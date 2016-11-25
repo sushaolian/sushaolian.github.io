@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="//sushaolian.me">
+  <title>如何避免浏览器兼容问题 | Sunshine的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="概述:浏览器的样式BUG实际上是由于浏览器解析规则不一样导致的，所以说为什么我们自己写出来的一个页面，在不同的浏览器的样式都不尽相同。常常这样的BUG会引起诸多人的烦恼，有时甚至让人感到绝望。本文主要讲解一些比较容易遇到的浏览器的样式BUG，以及解决办法。
+1、高度不适应高度不适应是当内层对象的高度发生变化时外层高度不能自动进行调节，特别是当内层对象使用margin 或padding时。
+
+例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何避免浏览器兼容问题">
+<meta property="og:url" content="//sushaolian.me/2016/10/21/brower/index.html">
+<meta property="og:site_name" content="Sunshine的博客">
+<meta property="og:description" content="概述:浏览器的样式BUG实际上是由于浏览器解析规则不一样导致的，所以说为什么我们自己写出来的一个页面，在不同的浏览器的样式都不尽相同。常常这样的BUG会引起诸多人的烦恼，有时甚至让人感到绝望。本文主要讲解一些比较容易遇到的浏览器的样式BUG，以及解决办法。
+1、高度不适应高度不适应是当内层对象的高度发生变化时外层高度不能自动进行调节，特别是当内层对象使用margin 或padding时。
+
+例">
+<meta property="og:image" content="//sushaolian.me/assets/newImg/cat.jpg">
+<meta property="og:updated_time" content="2016-11-25T13:48:38.094Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何避免浏览器兼容问题">
+<meta name="twitter:description" content="概述:浏览器的样式BUG实际上是由于浏览器解析规则不一样导致的，所以说为什么我们自己写出来的一个页面，在不同的浏览器的样式都不尽相同。常常这样的BUG会引起诸多人的烦恼，有时甚至让人感到绝望。本文主要讲解一些比较容易遇到的浏览器的样式BUG，以及解决办法。
+1、高度不适应高度不适应是当内层对象的高度发生变化时外层高度不能自动进行调节，特别是当内层对象使用margin 或padding时。
+
+例">
+<meta name="twitter:image" content="//sushaolian.me/assets/newImg/cat.jpg">
+  
+  
+    <link rel="icon" href="/assets/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/assets/blogImg/sushaolian.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Sunshine</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">让学习成为一种习惯！</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/sushaolian" title="github">github</a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+		        
+					<a class="mail" target="_blank" href="/1243856760@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Sunshine</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/assets/blogImg/sushaolian.png" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Sunshine</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">让学习成为一种习惯！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/sushaolian" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+						<a class="mail" target="_blank" href="/1243856760@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-brower" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何避免浏览器兼容问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/assets/newImg/cat.jpg" alt=""> </p>
+<p>概述:浏览器的样式BUG实际上是由于浏览器解析规则不一样导致的，所以说为什么我们自己写出来的一个页面，在不同的浏览器的样式都不尽相同。常常这样的BUG会引起诸多人的烦恼，有时甚至让人感到绝望。本文主要讲解一些比较容易遇到的浏览器的样式BUG，以及解决办法。</p>
+<p>1、高度不适应<br>高度不适应是当内层对象的高度发生变化时外层高度不能自动进行调节，特别是当内层对象使用margin 或padding时。</p>
+<blockquote>
+<p>例子:</p>
+<p>#box {background-color:blue; } </p>
+<p>#box p {margin-top: 20px;margin-bottom: 20px; text-align:center; } </p>
+<p>&lt;div id=”box”</p>
+<p></p><p>p对象中的内容&lt;/p<br>&lt;/div</p>
+<p>解决办法:在P对象上下各加2个空的div对象CSS代码：.1{height:0px;overflow:hidden;}或者为DIV加上border属性。</p>
+</blockquote>
+<p>2、IE6下为什么图片有空隙产生</p>
+<p>解决这个BUG的方法也有很多,可以是改变html的排版,或者设置img 为display:block 或者设置vertical-align 属性为 vertical-align:top | bottom |middle |text-bottom 都可以解决. </p>
+<p>3、DIV浮动IE文本产生3像素的bug<br> 左边对象浮动，右边采用外补丁的左边距来定位，右边对象内的文本会离左边有3px的间距。<br>    例子:</p>
+<pre><code>#box{ float:left; width:800px;}   
+#left{ float:left; width:50%;}   
+#right{ width:50%;}   *html #left{ margin-right:-3px; //这句是关键}
+&lt;div id=&quot;box&quot;  
+&lt;div id=&quot;left&quot;&gt;&lt;/div  
+&lt;div id=&quot;right&quot;&gt;&lt;/div  
+&lt;/div&gt;
+</code></pre><p>4、IE与宽度和高度的问题</p>
+<p>IE 不认得min-width和min-height这两个定义，但实际上它把正常的width和height当作有min的情况来使。这样问题就大了，如果只用宽度和高度，正常的浏览器里这两个值就不会变，如果只用min-width和min-height的话，IE下面根本等于没有设置宽度和高度。比如要设置背景图片，这个宽度是比较重要的。</p>
+<p>要解决这个问题，可以这样：    </p>
+<blockquote>
+<p>#box{width:80px; height:35px;} html&gt;body #box{ width:auto; height:auto; min-width:80px; min-height: 35px;}<br>5、margin加倍的问题<br>div被float修饰，在IE下设置的margin会加倍。这是一个IE6都存在的BUG。<br>    例如:<br>    <div id="”imfloat”"></div><br>    相应的CSS为</p>
+<pre><code>#imfloat
+{
+   float:left;
+   margin:5px;
+   display:inline;
+}
+</code></pre></blockquote>
+<p>解决方法:在这个div里面加上display:inline;</p>
+<p>6、浮动IE产生的双倍距离</p>
+<p>#box{ float:left; width:100px; margin:0 0 0 100px; //这种情况之下IE会产生200px的距离 display:inline; //使浮动忽略}<br>这里细说一下block与inline两个元素：<br>1、block元素的特点是,总是在新行上开始,高度,宽度,行高,边距都可以控制(块元素);<br>2、Inline元素的特点是,和其他元素在同一行上,不可控制(内嵌元素);    </p>
+<blockquote>
+<p>#box{ display:block; //可以为内嵌元素模拟为块元素 display:inline; //实现同一行排列的效果 diplay:table; }</p>
+</blockquote>
+<p>7、div中元素的垂直居中问题<br>vertical-align:middle; 将行距增加到和整个DIV一样高line-height:200px;然后插入文字，就垂直居中了。缺点是要控制内容不要换行;</p>
+<p>8、flaot的div闭合;清除浮动;自适应高度;<br>① 例如：&lt;#div id=”floatA” &gt;&lt;#div id=”floatB” &gt;&lt;#div id=” NOTfloatC” &gt;这里的NOTfloatC并不希望继续平移，而是希望往下排。(其中floatA、floatB的属性已经设置为 float:left;)   </p>
+<p>这段代码在IE中毫无问题，问题出在FF。原因是NOTfloatC并非float标签，必须将float标签 闭合。在 &lt;#div class=”floatB”&gt; &lt;#div class=”NOTfloatC”&gt;之间加上 &lt; #div class=”clear”&gt;这个div一定要注意位置，而且必须与两个具有float属性的div同级，之间不能存在嵌套关系，否则会产生异常。 并且将clear这种样式定义为为如下即可： .clear{ clear:both;}    </p>
+<p>②作为外部 wrapper 的 div 不要定死高度,为了让高度能自动适应，要在wrapper里面加上overflow:hidden; 当包含float的 box的时候，高度自动适应在IE下无效，这时候应该触发IE的layout私有属性(万恶的IE啊！)用zoom:1;可以做到，这样就达到了兼容。<br>例如某一个wrapper如下定义：<br>.colwrapper{ overflow:hidden; zoom:1; margin:5px auto;}    </p>
+<p>③对于排版,我们用得最多的css描述可能就是float:left有的时候我们需要在n栏的float div后面做一个统一的背景,譬如:   </p>
+<pre><code>&gt; &lt;div id=”page”&gt;  
+&gt; &lt;div id=”left”&gt;&lt;/div&gt;  
+&gt; &lt;div id=”center”&gt;&lt;/div&gt; 
+&gt; &lt;div id=”right”&gt;&lt;/div&gt;   
+&gt; &lt;/div&gt;  
+</code></pre><p>比 如我们要将page的背景设置成蓝色,以达到所有三栏的背景颜色是蓝色的目的,但是我们会发现随着left center right的向下拉长,而 page居然保存高度不变,问题来了,原因在于page不是float属性,而我们的page由于要居中,不能设置成float,所以我们应该这样解决   </p>
+<pre><code>&gt; &lt;div id=”page”&gt;
+&gt; &lt;div id=”bg” style=”float:left;width:100%”&gt;  
+&gt; &lt;div id=”left”&gt;&lt;/div&gt; 
+&gt; &lt;div id=”center”&gt;&lt;/div&gt;  
+&gt; &lt;div id=”right”&gt;&lt;/div&gt; 
+&gt; &lt;/div&gt; 
+&gt; &lt;/div&gt; 
+</code></pre><p>再嵌入一个float left而宽度是100%的DIV解决之   </p>
+<p>④万能float 闭合(非常重要!)<br>关 于 clear float 的原理可参见 [How To Clear Floats Without Structural Markup],将以下 代码加入Global CSS 中,给需要闭合的div加上 class=”clearfix” 即可,屡试不爽.    </p>
+<blockquote>
+<pre><code>.clearfix:after { content:&quot;.&quot;; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix { display:inline-block; }
+.clearfix {display:block;}    
+</code></pre></blockquote>
+<p>或者这样设置：.hackbox{ display:table; //将对象作为块元素级的表格显示}   </p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/21/brower/" class="archive-article-date">
+  	<time datetime="2016-10-20T16:02:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-21</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器/">浏览器</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/25/jiekou/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (干货）PHP第三方接口文档大全
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/08/items/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">项目展示</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="brower" data-title="如何避免浏览器兼容问题" data-url="//sushaolian.me/2016/10/21/brower/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"rlovep"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Sunshine
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/作品/" style="font-size: 10px;">作品</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">Sunshine，&lt;br&gt;热爱前端！&lt;br&gt;外表坚强，内心柔弱！&lt;br&gt;没有华丽的背景和学历，只有相信努力和实力！</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

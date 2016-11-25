@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="//sushaolian.me">
+  <title>CSS详解——文档流 | Sunshine的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。
+内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。
+有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位， 固定定位。 但是在IE中浮动元素也存在于文档流中（还让我觉得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS详解——文档流">
+<meta property="og:url" content="//sushaolian.me/2016/07/25/css-wendang/index.html">
+<meta property="og:site_name" content="Sunshine的博客">
+<meta property="og:description" content="将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。
+内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。
+有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位， 固定定位。 但是在IE中浮动元素也存在于文档流中（还让我觉得">
+<meta property="og:updated_time" content="2016-11-25T14:05:12.645Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS详解——文档流">
+<meta name="twitter:description" content="将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。
+内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。
+有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位， 固定定位。 但是在IE中浮动元素也存在于文档流中（还让我觉得">
+  
+  
+    <link rel="icon" href="/assets/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/assets/blogImg/sushaolian.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Sunshine</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">让学习成为一种习惯！</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/sushaolian" title="github">github</a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+		        
+					<a class="mail" target="_blank" href="/1243856760@qq.com" title="mail">mail</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Sunshine</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/assets/blogImg/sushaolian.png" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Sunshine</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">让学习成为一种习惯！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/sushaolian" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+						<a class="mail" target="_blank" href="/1243856760@qq.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-css-wendang" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS详解——文档流
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。<br>每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。</p>
+<p>内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。</p>
+<p>有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位， 固定定位。 但是在IE中浮动元素也存在于文档流中（还让我觉得这样很合理&gt;&lt;）。</p>
+<p>浮动元素不占任何正常文档流空间，而浮动元素的定位还是基于正常的文档流，然后从文档流中抽出并尽可能远的移动至左侧或者右侧。文字内容会围绕在浮动元素周围。当一个元素从正常文档流中抽出后，仍然在文档流中的其他元素将忽略该元素并填补他原先的空间。</p>
+<p>浮动概念让人迷惑根源在于浏览器对理论的解读造成的。只能说很多人以IE做标准，其实它不是。</p>
+<p>基于文档流， 我们可以很容易理解以下的定位模式：</p>
+<ol>
+<li>相对定位， 即相对于元素在文档流中位置进行偏移。 但保留原占位。</li>
+<li>绝对定位， 即完全脱离文档流， 相对于position属性非static值的最近父级元素进行偏移。</li>
+<li>固定定位， 即完全脱离文档流， 相对于视区进行偏移。</li>
+</ol>
+<p>几个问题</p>
+<ol>
+<li>作为三大基本元素之一的内联元素。 它跟块级元素的主要区别在哪？</li>
+<li>Clear属性取right值时怎么理解？ 貌似实验情况总跟理论不符.</li>
+<li>内联元素是什么意思呢？什么是块级别元素？</li>
+</ol>
+<p>《CSS权威指南》中文字显示：任何不是块级元素的可见元素都是内联元素。其表现的特性是“行布局”形式，这里的“行布局”的意思就是说其表现形式始终以行进行显示。比如，我们设定一个内联元素border-bottom:1px solid #000;时其表现是以每行进行重复，每一行下方都会有一条黑色的细线。如果是块级元素那么所显示的的黑线只会在块的下方出现。</p>
+<p>p、h1、或div等元素常常称为块级元素，这些元素显示为一块内容；Strong。span等元素称为行内元素，它们的内容显示在行中，即“行内框”。（可以使用display=block将行内元素转换成块元素，display=none表示生成的元素根本没有框，也既不显示元素，不占用文档中的空间）</p>
+<pre><code>&gt; 行内就是在一行内的元素，只能放在行内；块级元素，就是一个四方块，可以放在页面上任何地方。
+&gt; 说白了，行内元素就好像一个单词；块级元素就好像一个段落，如果不另加定义的话，它将独立一行出现。
+&gt; 一般的 块级元素诸如段落&lt;p&gt;、标 题&lt;h1&gt;&lt;h2&gt;...、列表。&lt;ul&gt;&lt;ol&gt;&lt;li、表格&lt;table&gt;、表单&lt;form&gt;、DIV&lt;div&gt;和BODY&lt;body&gt;等元素。而内联元素则如: 表单元素&lt;input&gt;、超级链接&lt;a&gt;、图像&lt;img&gt;、&lt;span........
+&gt; 块级无素的显著特点是：每个块级元素都是从一个新行开始显示，而且其后的无素也需另起一行进行显示。
+&gt; &lt;span&gt;在CSS定义中属于一个行内元素，而&lt;div&gt;是块级元素。
+</code></pre><p>对于学过CSS的人来说一听就能明白。可对于新手来说不易理解，我主要对新手说通熟点吧!</p>
+<p>用容器这一词会更容易形象理解它们的存在与用途，行内元素相当一个小容器，而div相当于一个大容器，大容器当然可以放一个小容器了。<span>就是小容器，这样一说你也许会在脑海中有一个初步的印象了吧，如果我们想在大容器中装一些清水。但我也想在里装一些墨水怎么 办？很简单，我们把小容器拿出来装上墨水然后放入大容器里的清水中不就成了吗。</span></p>
+<p>块元素（block element）一般是其他元素的容器元素<br>块元素一般都从新行开始，它可以容纳内联元素和其他块元素。常见块元素是段落标签’P”。“form”这个块元素比较特殊，它只能用来容纳其他块元素。</p>
+<p>如果没有css的作用，块元素会顺序以每次另起一行的方式一直往下排。而有了css以后，我们可以改变这种html的默认布局模式，把块元素摆放到你想要 的位置上去。而不是每次都愚蠢的另起一行。需要指出的是，table标签也是块元素的一种，table based layout和css based layout从一般使用者（不包括视力障碍者、盲人等）的角度来看这两种布局，除了页面载入速度的差别外，没有其他的差别。但是如果普通使用者不经意点了 查看页面源代码按钮后，两者所表现出来的差异就非常大了。基于良好重构理念设计的css布局页面源码，至少也能让没有web开发经验的普通使用者把内容快速的读懂。从这个角度来说，css layout code应该有更好的美学体验吧。</p>
+<p>你能够把块容器元素div想象成一个个box，或者如果你玩过剪贴文载的话，那就更加容易理解了。我们先把需要的文章从各种报纸、杂志总剪 下来。每块剪下来的内容就是一个block。然后我们把这些纸块按照自己的排版意图，用胶水重新贴到一张空白的新纸上。这样就形成了你自己独特的文摘快报了。作为一种技术的延伸，网页布局设计也遵循了同样的模式。</p>
+<p>内联元素（inline element）一般都是基于语义级（semantic）的基本元素。内联元素只能容纳文本或者其他内联元素，常见内联元素 “a”。</p>
+<p>块元素（block element）和内联元素（inline element）都是html规范中的概念。块元素和内联元素的基本差异是块元素一般都从新行开始。而当加入了css控制以后，块元素和内联元素的这种属 性差异就不成为差异了。比如，我们完全可以把内联元素cite加上display:block这样的属性，让他也有每次都从新行开始的属性。</p>
+<p>可变元素的基本概念就是他需要根据上下文关系确定该元素是块元素或者内联元素。可变元素还是属于上述两种元素类别，一旦上下文关系确定了他的类别，他就要遵循块元素或者内联元素的规则限制。大致的元素分类见全文。</p>
+<p>关于inline element的中文叫法，有多种内联元素、内嵌元素、行内元素、直进式元素。基本上没有统一的翻译，爱怎么叫怎么叫吧。另外提到内联元素，我们会想到有个display的属性是display:inline;这个属性能够修复著名的IE双倍浮动边界问题。</p>
+<h2 id="块元素（block-element）"><a href="#块元素（block-element）" class="headerlink" title="块元素（block element）"></a>块元素（block element）</h2><ol>
+<li>address 地址</li>
+<li>blockquote 块引用</li>
+<li>center 举中对齐块</li>
+<li>dir 目录列表</li>
+<li>div 常用块级容易，也是css layout的主要标签</li>
+<li>dl 定义列表</li>
+<li>fieldset form控制组</li>
+<li>form 交互表单</li>
+<li>h1 大标题</li>
+<li>h2 副标题</li>
+<li>h3 3级标题</li>
+<li>h4 4级标题</li>
+<li>h5 5级标题</li>
+<li>h6 6级标题</li>
+<li>hr 水平分隔线</li>
+<li>isindex input prompt</li>
+<li>menu 菜单列表</li>
+<li>noframes frames可选内容（对于不支持frame的浏览器显示此区块内容）</li>
+<li>noscript 可选脚本内容（对于不支持script的浏览器显示此内容）</li>
+<li>ol 排序列表</li>
+<li>p 段落</li>
+<li>pre 格式化文本</li>
+<li>table 表格</li>
+<li>ul 非排序列表</li>
+</ol>
+<h2 id="内联元素（inline-element）"><a href="#内联元素（inline-element）" class="headerlink" title="内联元素（inline element）"></a>内联元素（inline element）</h2><ol>
+<li>a - 锚点</li>
+<li>abbr - 缩写</li>
+<li>acronym - 首字</li>
+<li>b - 粗体（不推荐）</li>
+<li>bdo - bidi override</li>
+<li>big - 大字体</li>
+<li>br - 换行</li>
+<li>cite - 引用</li>
+<li>code - 计算机代码（在引用源码的时候需要）</li>
+<li>dfn - 定义字段</li>
+<li>em - 强调</li>
+<li>font - 字体设定（不推荐）</li>
+<li>i - 斜体</li>
+<li>img - 图片</li>
+<li>input - 输入框</li>
+<li>kbd - 定义键盘文本</li>
+<li>label - 表格标签</li>
+<li>q - 短引用</li>
+<li>s - 中划线（不推荐）</li>
+<li>samp - 定义范例计算机代码</li>
+<li>select - 项目选择</li>
+<li>small - 小字体文本</li>
+<li>span - 常用内联容器，定义文本内区块</li>
+<li>strike - 中划线</li>
+<li>strong - 粗体强调</li>
+<li>sub - 下标</li>
+<li>sup - 上标</li>
+<li>textarea - 多行文本输入框</li>
+<li>tt - 电传文本</li>
+<li>u - 下划线</li>
+<li>var - 定义变量</li>
+<li>可变元素</li>
+<li>可变元素为根据上下文语境决定该元素为块元素或者内联元素。</li>
+<li>applet - java applet</li>
+<li>button - 按钮</li>
+<li>del - 删除文本</li>
+<li>iframe - inline frame</li>
+<li>ins - 插入的文本</li>
+<li>map - 图片区块（map）</li>
+<li>object - object对象</li>
+<li>script - 客户端脚本</li>
+</ol>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/07/25/css-wendang/" class="archive-article-date">
+  	<time datetime="2016-07-24T16:58:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-07-25</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/10/08/items/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          项目展示
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/21/hexo-base/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo在github的搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="css-wendang" data-title="CSS详解——文档流" data-url="//sushaolian.me/2016/07/25/css-wendang/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"rlovep"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Sunshine
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/作品/" style="font-size: 10px;">作品</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">Sunshine，&lt;br&gt;热爱前端！&lt;br&gt;外表坚强，内心柔弱！&lt;br&gt;没有华丽的背景和学历，只有相信努力和实力！</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

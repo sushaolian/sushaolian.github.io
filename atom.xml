@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sunshine的博客</title>
+  <subtitle>让学习成为一种习惯！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="//sushaolian.me/"/>
+  <updated>2016-11-25T12:16:48.671Z</updated>
+  <id>//sushaolian.me/</id>
+  
+  <author>
+    <name>Sunshine</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>找工作的日子</title>
+    <link href="//sushaolian.me/2016/11/25/diary-1125/"/>
+    <id>//sushaolian.me/2016/11/25/diary-1125/</id>
+    <published>2016-11-25T11:16:54.895Z</published>
+    <updated>2016-11-25T12:16:48.671Z</updated>
+    
+    <content type="html"><![CDATA[<p><audio src="/assets/video/xiaoxingyun.mp3" controls></audio><br>    耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不<br>知道！生活总是喜怒哀乐交差在一起，快乐与否取决你自己的态度和心态！不开心是一天，开心也是一天，为什么我们不快快乐乐的过每一天呢？<br><img src="/assets/newImg/diary1.jpg" alt=""><br>    最近的我，不但失业还失恋了，我觉得我这运气也是没有谁了吧！现在是11月份底，马上就过年，<br>现在这段时间想找一份前端的工作也不易！我采取海投简历的办法，希望得到面试的机会多一点，可是这样子收到面试机会却很少。这些公司拒绝的原因都很简单又直接：都是经验不足和项目偏少。很多公司招收前端这样的岗位都要求要有2年的工作经历以上，而我只是一个刚刚毕业没多久的大学生，才工作了几个月。估计很少公司会选择我这样的新人吧！其实我上一家公司也不错的，和同事相处也很愉快，可是公司无法运营下去，我也没有办法。有人都跟说女生不应该选择编程的，那样太辛苦了。可是我是真的热爱这个行业，尽管很辛苦，我也想努力坚持走下去。人的一生，能够做自己喜欢的事情，可以自己做选择，那是一件幸福的事情！我觉得我何其幸运，能够做自己喜欢的事。也有收到一些面试的机会，可是要求却很严格，有一家公司面试的时候，单单是笔试题就有6页，我是做，可是正确率是多少我就不知道了，最后我也没有接到要我去复试的机会。估计是我的笔试太差了！所以最近在恶补一些前端方面的知识。相信努力总会找到工作的！<br><img src="/assets/newImg/diary2.jpg" alt=""><br>    冬天来了，在这寒冷的天气里，我还是感觉到了好朋友带给我的一丝丝温暖，暖和了我的一颗心。<br>我幸运此生能够认识他们，我会珍惜这些友情。我知道我是那种非常冷漠的女孩子，喜欢假装坚强，其实我的内心很柔弱。阳光总在风雨后，冬天过了，春天自然会来的！我要对自己说：加油！你是永远都不服输的女孩子！</p>
+<p>——–author:苏少莲———————</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;audio src=&quot;/assets/video/xiaoxingyun.mp3&quot; controls&gt;&lt;/audio&gt;&lt;br&gt;    耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不&lt;br&gt;知道！生活总是喜怒哀乐交差在一起，快乐与否
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="//sushaolian.me/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="心情" scheme="//sushaolian.me/tags/%E5%BF%83%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信开发详细教程</title>
+    <link href="//sushaolian.me/2016/11/25/weixin/"/>
+    <id>//sushaolian.me/2016/11/25/weixin/</id>
+    <published>2016-11-24T16:58:00.000Z</published>
+    <updated>2016-11-24T17:14:10.231Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a></p>
+<p>二、微信公众账号介绍</p>
+<p><img src="/assets/newImg/weixin1.png" alt=""><br>服务号、订阅号、企业号的介绍（区别）<br>1、订阅号：主要偏于为用户传达资讯（类似报纸杂志），认证前后都是每天只可以群发一条消息；<br>2、服务号：主要偏于服务交互（类似银行，114，提供服务查询），认证前后都是每个月可群发4条消息；<br>3、企业号：主要用于公司内部通讯使用，需要先有成员的通讯信息验证才可以关注成功企业号；<br>温馨提示：<br>1、如果想简单的发送消息，达到宣传效果，建议可选择订阅号；<br>2、如果想进行商品销售，进行商品售卖，建议可申请服务号；<br>3、如果想用来管理内部企业员工、团队，对内使用，可申请企业号。<br><img src="/assets/newImg/weixin2.png" alt=""> </p>
+<p>三、微信数据收发原理以及消息数据格式</p>
+<p>3、1 开发者模式成为开发者时的消息校验原理<br>开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，并且带上四个参数(signature、timestamp、nonce、echostr)，开发者通过对签名(signature)的检验，来判断此条信息的真实性。<br>验证成功之后，开发者接受用户消息的时候，微信也都会带上前面三个参数(signature、timestamp、nonce)访问开发者设置的URL，开发者依然通过签名的校验判断消息的真实性。<br>加密/校验流程如下：</p>
+<ol>
+<li>将token、timestamp、nonce三个参数进行字典序排序</li>
+<li>将三个参数字符串拼接成一个字符串进行sha1加密</li>
+<li><p>开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</p>
+<p> 3、2 成为开发者后消息收发的原理<br>微信消息收发原理图：<br><img src="/assets/newImg/weixin3.png" alt=""><br>其实，我们需要做的事情，就是对HTTP请求，做出响应。也就是拿到微信服务器给我们的数据，然后处理后再返回去。</p>
+</li>
+</ol>
+<p>上图的消息收发过程是这样的：用户用手机发送一个?给微信公众号，微信服务器接受到? 然后组装一个消息发送给我们自己的服务器，我们的服务器回复一个时间，并且将时间也按照一定的规则组装，回复给公众号，公众号所在的服务器再回复给用户。</p>
+<p>四、接入指南<br>接入微信公众号平台开发，需要按照如下步骤：<br>1、填写服务器配置<br>2、验证服务器地址的有效性<br>3、依据接口文档实现业务逻辑</p>
+<p>第一步：填写服务器配置<br>    进入微信公众平台<a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a><br>在左侧列表中最下方，找到基本配置，点击进入<br><img src="/assets/newImg/weixin4.png" alt=""> </p>
+<p>点击启用，如果编辑模式开启了。那就先把编辑模式关闭。<br><img src="/assets/newImg/weixin5.png" alt=""><br>点击“修改配置”按钮，按照要求填写。<br>参数说明：<br>其中URL是开发者用来接收微信消息和事件的接口URL。<br>Token是开发者任意填写的，但是填写的要与代码中的一致。Token是用作签名(填写的Token会和接口URL中包含的Token进行对比，从而验证安全性),Token是为了用来验证发送我们的信息是否来自微信服务器。</p>
+<p>第二步：验证服务器地址的有效性<br>开发者提供信息后，微信服务器将发送GET请求到填写的服务器地址URL上，GET请求携带四个参数：<br><img src="/assets/newImg/weixin6.png" alt=""> </p>
+<p>开发者通过检验signature对请求进行校验。若确认此次GET请求来自微信服务器，需要原样返回echostr参数的内容。这样就接入成功了，否则接入失败。</p>
+<p>接入的代码如下：<br>        //获得参数 signature nonce token timestamp echostr<br>        $nonce = $_GET[‘nonce’];<br>        $token = ‘imooc’;<br>        $timestamp = $_GET[‘timestamp’];<br>        $echostr   = $_GET[‘echostr’];<br>        $signature = $_GET[‘signature’];<br>        //第一步：形成数组，然后按字典序排序<br>        $array = array();<br>        $tmpArr= array($nonce, $timestamp, $token);<br>        sort($tmpArr,SORT_STRING);<br>        //第二步：拼接成字符串,sha1加密 ，然后与signature进行校验<br>        $str = sha1( implode( $tmpArr ) );<br>        //第三步：获得加密后的字符串与signature对比<br>        if( $str  == $signature &amp;&amp; $echostr ){<br>            //第一次接入weixin api接口的时候<br>            echo  $echostr;<br>            exit;<br>        }</p>
+<p>第三部：依据接口文档实现业务逻辑<br>    验证URL有效性后即接入生效，成为开发者。<br>经历过第一次验证后，此后用户每次向公众号发送消息、或者产生自定义菜单点击事件时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，然后开发者可以依据自身业务逻辑进行相应，例如回复消息等。</p>
+<p>其他需要知道的：<br>1、用户向公众号发送消息时，公众号收到的消息发送者是一个OpenID，每个用户对每个公众号有一个唯一的OpenID。<br>2、微信公众号接口只支持80端口<br>五、接受普通消息<br>当普通微信用户向微信公众账号发消息时，微信服务器将POST消息的XML数据发送到我们自己的服务器上，也就是我们在微信公众平台填写的URL<br><img src="/assets/newImg/weixin7.png" alt=""> </p>
+<p>普通消息有：文本消息、图片消息、语言消息、视频消息、地理位置消息。</p>
+<p>接受文本消息的XML格式</p>
+<xml><br> <tousername>&lt;![CDATA[toUser]]&gt;</tousername><br> <fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br> <createtime>1348831860</createtime><br> <msgtype>&lt;![CDATA[text]]&gt;</msgtype><br> <content>&lt;![CDATA[this is a test]]&gt;</content><br> <msgid>1234567890123456</msgid><br> </xml>
+
+<p><img src="/assets/newImg/weixin8.png" alt=""><br>当微信服务器接受到用户发送的消息，微信服务器再把这条消息通过XML格式组装后，发送给我们的服务器。那么，如果我们想要回复文本消息。我们也需要把消息通过XML格式组装好发送给微信服务器，微信服务器再发送给用户。</p>
+<p>回复文本消息的XML格式：</p>
+<xml><br><tousername>&lt;![CDATA[toUser]]&gt;</tousername><br><fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br><createtime>12345678</createtime><br><msgtype>&lt;![CDATA[text]]&gt;</msgtype><br><content>&lt;![CDATA[你好]]&gt;</content><br></xml>
+
+<p>实例代码：</p>
+<p><img src="/assets/newImg/weixin9.png" alt=""><br>注意，$toUser 是指将这个消息返回给谁。因为我们是将消息回复给用户的，所以<br>$toUser = $this-&gt;postObj-&gt;FromUserName;//获取到发送消息给微信公众号的用户openId</p>
+<p>素材管理<br>新增临时素材<br>公众号经常需要用到一些临时性的多媒体素材的场景，例如在使用接口特别是发送消息时，对多媒体文件、多媒体消息的获取和调用等操作，是通过media_id来进行的。素材管理接口对所有认证的订阅号和服务号开发。通过本接口，公众号可以新增一些临时素材（即上传临时多媒体文件）。<br>请注意：<br>1、对于临时素材，每个素材（media_id）会在开发者上传或粉丝发送到微信服务器3天后自动删除（所以用户发送给开发者的素材，若开发者需要，应尽快下载到本地），以节省服务器资源。<br>2、media_id是可复用的。<br>3、素材的格式大小等要求与公众平台官网一致。具体是，图片大小不超过2M，支持bmp/png/jpeg/png/gif格式，语音大小不超过2M，长度不超过60秒（公众平台官网可以在文章中插入小于30分钟的语音，但这些语音不能用于群发等场景，只能放在文章内，这方面接口暂不支持），支持mp3/wma/wav/amr格式<br>4、需使用https调用本接口。</p>
+<p>调用接口地址<br><a href="https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE</a></p>
+<p>其他需要注意的问题：<br>1、文件上传时通过CURL POST方式提交的，POST内容需要是数组格式。<br><img src="/assets/newImg/weixin9.png" alt=""><br>2、上传的文件必须先在你的服务器，然后获取到上传文件所在服务器的绝对路径。并且需要在绝对路径前面加上@以示区分。<br>3、在Window服务上，路径分隔符为斜杠\，例子：@D:\soft\logo.png<br>而在Linux服务器上，路径分隔符为反斜杠/ 例子：@/tmp/logo.png</p>
+<p>代码示例：</p>
+<p><img src="/assets/newImg/weixin10.png" alt=""> </p>
+<p>获取临时素材<br>公众号可以使用本接口从微信服务器下载临时的多媒体素材。<br>接口调用URL<br>http请求方式: GET,https调用<br><a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a><br>参数说明<br>参数    是否必须    说明<br>access_token    是    调用接口凭证<br>media_id    是    媒体文件ID<br>返回说明<br>正确情况下的返回HTTP头如下：<br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Type: image/jpeg<br>    Content-disposition: attachment; filename=”MEDIA_ID.png”<br>    Date: Sun, 06 Jan 2013 10:20:18 GMT<br>    Cache-Control: no-cache, must-revalidate<br>    Content-Length: 339721<br>    curl -G “<a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a>“</p>
+<p>发送消息<br>    发送客服消息<br>当用户主动发消息给公众号的时候（包括发送信息、点击自定义菜单、订阅事件、扫描二维码事件），微信将会把消息数据推送给开发者，开发者在一段时间内可以调用客服消息接口，通过POST一个JSON数据包来发送消息给普通用户，在48小时内不限制发送次数。此接口主要用于客服等有人工消息处理环节的功能，方便开发者为用户提供更加优质的服务。</p>
+<p>调用的接口URL<br><a href="https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN</a><br>具体参考文档<a href="http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html" target="_blank" rel="external">http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html</a><br>至于为什么需要客服接口呢？<br>因为微信公众平台一直没有推出手机客服端，除了程序的自动应答，运营者还需要一些人工回复，而人工回复目前一般都是通过电脑端操作，有了客服接口可以使运营者使用手机回复。</p>
+<p>获取用户基本信息<br>在关注者与公众号产生消息交互后，公众号可获得关注者的OpenID（加密后的微信号，每个用户对每个公众号的OpenID是唯一的。对于不同公众号，同一用户的openid不同）。公众号可通过本接口来根据OpenID获取用户基本信息，包括昵称、头像、性别、所在城市、语言和关注时间。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一、准备工作&lt;br&gt;a)账号&lt;br&gt;i.在SAE上面注册一个账号。&lt;a href=&quot;http://t.cn/RbuZZHk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://t.cn/RbuZZHk&lt;/a&gt;  我的SAE推荐链接&lt;br&gt;ii.在微
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="//sushaolian.me/tags/PHP/"/>
+    
+      <category term="微信" scheme="//sushaolian.me/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(干货）PHP第三方接口文档大全</title>
+    <link href="//sushaolian.me/2016/11/25/jiekou/"/>
+    <id>//sushaolian.me/2016/11/25/jiekou/</id>
+    <published>2016-11-24T16:58:00.000Z</published>
+    <updated>2016-11-25T14:11:01.006Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/assets/newImg/php1.png" alt="第三方接口文档"> </p>
+<ol>
+<li><p>天气预报接口 [20130901]<br>city：城市名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/weather/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3" target="_blank" rel="external">http://apix.sinaapp.com/weather/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3</a></p>
+</li>
+<li><p>空气质量指数接口 [20130901]<br>city：城市名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3" target="_blank" rel="external">http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3</a></p>
+</li>
+<li><p>快递查询接口 [20130901]<br>company：快递公司英文代码 点击查看英文代码列表<br>number：快递单号<br><a href="http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877" target="_blank" rel="external">http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877</a></p>
+</li>
+</ol>
+<p>新版Web页查询<br><a href="http://apix.sinaapp.com/express2/index.php" target="_blank" rel="external">http://apix.sinaapp.com/express2/index.php</a></p>
+<ol>
+<li>智能快递查询接口 [20130901]<br>number：快递单号<br><a href="http://apix.sinaapp.com/expressauto/?appkey=trialuser&amp;number=3143490877" target="_blank" rel="external">http://apix.sinaapp.com/expressauto/?appkey=trialuser&amp;number=3143490877</a><br>备注：支持EMS,申通快递,圆通快递,中通快递,汇通快递,天天快递,韵达快递,顺丰快递,宅急送,速尔快递,德邦物流,联昊通物流,全峰快递,中国邮政，如风达</li>
+<li>股票查询接口 [20130901]</li>
+</ol>
+<p>code：股票代码[通达信代码]<br><a href="http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063" target="_blank" rel="external">http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063</a></p>
+<ol>
+<li><p>股票分析接口 [20131004]<br>code：股票代码<br><a href="http://apix.sinaapp.com/stockanalysis/?appkey=trialuser&amp;code=000063" target="_blank" rel="external">http://apix.sinaapp.com/stockanalysis/?appkey=trialuser&amp;code=000063</a></p>
+</li>
+<li><p>公交线路接口 [20131004]<br>city：城市名，传递时须做urlencode<br>line：线路，传递时须做urlencode<br><a href="http://apix.sinaapp.com/busline/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;line=209" target="_blank" rel="external">http://apix.sinaapp.com/busline/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;line=209</a></p>
+</li>
+<li><p>公交、地铁换乘接口 [20131004]<br>city：城市名，传递时须做urlencode<br>start：起点，传递时须做urlencode<br>end：终点，传递时须做urlencode<br><a href="http://apix.sinaapp.com/bus/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;start=%E4%B8%96%E7%95%8C%E4%B9%8B%E7%AA%97&amp;end=%E7%AB%B9%E5%AD%90%E6%9E%97" target="_blank" rel="external">http://apix.sinaapp.com/bus/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;start=%E4%B8%96%E7%95%8C%E4%B9%8B%E7%AA%97&amp;end=%E7%AB%B9%E5%AD%90%E6%9E%97</a></p>
+</li>
+<li><p>地铁查询接口 [20131004]<br><a href="http://apix.sinaapp.com/subway/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/subway/?appkey=trialuser</a></p>
+</li>
+<li><p>火车查询 [20131004]<br><a href="http://apix.sinaapp.com/train/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/train/?appkey=trialuser</a></p>
+</li>
+<li><p>汽车查询接口 [20131004]<br><a href="http://apix.sinaapp.com/coach/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/coach/?appkey=trialuser</a></p>
+</li>
+<li><p>自驾线路 [20131004]<br>startcity：起点城市，传递时须做urlencode<br>startplace：起点地名，传递时须做urlencode<br>endcity：终点城市，传递时须做urlencode<br>endplace：终点地名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/driving/?appkey=trailuser&amp;startcity=%E5%8C%97%E4%BA%AC&amp;startplace=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;endcity=%E5%8C%97%E4%BA%AC&amp;endplace=%E5%A4%A9%E5%AE%89%E9%97%A8" target="_blank" rel="external">http://apix.sinaapp.com/driving/?appkey=trailuser&amp;startcity=%E5%8C%97%E4%BA%AC&amp;startplace=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;endcity=%E5%8C%97%E4%BA%AC&amp;endplace=%E5%A4%A9%E5%AE%89%E9%97%A8</a></p>
+</li>
+<li><p>出租车费用 [20131004]<br>city：城市名，传递时须做urlencode<br>start：起点，传递时须做urlencode<br>end：终点，传递时须做urlencode</p>
+</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/taxi/?appkey=trailuser&amp;city=%E5%8C%97%E4%BA%AC&amp;start=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;end=%E5%A4%A9%E5%AE%89%E9%97%A8" target="_blank" rel="external">http://apix.sinaapp.com/taxi/?appkey=trailuser&amp;city=%E5%8C%97%E4%BA%AC&amp;start=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;end=%E5%A4%A9%E5%AE%89%E9%97%A8</a></p>
+<ol>
+<li>航班状态接口 [20131004]</li>
+</ol>
+<p>number：航班号<br><a href="http://apix.sinaapp.com/flight/?appkey=trialuser&amp;number=ca1111" target="_blank" rel="external">http://apix.sinaapp.com/flight/?appkey=trialuser&amp;number=ca1111</a></p>
+<ol>
+<li>笑话接口 [20131004]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/joke/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/joke/?appkey=trialuser</a></p>
+<ol>
+<li>周公解梦接口 [20131004]</li>
+</ol>
+<p>content: 梦见内容，传递时须做urlencode<br><a href="http://apix.sinaapp.com/dream/?appkey=trialuser&amp;content=%E8%80%81%E5%B8%88" target="_blank" rel="external">http://apix.sinaapp.com/dream/?appkey=trialuser&amp;content=%E8%80%81%E5%B8%88</a></p>
+<ol>
+<li>中英互译 [20131104]</li>
+</ol>
+<p>content: 翻译内容，传递时须做urlencode<br><a href="http://apix.sinaapp.com/translate/?appkey=trialuser&amp;content=%E8%A1%A8%E7%A4%BA" target="_blank" rel="external">http://apix.sinaapp.com/translate/?appkey=trialuser&amp;content=%E8%A1%A8%E7%A4%BA</a></p>
+<ol>
+<li>星座运势接口 [20131104]</li>
+</ol>
+<p>name: 星座名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/astrology/?appkey=trialuser&amp;name=%E7%99%BD%E7%BE%8A%E5%BA%A7" target="_blank" rel="external">http://apix.sinaapp.com/astrology/?appkey=trialuser&amp;name=%E7%99%BD%E7%BE%8A%E5%BA%A7</a></p>
+<ol>
+<li>彩票开奖结果接口 [20131104]</li>
+</ol>
+<p>name：彩票名称，传递时须做urlencode<br><a href="http://apix.sinaapp.com/lottery/?appkey=trailuser&amp;name=%E5%8F%8C%E8%89%B2%E7%90%83" target="_blank" rel="external">http://apix.sinaapp.com/lottery/?appkey=trailuser&amp;name=%E5%8F%8C%E8%89%B2%E7%90%83</a><br>备注：支持双色球,大乐透,3D,排列3,排列5,七星彩,七乐彩,胜负彩,任选九,六场半全场,四场进球</p>
+<ol>
+<li>苹果IMEI/序列号查询接口 [20131104]</li>
+</ol>
+<p>number: IMEI号或序列号<br><a href="http://apix.sinaapp.com/apple/?appkey=trialuser&amp;number=358031058974471" target="_blank" rel="external">http://apix.sinaapp.com/apple/?appkey=trialuser&amp;number=358031058974471</a></p>
+<ol>
+<li>百科全书接口 [20131204]</li>
+</ol>
+<p>word: 词条，传递时须做urlencode<br><a href="http://apix.sinaapp.com/encyclopedia/?appkey=trialuser&amp;word=%e5%be%ae%e4%bf%a1" target="_blank" rel="external">http://apix.sinaapp.com/encyclopedia/?appkey=trialuser&amp;word=%e5%be%ae%e4%bf%a1</a></p>
+<ol>
+<li>图书介绍 [20131104]</li>
+</ol>
+<p>name: 图书名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/book/?appkey=trialuser&amp;name=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0" target="_blank" rel="external">http://apix.sinaapp.com/book/?appkey=trialuser&amp;name=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0</a></p>
+<ol>
+<li>歌曲介绍 [20131104]</li>
+</ol>
+<p>name: 音乐名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/song/?appkey=trialuser&amp;name=%E6%96%B0%E5%B9%B4%E5%A5%BD" target="_blank" rel="external">http://apix.sinaapp.com/song/?appkey=trialuser&amp;name=%E6%96%B0%E5%B9%B4%E5%A5%BD</a></p>
+<ol>
+<li>影片介绍 [20131104]</li>
+</ol>
+<p>name: 电影名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/movie/?appkey=trialuser&amp;name=%E9%BE%99%E7%8C%AB" target="_blank" rel="external">http://apix.sinaapp.com/movie/?appkey=trialuser&amp;name=%E9%BE%99%E7%8C%AB</a></p>
+<ol>
+<li>历史上的今天接口 [20140104]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/history/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/history/?appkey=trialuser</a></p>
+<ol>
+<li><p>经济指标</p>
+</li>
+<li><p>财经大事</p>
+</li>
+<li><p>手机充值</p>
+</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/recharge/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/recharge/?appkey=trialuser</a><br>备注：腾讯财付通官方网站充值接口，基于微信安全支付</p>
+<ol>
+<li>城市团购 [20140104]</li>
+</ol>
+<p>city: 城市名，传递时须做urlencode，你可以指定一个固定城市 查看支持城市列表<br>keyword：关键字，传递时须做urlencode，可为商户名、商品名、地址等<br><a href="http://apix.sinaapp.com/groupon/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;keyword=%E5%8D%8E%E5%BC%BA%E5%8C%97" target="_blank" rel="external">http://apix.sinaapp.com/groupon/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;keyword=%E5%8D%8E%E5%BC%BA%E5%8C%97</a></p>
+<ol>
+<li><p>城市优惠</p>
+</li>
+<li><p>黄金</p>
+</li>
+<li><p>白银</p>
+</li>
+<li><p>外汇</p>
+</li>
+<li><p>图片检索</p>
+</li>
+<li><p>视频检索</p>
+</li>
+<li><p>地图位置服务 [20140104]</p>
+</li>
+</ol>
+<p>lat：纬度<br>lng：经度<br>entity：查询名称，传递时须做urlencode<br><a href="http://apix.sinaapp.com/map/?appkey=trialuser&amp;lat=39.915&amp;lng=116.404&amp;entity=%E5%8C%BB%E9%99%A2" target="_blank" rel="external">http://apix.sinaapp.com/map/?appkey=trialuser&amp;lat=39.915&amp;lng=116.404&amp;entity=%E5%8C%BB%E9%99%A2</a></p>
+<ol>
+<li>菜谱 [20140104]</li>
+</ol>
+<p>name: 菜谱名称，传递时须做urlencode<br><a href="http://apix.sinaapp.com/recipe/?appkey=trialuser&amp;name=%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4" target="_blank" rel="external">http://apix.sinaapp.com/recipe/?appkey=trialuser&amp;name=%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4</a></p>
+<ol>
+<li>手机号码归属地查询接口 [20140105]</li>
+</ol>
+<p>number: 手机号码<br><a href="http://apix.sinaapp.com/mobilephone/?appkey=trialuser&amp;number=13456789000" target="_blank" rel="external">http://apix.sinaapp.com/mobilephone/?appkey=trialuser&amp;number=13456789000</a></p>
+<ol>
+<li>身份证归属查询查询接口 [20140105]</li>
+</ol>
+<p>number: 15或18位身份证号码<br><a href="http://apix.sinaapp.com/idcard/?appkey=trialuser&amp;number=542621201212210003" target="_blank" rel="external">http://apix.sinaapp.com/idcard/?appkey=trialuser&amp;number=542621201212210003</a></p>
+<ol>
+<li>电视节目表 [20140116]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/tvprogram/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/tvprogram/?appkey=trialuser</a></p>
+<ol>
+<li>IP地址查询接口 [20140116]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/ip/?appkey=trialuser&amp;ip=202.203.208.80" target="_blank" rel="external">http://apix.sinaapp.com/ip/?appkey=trialuser&amp;ip=202.203.208.80</a></p>
+<ol>
+<li>每日宜忌查询接口 [20140116][源网站已关闭，失效]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/almanac/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/almanac/?appkey=trialuser</a></p>
+<ol>
+<li>疾病查询 [20140121]</li>
+</ol>
+<p>name: 疾病名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/illness/?appkey=trailuser&amp;name=%E6%84%9F%E5%86%92" target="_blank" rel="external">http://apix.sinaapp.com/illness/?appkey=trailuser&amp;name=%E6%84%9F%E5%86%92</a></p>
+<ol>
+<li><p>号码吉凶</p>
+</li>
+<li><p>邮政编码</p>
+</li>
+</ol>
+<p>code：邮政编码<br><a href="http://apix.sinaapp.com/postcode/?appkey=trailuser&amp;code=518057" target="_blank" rel="external">http://apix.sinaapp.com/postcode/?appkey=trailuser&amp;code=518057</a></p>
+<ol>
+<li>产品比价查询接口 [20140118]</li>
+</ol>
+<p>name: 商品名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/price/?appkey=trialuser&amp;name=iphone%205s" target="_blank" rel="external">http://apix.sinaapp.com/price/?appkey=trialuser&amp;name=iphone%205s</a></p>
+<ol>
+<li>食物热量查询接口 [20140120]</li>
+</ol>
+<p>name：食物名<br><a href="http://apix.sinaapp.com/calorie/?appkey=trailuser&amp;name=%E9%B8%A1%E8%9B%8B" target="_blank" rel="external">http://apix.sinaapp.com/calorie/?appkey=trailuser&amp;name=%E9%B8%A1%E8%9B%8B</a></p>
+<ol>
+<li>人品计算 [20140118]</li>
+</ol>
+<p>name: 人名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/moral/?appkey=trialuser&amp;name=%E5%BC%A0%E4%B8%89" target="_blank" rel="external">http://apix.sinaapp.com/moral/?appkey=trialuser&amp;name=%E5%BC%A0%E4%B8%89</a></p>
+<ol>
+<li>违章查询 [20140118]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/peccancy/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/peccancy/?appkey=trialuser</a></p>
+<ol>
+<li>药物查询 [20140117]</li>
+</ol>
+<p>name: 药物名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/medicine/?appkey=trialuser&amp;name=%E9%9D%92%E9%9C%89%E7%B4%A0" target="_blank" rel="external">http://apix.sinaapp.com/medicine/?appkey=trialuser&amp;name=%E9%9D%92%E9%9C%89%E7%B4%A0</a></p>
+<ol>
+<li>周易算命 [20140117]</li>
+</ol>
+<p>name: 人名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/fortune/?appkey=trailuser&amp;name=%E5%BC%A0%E4%B8%89" target="_blank" rel="external">http://apix.sinaapp.com/fortune/?appkey=trailuser&amp;name=%E5%BC%A0%E4%B8%89</a></p>
+<ol>
+<li>机票查询 [20140118]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/airline/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/airline/?appkey=trialuser</a></p>
+<ol>
+<li>酒店查询 [20140119]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/hotel/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/hotel/?appkey=trialuser</a></p>
+<ol>
+<li>驾照模拟考试 [20140119]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/drivingtest/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/drivingtest/?appkey=trialuser</a></p>
+<ol>
+<li>在线点歌查询接口 [20140119]</li>
+</ol>
+<p>singer: 歌手名，传递时须做urlencode<br>song: 歌曲名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/music/?appkey=trialuser&amp;singer=%E5%87%A4%E5%87%B0%E4%BC%A0%E5%A5%87&amp;song=%E6%9C%80%E7%82%AB%E6%B0%91%E6%97%8F%E9%A3%8E" target="_blank" rel="external">http://apix.sinaapp.com/music/?appkey=trialuser&amp;singer=%E5%87%A4%E5%87%B0%E4%BC%A0%E5%A5%87&amp;song=%E6%9C%80%E7%82%AB%E6%B0%91%E6%97%8F%E9%A3%8E</a></p>
+<ol>
+<li>车牌归属地吉凶 [20140119]</li>
+</ol>
+<p>number：车牌号码。例如：湘C12345，传递时须做urlencode<br><a href="http://apix.sinaapp.com/platenumber/?appkey=trialuser&amp;number=%E6%B9%98C12345" target="_blank" rel="external">http://apix.sinaapp.com/platenumber/?appkey=trialuser&amp;number=%E6%B9%98C12345</a></p>
+<ol>
+<li>冬吴相对论 [20140120]</li>
+</ol>
+<p>number：节目期号<br><a href="http://apix.sinaapp.com/dongwu/?appkey=trialuser&amp;number=123" target="_blank" rel="external">http://apix.sinaapp.com/dongwu/?appkey=trialuser&amp;number=123</a></p>
+<ol>
+<li>每日英语 [20140120]</li>
+</ol>
+<p>type：类型，目前支持translation, listening<br><a href="http://apix.sinaapp.com/daily/?appkey=trailuser&amp;type=translation" target="_blank" rel="external">http://apix.sinaapp.com/daily/?appkey=trailuser&amp;type=translation</a></p>
+<ol>
+<li>实时路况 [20140120]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/traffic/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/traffic/?appkey=trialuser</a></p>
+<ol>
+<li>菜价查询 [20140121]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/foodprice/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/foodprice/?appkey=trialuser</a></p>
+<ol>
+<li>成语词典 [20140121]</li>
+</ol>
+<p>word：成语名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/idiom/?appkey=trailuser&amp;word=%E6%96%B9%E5%85%B4%E6%9C%AA%E8%89%BE" target="_blank" rel="external">http://apix.sinaapp.com/idiom/?appkey=trailuser&amp;word=%E6%96%B9%E5%85%B4%E6%9C%AA%E8%89%BE</a></p>
+<ol>
+<li>人脸识别接口 [20140315]</li>
+</ol>
+<p>picurl：图片地址，传递时须做urlencode</p>
+<p><a href="http://apix.sinaapp.com/face/?appkey=trialuser&amp;picurl=http://www.ineiyi.com/uploads/allimg/1312/79-131213142315.jpg" target="_blank" rel="external">http://apix.sinaapp.com/face/?appkey=trialuser&amp;picurl=http://www.ineiyi.com/uploads/allimg/1312/79-131213142315.jpg</a></p>
+<ol>
+<li>四六级成绩查询接口 [20140317]</li>
+</ol>
+<p><a href="http://apix.sinaapp.com/cet/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/cet/?appkey=trialuser</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/assets/newImg/php1.png&quot; alt=&quot;第三方接口文档&quot;&gt; &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;天气预报接口 [20130901]&lt;br&gt;city：城市名，传递时须做urlencode&lt;br&gt;&lt;a href=&quot;http://apix.s
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="//sushaolian.me/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何避免浏览器兼容问题</title>
+    <link href="//sushaolian.me/2016/10/21/brower/"/>
+    <id>//sushaolian.me/2016/10/21/brower/</id>
+    <published>2016-10-20T16:02:00.000Z</published>
+    <updated>2016-11-25T13:48:38.094Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/assets/newImg/cat.jpg" alt=""> </p>
+<p>概述:浏览器的样式BUG实际上是由于浏览器解析规则不一样导致的，所以说为什么我们自己写出来的一个页面，在不同的浏览器的样式都不尽相同。常常这样的BUG会引起诸多人的烦恼，有时甚至让人感到绝望。本文主要讲解一些比较容易遇到的浏览器的样式BUG，以及解决办法。</p>
+<p>1、高度不适应<br>高度不适应是当内层对象的高度发生变化时外层高度不能自动进行调节，特别是当内层对象使用margin 或padding时。</p>
+<blockquote>
+<p>例子:</p>
+<p>#box {background-color:blue; } </p>
+<p>#box p {margin-top: 20px;margin-bottom: 20px; text-align:center; } </p>
+<p>&lt;div id=”box”</p>
+<p></p><p>p对象中的内容&lt;/p<br>&lt;/div</p>
+<p>解决办法:在P对象上下各加2个空的div对象CSS代码：.1{height:0px;overflow:hidden;}或者为DIV加上border属性。</p>
+</blockquote>
+<p>2、IE6下为什么图片有空隙产生</p>
+<p>解决这个BUG的方法也有很多,可以是改变html的排版,或者设置img 为display:block 或者设置vertical-align 属性为 vertical-align:top | bottom |middle |text-bottom 都可以解决. </p>
+<p>3、DIV浮动IE文本产生3像素的bug<br> 左边对象浮动，右边采用外补丁的左边距来定位，右边对象内的文本会离左边有3px的间距。<br>    例子:</p>
+<pre><code>#box{ float:left; width:800px;}   
+#left{ float:left; width:50%;}   
+#right{ width:50%;}   *html #left{ margin-right:-3px; //这句是关键}
+&lt;div id=&quot;box&quot;  
+&lt;div id=&quot;left&quot;&gt;&lt;/div  
+&lt;div id=&quot;right&quot;&gt;&lt;/div  
+&lt;/div&gt;
+</code></pre><p>4、IE与宽度和高度的问题</p>
+<p>IE 不认得min-width和min-height这两个定义，但实际上它把正常的width和height当作有min的情况来使。这样问题就大了，如果只用宽度和高度，正常的浏览器里这两个值就不会变，如果只用min-width和min-height的话，IE下面根本等于没有设置宽度和高度。比如要设置背景图片，这个宽度是比较重要的。</p>
+<p>要解决这个问题，可以这样：    </p>
+<blockquote>
+<p>#box{width:80px; height:35px;} html&gt;body #box{ width:auto; height:auto; min-width:80px; min-height: 35px;}<br>5、margin加倍的问题<br>div被float修饰，在IE下设置的margin会加倍。这是一个IE6都存在的BUG。<br>    例如:<br>    <div id="”imfloat”"></div><br>    相应的CSS为</p>
+<pre><code>#imfloat
+{
+   float:left;
+   margin:5px;
+   display:inline;
+}
+</code></pre></blockquote>
+<p>解决方法:在这个div里面加上display:inline;</p>
+<p>6、浮动IE产生的双倍距离</p>
+<p>#box{ float:left; width:100px; margin:0 0 0 100px; //这种情况之下IE会产生200px的距离 display:inline; //使浮动忽略}<br>这里细说一下block与inline两个元素：<br>1、block元素的特点是,总是在新行上开始,高度,宽度,行高,边距都可以控制(块元素);<br>2、Inline元素的特点是,和其他元素在同一行上,不可控制(内嵌元素);    </p>
+<blockquote>
+<p>#box{ display:block; //可以为内嵌元素模拟为块元素 display:inline; //实现同一行排列的效果 diplay:table; }</p>
+</blockquote>
+<p>7、div中元素的垂直居中问题<br>vertical-align:middle; 将行距增加到和整个DIV一样高line-height:200px;然后插入文字，就垂直居中了。缺点是要控制内容不要换行;</p>
+<p>8、flaot的div闭合;清除浮动;自适应高度;<br>① 例如：&lt;#div id=”floatA” &gt;&lt;#div id=”floatB” &gt;&lt;#div id=” NOTfloatC” &gt;这里的NOTfloatC并不希望继续平移，而是希望往下排。(其中floatA、floatB的属性已经设置为 float:left;)   </p>
+<p>这段代码在IE中毫无问题，问题出在FF。原因是NOTfloatC并非float标签，必须将float标签 闭合。在 &lt;#div class=”floatB”&gt; &lt;#div class=”NOTfloatC”&gt;之间加上 &lt; #div class=”clear”&gt;这个div一定要注意位置，而且必须与两个具有float属性的div同级，之间不能存在嵌套关系，否则会产生异常。 并且将clear这种样式定义为为如下即可： .clear{ clear:both;}    </p>
+<p>②作为外部 wrapper 的 div 不要定死高度,为了让高度能自动适应，要在wrapper里面加上overflow:hidden; 当包含float的 box的时候，高度自动适应在IE下无效，这时候应该触发IE的layout私有属性(万恶的IE啊！)用zoom:1;可以做到，这样就达到了兼容。<br>例如某一个wrapper如下定义：<br>.colwrapper{ overflow:hidden; zoom:1; margin:5px auto;}    </p>
+<p>③对于排版,我们用得最多的css描述可能就是float:left有的时候我们需要在n栏的float div后面做一个统一的背景,譬如:   </p>
+<pre><code>&gt; &lt;div id=”page”&gt;  
+&gt; &lt;div id=”left”&gt;&lt;/div&gt;  
+&gt; &lt;div id=”center”&gt;&lt;/div&gt; 
+&gt; &lt;div id=”right”&gt;&lt;/div&gt;   
+&gt; &lt;/div&gt;  
+</code></pre><p>比 如我们要将page的背景设置成蓝色,以达到所有三栏的背景颜色是蓝色的目的,但是我们会发现随着left center right的向下拉长,而 page居然保存高度不变,问题来了,原因在于page不是float属性,而我们的page由于要居中,不能设置成float,所以我们应该这样解决   </p>
+<pre><code>&gt; &lt;div id=”page”&gt;
+&gt; &lt;div id=”bg” style=”float:left;width:100%”&gt;  
+&gt; &lt;div id=”left”&gt;&lt;/div&gt; 
+&gt; &lt;div id=”center”&gt;&lt;/div&gt;  
+&gt; &lt;div id=”right”&gt;&lt;/div&gt; 
+&gt; &lt;/div&gt; 
+&gt; &lt;/div&gt; 
+</code></pre><p>再嵌入一个float left而宽度是100%的DIV解决之   </p>
+<p>④万能float 闭合(非常重要!)<br>关 于 clear float 的原理可参见 [How To Clear Floats Without Structural Markup],将以下 代码加入Global CSS 中,给需要闭合的div加上 class=”clearfix” 即可,屡试不爽.    </p>
+<blockquote>
+<pre><code>.clearfix:after { content:&quot;.&quot;; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix { display:inline-block; }
+.clearfix {display:block;}    
+</code></pre></blockquote>
+<p>或者这样设置：.hackbox{ display:table; //将对象作为块元素级的表格显示}   </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/assets/newImg/cat.jpg&quot; alt=&quot;&quot;&gt; &lt;/p&gt;
+&lt;p&gt;概述:浏览器的样式BUG实际上是由于浏览器解析规则不一样导致的，所以说为什么我们自己写出来的一个页面，在不同的浏览器的样式都不尽相同。常常这样的BUG会引起诸多人的烦恼，有时
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="//sushaolian.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="浏览器" scheme="//sushaolian.me/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目展示</title>
+    <link href="//sushaolian.me/2016/10/08/items/"/>
+    <id>//sushaolian.me/2016/10/08/items/</id>
+    <published>2016-10-08T02:36:00.000Z</published>
+    <updated>2016-11-24T16:58:07.358Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目名称：广州京牛教育科技有限公司<br><a href="http://www.jn199.cn/" title="广州京牛教育科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box1.jpg" alt=""><br></a><br>项目名称：天元乾程科技有限公司<br><a href="http://www.sctyqc.cn/index.html" title="天元乾程科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box2.jpg" alt=""><br></a><br>项目名称：四川卓煌企业管理有限公司<br><a href="http://www.sczhuohuang.com/" title="四川卓煌企业管理有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box3.jpg" alt=""><br></a><br>项目名称：成都兰途网络科技有限公司<br><a href="http://www.lantunet.com/" title="成都兰途网络科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box4.jpg" alt=""><br></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;项目名称：广州京牛教育科技有限公司&lt;br&gt;&lt;a href=&quot;http://www.jn199.cn/&quot; title=&quot;广州京牛教育科技有限公司&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;br&gt;&lt;img src=&quot;/assets/newImg/demo
+    
+    </summary>
+    
+    
+      <category term="作品" scheme="//sushaolian.me/tags/%E4%BD%9C%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS详解——文档流</title>
+    <link href="//sushaolian.me/2016/07/25/css-wendang/"/>
+    <id>//sushaolian.me/2016/07/25/css-wendang/</id>
+    <published>2016-07-24T16:58:00.000Z</published>
+    <updated>2016-11-25T14:05:12.645Z</updated>
+    
+    <content type="html"><![CDATA[<p>将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。<br>每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。</p>
+<p>内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。</p>
+<p>有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位， 固定定位。 但是在IE中浮动元素也存在于文档流中（还让我觉得这样很合理&gt;&lt;）。</p>
+<p>浮动元素不占任何正常文档流空间，而浮动元素的定位还是基于正常的文档流，然后从文档流中抽出并尽可能远的移动至左侧或者右侧。文字内容会围绕在浮动元素周围。当一个元素从正常文档流中抽出后，仍然在文档流中的其他元素将忽略该元素并填补他原先的空间。</p>
+<p>浮动概念让人迷惑根源在于浏览器对理论的解读造成的。只能说很多人以IE做标准，其实它不是。</p>
+<p>基于文档流， 我们可以很容易理解以下的定位模式：</p>
+<ol>
+<li>相对定位， 即相对于元素在文档流中位置进行偏移。 但保留原占位。</li>
+<li>绝对定位， 即完全脱离文档流， 相对于position属性非static值的最近父级元素进行偏移。</li>
+<li>固定定位， 即完全脱离文档流， 相对于视区进行偏移。</li>
+</ol>
+<p>几个问题</p>
+<ol>
+<li>作为三大基本元素之一的内联元素。 它跟块级元素的主要区别在哪？</li>
+<li>Clear属性取right值时怎么理解？ 貌似实验情况总跟理论不符.</li>
+<li>内联元素是什么意思呢？什么是块级别元素？</li>
+</ol>
+<p>《CSS权威指南》中文字显示：任何不是块级元素的可见元素都是内联元素。其表现的特性是“行布局”形式，这里的“行布局”的意思就是说其表现形式始终以行进行显示。比如，我们设定一个内联元素border-bottom:1px solid #000;时其表现是以每行进行重复，每一行下方都会有一条黑色的细线。如果是块级元素那么所显示的的黑线只会在块的下方出现。</p>
+<p>p、h1、或div等元素常常称为块级元素，这些元素显示为一块内容；Strong。span等元素称为行内元素，它们的内容显示在行中，即“行内框”。（可以使用display=block将行内元素转换成块元素，display=none表示生成的元素根本没有框，也既不显示元素，不占用文档中的空间）</p>
+<pre><code>&gt; 行内就是在一行内的元素，只能放在行内；块级元素，就是一个四方块，可以放在页面上任何地方。
+&gt; 说白了，行内元素就好像一个单词；块级元素就好像一个段落，如果不另加定义的话，它将独立一行出现。
+&gt; 一般的 块级元素诸如段落&lt;p&gt;、标 题&lt;h1&gt;&lt;h2&gt;...、列表。&lt;ul&gt;&lt;ol&gt;&lt;li、表格&lt;table&gt;、表单&lt;form&gt;、DIV&lt;div&gt;和BODY&lt;body&gt;等元素。而内联元素则如: 表单元素&lt;input&gt;、超级链接&lt;a&gt;、图像&lt;img&gt;、&lt;span........
+&gt; 块级无素的显著特点是：每个块级元素都是从一个新行开始显示，而且其后的无素也需另起一行进行显示。
+&gt; &lt;span&gt;在CSS定义中属于一个行内元素，而&lt;div&gt;是块级元素。
+</code></pre><p>对于学过CSS的人来说一听就能明白。可对于新手来说不易理解，我主要对新手说通熟点吧!</p>
+<p>用容器这一词会更容易形象理解它们的存在与用途，行内元素相当一个小容器，而div相当于一个大容器，大容器当然可以放一个小容器了。<span>就是小容器，这样一说你也许会在脑海中有一个初步的印象了吧，如果我们想在大容器中装一些清水。但我也想在里装一些墨水怎么 办？很简单，我们把小容器拿出来装上墨水然后放入大容器里的清水中不就成了吗。</span></p>
+<p>块元素（block element）一般是其他元素的容器元素<br>块元素一般都从新行开始，它可以容纳内联元素和其他块元素。常见块元素是段落标签’P”。“form”这个块元素比较特殊，它只能用来容纳其他块元素。</p>
+<p>如果没有css的作用，块元素会顺序以每次另起一行的方式一直往下排。而有了css以后，我们可以改变这种html的默认布局模式，把块元素摆放到你想要 的位置上去。而不是每次都愚蠢的另起一行。需要指出的是，table标签也是块元素的一种，table based layout和css based layout从一般使用者（不包括视力障碍者、盲人等）的角度来看这两种布局，除了页面载入速度的差别外，没有其他的差别。但是如果普通使用者不经意点了 查看页面源代码按钮后，两者所表现出来的差异就非常大了。基于良好重构理念设计的css布局页面源码，至少也能让没有web开发经验的普通使用者把内容快速的读懂。从这个角度来说，css layout code应该有更好的美学体验吧。</p>
+<p>你能够把块容器元素div想象成一个个box，或者如果你玩过剪贴文载的话，那就更加容易理解了。我们先把需要的文章从各种报纸、杂志总剪 下来。每块剪下来的内容就是一个block。然后我们把这些纸块按照自己的排版意图，用胶水重新贴到一张空白的新纸上。这样就形成了你自己独特的文摘快报了。作为一种技术的延伸，网页布局设计也遵循了同样的模式。</p>
+<p>内联元素（inline element）一般都是基于语义级（semantic）的基本元素。内联元素只能容纳文本或者其他内联元素，常见内联元素 “a”。</p>
+<p>块元素（block element）和内联元素（inline element）都是html规范中的概念。块元素和内联元素的基本差异是块元素一般都从新行开始。而当加入了css控制以后，块元素和内联元素的这种属 性差异就不成为差异了。比如，我们完全可以把内联元素cite加上display:block这样的属性，让他也有每次都从新行开始的属性。</p>
+<p>可变元素的基本概念就是他需要根据上下文关系确定该元素是块元素或者内联元素。可变元素还是属于上述两种元素类别，一旦上下文关系确定了他的类别，他就要遵循块元素或者内联元素的规则限制。大致的元素分类见全文。</p>
+<p>关于inline element的中文叫法，有多种内联元素、内嵌元素、行内元素、直进式元素。基本上没有统一的翻译，爱怎么叫怎么叫吧。另外提到内联元素，我们会想到有个display的属性是display:inline;这个属性能够修复著名的IE双倍浮动边界问题。</p>
+<h2 id="块元素（block-element）"><a href="#块元素（block-element）" class="headerlink" title="块元素（block element）"></a>块元素（block element）</h2><ol>
+<li>address 地址</li>
+<li>blockquote 块引用</li>
+<li>center 举中对齐块</li>
+<li>dir 目录列表</li>
+<li>div 常用块级容易，也是css layout的主要标签</li>
+<li>dl 定义列表</li>
+<li>fieldset form控制组</li>
+<li>form 交互表单</li>
+<li>h1 大标题</li>
+<li>h2 副标题</li>
+<li>h3 3级标题</li>
+<li>h4 4级标题</li>
+<li>h5 5级标题</li>
+<li>h6 6级标题</li>
+<li>hr 水平分隔线</li>
+<li>isindex input prompt</li>
+<li>menu 菜单列表</li>
+<li>noframes frames可选内容（对于不支持frame的浏览器显示此区块内容）</li>
+<li>noscript 可选脚本内容（对于不支持script的浏览器显示此内容）</li>
+<li>ol 排序列表</li>
+<li>p 段落</li>
+<li>pre 格式化文本</li>
+<li>table 表格</li>
+<li>ul 非排序列表</li>
+</ol>
+<h2 id="内联元素（inline-element）"><a href="#内联元素（inline-element）" class="headerlink" title="内联元素（inline element）"></a>内联元素（inline element）</h2><ol>
+<li>a - 锚点</li>
+<li>abbr - 缩写</li>
+<li>acronym - 首字</li>
+<li>b - 粗体（不推荐）</li>
+<li>bdo - bidi override</li>
+<li>big - 大字体</li>
+<li>br - 换行</li>
+<li>cite - 引用</li>
+<li>code - 计算机代码（在引用源码的时候需要）</li>
+<li>dfn - 定义字段</li>
+<li>em - 强调</li>
+<li>font - 字体设定（不推荐）</li>
+<li>i - 斜体</li>
+<li>img - 图片</li>
+<li>input - 输入框</li>
+<li>kbd - 定义键盘文本</li>
+<li>label - 表格标签</li>
+<li>q - 短引用</li>
+<li>s - 中划线（不推荐）</li>
+<li>samp - 定义范例计算机代码</li>
+<li>select - 项目选择</li>
+<li>small - 小字体文本</li>
+<li>span - 常用内联容器，定义文本内区块</li>
+<li>strike - 中划线</li>
+<li>strong - 粗体强调</li>
+<li>sub - 下标</li>
+<li>sup - 上标</li>
+<li>textarea - 多行文本输入框</li>
+<li>tt - 电传文本</li>
+<li>u - 下划线</li>
+<li>var - 定义变量</li>
+<li>可变元素</li>
+<li>可变元素为根据上下文语境决定该元素为块元素或者内联元素。</li>
+<li>applet - java applet</li>
+<li>button - 按钮</li>
+<li>del - 删除文本</li>
+<li>iframe - inline frame</li>
+<li>ins - 插入的文本</li>
+<li>map - 图片区块（map）</li>
+<li>object - object对象</li>
+<li>script - 客户端脚本</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。&lt;br&gt;每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。&lt;/p&gt;
+&lt;p&gt;内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成
+    
+    </summary>
+    
+    
+      <category term="css" scheme="//sushaolian.me/tags/css/"/>
+    
+      <category term="前端" scheme="//sushaolian.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo在github的搭建</title>
+    <link href="//sushaolian.me/2016/06/21/hexo-base/"/>
+    <id>//sushaolian.me/2016/06/21/hexo-base/</id>
+    <published>2016-06-20T16:02:00.000Z</published>
+    <updated>2016-11-25T13:13:07.893Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实用hexo搭建博客，简单便捷，而且好看！下面我分享一下我的做法吧！<br><img src="/assets/newImg/hexo1.jpg" alt="安装图片"> </p>
+<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>下载-安装<br><img src="/assets/newImg/hexo2.jpg" alt="安装"><br>参考链接：<br><a href="http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html" target="_blank" rel="external">http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html</a><br>打开Telent客户端（如果没打开会出错）<br>如果是windowXP<br>输入<br>win7:<br><img src="/assets/newImg/hexo3.jpg" alt="win7"><br>xp:<br>在[运行]中输入”services.msc”，确定后出现[服务管理器]；<br>或者在[控制面板]里进入[管理工具]，运行[服务]就会出现[服务管理器]；<br>在[服务管理器]中找到[Telnet] 项，按键盘的”t”-“e”-“l”键很快就能找着；<br>在双击后出现的[属性对话框]中[启动类型]改为[自动]或[手动]；<br>启动Telnet服务<br>在[属性对话框]中的[服务状态]项中点击[启动]；<br>在[运行]中输入”cmd”，确定后在光标提示符输入”net start telnet”回车，当屏幕显示”Telnet服务正在启动…Telnet 服务已经启动成功。”后，说明Telnet服务已经在你本机启动了。</p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p><img src="/assets/newImg/hexo4.jpg" alt="git"><br>点击下一步完成即可</p>
+<h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>生成SSH密钥<br>查看是否已经有了ssh密钥：</p>
+<blockquote>
+<p><code>cd ~/.ssh</code><br>如果没有密钥则不会有此文件夹，有则备份删除<br>生成密钥：<br><code>$ ssh-keygen -t rsa -C “you@gmail.com”</code><br><code>按3个回车，密码为空。</code><br>最后得到了两个文件：id_rsa和id_rsa.pub<br><img src="/assets/newImg/hexo5.jpg" alt="安装图片"><br>打开github网站<br>在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。<br>选择Settings<br><img src="/assets/newImg/hexo6.jpg" alt="github"><br>选择 SSH and GDP keys<br><img src="/assets/newImg/hexo7.jpg" alt="githubkey"><br>点击new ssh key<br><img src="/assets/newImg/hexo8.jpg" alt="sshkey"><br>添加id_rsa.pub里面的公钥到key中提交即可<br><img src="/assets/newImg/hexo9.jpg" alt="安装图片"></p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><pre><code>npm install hexo-deployer-git --save
+</code></pre><p>安装HEXO<br>官网：<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">https://hexo.io/zh-cn/</a><br>右击选择 Bash<br><img src="/assets/newImg/hexo10.jpg" alt="安装图片"><br>    选择想要存放盘 cd</p>
+</blockquote>
+<pre><code>npm install hexo-cli -g//安装
+
+hexo -v//查看版本号（如果可以显示说明安装成功）
+
+hexo init myblog//初始化一个博客（myblog随便取）
+
+cd myblog//选择（同上面myblog的取名）
+
+npm install//初始化博客
+
+hexo g//生成静态网页（输入后查看根目录是否有public文件夹，如果没有请重装）
+
+hexo server//开启服务器
+</code></pre><p><img src="/assets/newImg/hexoyy.jpg" alt="安装图片"><br>在浏览器中输入：<a href="http://127.0.0.1:4000/" target="_blank" rel="external">http://127.0.0.1:4000/</a><br><img src="/assets/newImg/hexo11.jpg" alt="安装图片"><br>安装完成</p>
+<h2 id="建github库与推送"><a href="#建github库与推送" class="headerlink" title="建github库与推送"></a>建github库与推送</h2><p><img src="/assets/newImg/hexo12.jpg" alt="安装图片"><br>复制克隆码（一定要是SSH的）<br><img src="/assets/newImg/hexo13.jpg" alt="安装图片"><br>打开博客存放位置进入_config.yml（配置文件）<br><img src="/assets/newImg/hexo14.jpg" alt="安装图片"></p>
+<p>在deploy:位置输入</p>
+<blockquote>
+<pre><code>deploy://前面不能有有空格 
+type: git
+repo: git@github.com:crazezy2333/crazezy2333.github.io.git //克隆码
+branch: master
+</code></pre><p>推送<br>hexo clean//清除原静态网页<br>hexo generate//生成静态网页<br>hexo deploy//推送<br>完成</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实用hexo搭建博客，简单便捷，而且好看！下面我分享一下我的做法吧！&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo1.jpg&quot; alt=&quot;安装图片&quot;&gt; &lt;/p&gt;
+&lt;h3 id=&quot;安装node-js&quot;&gt;&lt;a href=&quot;#安装node-js&quot; class
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="//sushaolian.me/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当我想用css3实现一个动作类库</title>
+    <link href="//sushaolian.me/2015/12/31/css3-animater/"/>
+    <id>//sushaolian.me/2015/12/31/css3-animater/</id>
+    <published>2015-12-30T16:02:00.000Z</published>
+    <updated>2016-11-25T12:26:54.138Z</updated>
+    
+    <content type="html"><![CDATA[<p>当我如是想的时候，事实上我已想了很久。后来被各种纠结的差事冲乱了生活和心绪，并且心里认为这是个妥当无比的借口。找到了借口后一拖再拖，果然认识到deadline才是第一生产力的真理。最近，却是被朋友的一句话逼急了，他跟我说：我们的业务用到了css4的新属性！</p>
+<p>这句话的意思，大体等同于说，我买到了一个iphone6，亲你怎么看？<br><a id="more"></a><br>它在我脑中纷乱起舞，那是plans vs zombies中一大波僵尸正在逼近的场景。是的，再不行动，就要被技术的狂潮给淹没了！日前，就我的浅薄见闻，当html5越来越多的功能被应用到业务主功能上，诸如本地存储，拖拽优化，postMessage通信…css3却是另一番光景。一方面，一个个绚丽效果的css3-demo在网上被围观与叫好，大家却又在为浏览器兼容性和差异性这座大山望而却步。css3技术在大家眼中更偏向于一种优化的体验，等于说，你不敢用它来实现网站的key point，即使是一个圆角，不问技术细节的产品经理也会想使用图片来代替的。</p>
+<p>因此，缘由可以归结为：我忍够了。要玩，就玩个大的。</p>
+<p>其实虽然我想了很久，但这个“想”，更偏向于单纯的幻想，而不是思考。暑假的时候，在腾讯大讲堂看到有哥们分享css3与js的动画效率比较的演示，就萌生了这个想法。现在，在正式尝试编写类库之前，我想先写2~3个实验demo，来看看技术的复杂度以及一些可以避免的暗礁，并做好一些记录。当然这些demo必须得使用最新的chrome，firefox，opera以及ie8，9才能正常运行。</p>
+<p>##<strong>第一个实验：人物sprite图动画实现，按键与位移的衔接</strong><br>请按键盘方向键控制人物运动：</p>
+<iframe id="demoIframe" src="/assets/demo/pre_css3_demo/demo.html" width="641" height="483" scrolling="no"></iframe>
+
+<p>##<strong>最深的体会</strong><br><strong>我的js代码需要怎样“辅助”css3？</strong><br>按照我的理解，如果是说一个dom元素的“动作”的话，完全可以用纯css3来实现，而且你可以将dom的动作串连起来。<br>例如：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> q-down &#123;</div><div class="line">     0%&#123;</div><div class="line">          <span class="attribute">-webkit-transform</span>:<span class="built_in">rotate</span>(0deg);</div><div class="line">          <span class="attribute">top</span>:<span class="number">10px</span>;</div><div class="line">     &#125;</div><div class="line">     33%&#123;</div><div class="line">          <span class="attribute">-webkit-transform</span>: <span class="built_in">scale</span>(1.5);</div><div class="line">          <span class="attribute">top</span>:<span class="number">147px</span>;</div><div class="line">     &#125;</div><div class="line">     66%&#123;</div><div class="line">          <span class="attribute">top</span>:<span class="number">10px</span>;</div><div class="line">          <span class="attribute">-webkit-transform</span>: <span class="built_in">translate</span>(50px,50px);</div><div class="line">     &#125;</div><div class="line">    100% &#123;</div><div class="line">         <span class="attribute">top</span>:<span class="number">147px</span>;</div><div class="line">         <span class="attribute">-webkit-transform</span>:<span class="built_in">rotate</span>(45deg);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">    <span class="attribute">-webkit-animation</span>:q-down  ease;</div><div class="line">    <span class="attribute">-webkit-animation-duration</span>: <span class="number">2s</span>;</div><div class="line">    <span class="attribute">-webkit-animation-timing-function</span>: linear;</div><div class="line">    <span class="attribute">-webkit-transform</span>:<span class="built_in">rotate</span>(45deg);</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">background</span>: red;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">top</span>: <span class="number">147px</span>;</div><div class="line">    <span class="attribute">left</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>dom元素会在0%，33%，66%，100%这些时间点上做出相应的效果响应。<br><strong>这样的动作序列还会有什么问题吗？</strong><br>在demo当中，我设置了按一下“左”键，人物向左偏移一格，按一下“下”键，人物下移一格，于是我就遇到了这样的两种情况：<br>    1、用户按下“下”，人物向下偏移动作完成后，他仍不放手，此时同时按了“左”<br>    我认为此时用户在使用“双键”，这时人物会再向左下方向都偏移一格。<br>    2、用户“几乎”同时按下“下”和“左”，由于js每次只能检测单键的keycode<br>    程序会判断用户是先按下了某个键，再使用了双键。<br>    而用户之所以“几乎”同时按下，本是希望只执行“双键”的。</p>
+<p><img src="/assets/blogImg/css3_anm.jpg" alt="两种情况"><br>1与2的区别，其实就是双键产生时，两个按键的时间间隔的区别。时间间隔长，用户是需要1这种效果的，而时间间隔短，用户就是想只执行“双键”。但程序是固定的，无论时间间隔有多短，在它看来就是有先后，因此程序认为2和1是一样的。我在demo里，就用了时间戳的方式，而这种方式，其实是“投机取巧”的一种方式。</p>
+<p>回到上面那个问题来，这样的纯css3动作序列有什么问题？时间的问题更深入一点我可以得到结论：<br>    那就是无法侦听一个css3动作是否已经结束。<br>如果我能够侦听动作是否正在执行，那么一切就好办了，如果前动作已完成，我就像情况1一样“先单键再双键”去操作，如果前动作未完成，我就判断用户是想只执行“双键”。</p>
+<p>OK，js代码就是要像jquery的animate方法一样，构造一个动作的队列，存放用户积累下来的动作，并作好回调判断。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当我如是想的时候，事实上我已想了很久。后来被各种纠结的差事冲乱了生活和心绪，并且心里认为这是个妥当无比的借口。找到了借口后一拖再拖，果然认识到deadline才是第一生产力的真理。最近，却是被朋友的一句话逼急了，他跟我说：我们的业务用到了css4的新属性！&lt;/p&gt;
+&lt;p&gt;这句话的意思，大体等同于说，我买到了一个iphone6，亲你怎么看？&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="css3" scheme="//sushaolian.me/tags/css3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css实现九宫格(二)</title>
+    <link href="//sushaolian.me/2015/12/21/css-jiugongge2/"/>
+    <id>//sushaolian.me/2015/12/21/css-jiugongge2/</id>
+    <published>2015-12-21T05:54:00.000Z</published>
+    <updated>2016-11-25T12:56:25.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>书接上回，<a href="http://litten.github.com/2012/12/14/css-jiugongge/" target="_blank" rel="external">上回在这</a>。</p>
+<blockquote>
+<p>9个元素，每个50*50px，排成九宫格<br>默认是border颜色为blue，hover到格子上变成red（兼容到IE6）</p>
+</blockquote>
+<p><img src="/assets/blogImg/jiugongge1.jpg" alt="css题目">     </p>
+<p>题目的关键是解决“公用边”，上次我主要做了两个方面的尝试：</p>
+<blockquote>
+<p>用负margin使元素的border叠加<br>用table的border-collapse实现边框合并</p>
+</blockquote>
+<p>这一次的思路则更加简明，也是个人认为是更好的方法。感谢<a href="http://weibo.com/u/1666828424" target="_blank" rel="external">队长</a>提供的思路。</p>
+<a id="more"></a>
+<p>##<strong>能不能不用border？</strong><br><img src="/assets/blogImg/jiugongge10.jpg" alt="一个格子的透视图，a其实充当了div的“边框”"><br>如果不用border，怎么实现hover后，格子四周变红呢？那肯定是两个dom嵌套在一起，一大一小，小的dom作为“格子”，大的dom作为格子的红色“边框”。先看我初始化的一个格子设定：<br>html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"test"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>初始css:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">	#test div&#123;</div><div class="line">		width: 50px;</div><div class="line">		line-height: 50px;</div><div class="line">		text-align:center;</div><div class="line">		background: #AAA;</div><div class="line">	&#125;</div><div class="line">	#test a&#123;</div><div class="line">		width: 55px;</div><div class="line">		line-height: 55px;</div><div class="line">		float: left;</div><div class="line">	&#125;</div><div class="line">	#test a:hover&#123;</div><div class="line">		background: red;</div><div class="line">	&#125;</div><div class="line">```css</div><div class="line">由于a标签设置了宽度为55px，div标签设置了宽度为50px，这时候格子hover看起来只露出了**右边**的5px红色部分。          </div><div class="line"></div><div class="line">接下来，div添加属性&lt;code&gt;margin-top:5px;margin-right:5px&lt;/code&gt;，这时可以显示**上部**的5px边框。再接着，在div的容器，也就是a标签设置&lt;code&gt;padding-left:5px;padding-bottom:5px;&lt;/code&gt;，使格子**左边框**和**下边框**都显示出来。</div><div class="line"></div><div class="line">![完成一个格子的设置步骤](/assets/blogImg/jiugongge8.jpg)      </div><div class="line"></div><div class="line">那么为什么要将a标签设置为55px，再进行一系列关于margin和padding的设置呢，原因我们最后再说。</div><div class="line"></div><div class="line">因此修改后的css为：</div><div class="line">```css</div><div class="line">	#test div&#123;</div><div class="line">		width: 50px;</div><div class="line">		line-height: 50px;</div><div class="line">		text-align:center;</div><div class="line">		background: #AAA;</div><div class="line">		margin-right:5px;</div><div class="line">		margin-top:5px;</div><div class="line">	&#125;</div><div class="line">	#test a&#123;</div><div class="line">		width: 55px;</div><div class="line">		line-height: 55px;</div><div class="line">		float: left;</div><div class="line">		margin-right: -5px;</div><div class="line">		margin-bottom: -5px;</div><div class="line">	&#125;</div><div class="line">	#test a:hover&#123;</div><div class="line">		background: red;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<p>##<strong>九个格子会怎样？</strong><br>将a标签左浮动，同时添加到九个格子，这时候的效果是：两个格子之间会有10px的距离。</p>
+<p>为解决“公用边”问题，在a标签添加负值的margin：<code>margin-right:-5px;margin-bottom:-5px;</code>。最后将最外层的容器#test的宽度和高度设置为170px(50<em>3+5</em>4)，背景设置为蓝色。这时候大功告成了。</p>
+<p><img src="/assets/blogImg/jiugongge9.jpg" alt="完成九个格子的设置步骤">      </p>
+<p>最终的代码是：<br>html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"test"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>css：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#test</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">170px</span>;</div><div class="line">	<span class="attribute">height</span>:<span class="number">170px</span>;</div><div class="line">	<span class="attribute">background</span>: blue;</div><div class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test</span> <span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">line-height</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">text-align</span>:center;</div><div class="line">	<span class="attribute">background</span>: <span class="number">#AAA</span>;</div><div class="line">	<span class="attribute">margin-right</span>:<span class="number">5px</span>;<span class="comment">/*这句不要也可以*/</span></div><div class="line">	<span class="attribute">margin-top</span>:<span class="number">5px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test</span> <span class="selector-tag">a</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">55px</span>;</div><div class="line">	<span class="attribute">line-height</span>: <span class="number">55px</span>;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">text-decoration</span>: none;</div><div class="line">	<span class="attribute">padding-left</span>: <span class="number">5px</span>;</div><div class="line">	<span class="attribute">padding-bottom</span>: <span class="number">5px</span>;</div><div class="line">	<span class="attribute">margin-right</span>: -<span class="number">5px</span>;</div><div class="line">	<span class="attribute">margin-bottom</span>: -<span class="number">5px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##<strong>巧妙在哪里？</strong></p>
+<ul>
+<li>a标签hover前不设置背景色，露出最外层#test的蓝色背景，看起来格子有蓝色的边框；a标签hover时背景色设置为红色，充当了格子的红色边框；       </li>
+<li>a标签设置为55px是最关键的一点。按照此思路和题目要求，格子是50px大小，边框的dom应该是60px大小。而此时a设置为55px，因为a要设置<code>padding-left:5px;padding-bottom:5px;</code>，刚好a就有60px大小了；而a里面的div要设置<code>margin-top:5px;margin-right:5px</code>（其实margin-right也可以不加）,这时候margin和padding就达到了一个“中和”的效果，使布局不发生偏差。</li>
+</ul>
+<p>点此看<a href="/assets/demo/jiugongge_demo2.html">demo</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;书接上回，&lt;a href=&quot;http://litten.github.com/2012/12/14/css-jiugongge/&quot;&gt;上回在这&lt;/a&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;9个元素，每个50*50px，排成九宫格&lt;br&gt;默认是border颜色为blue，hover到格子上变成red（兼容到IE6）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogImg/jiugongge1.jpg&quot; alt=&quot;css题目&quot;&gt;     &lt;/p&gt;
+&lt;p&gt;题目的关键是解决“公用边”，上次我主要做了两个方面的尝试：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用负margin使元素的border叠加&lt;br&gt;用table的border-collapse实现边框合并&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这一次的思路则更加简明，也是个人认为是更好的方法。感谢&lt;a href=&quot;http://weibo.com/u/1666828424&quot;&gt;队长&lt;/a&gt;提供的思路。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="css" scheme="//sushaolian.me/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx能为前端开发带来什么？</title>
+    <link href="//sushaolian.me/2015/11/03/nginx-in-fe/"/>
+    <id>//sushaolian.me/2015/11/03/nginx-in-fe/</id>
+    <published>2015-11-03T13:30:00.000Z</published>
+    <updated>2016-11-25T12:55:13.065Z</updated>
+    
+    <content type="html"><![CDATA[<p>Nginx那么好，我想去看看。<br>接连逛了两个书城后，我发现并没有Nginx相关的书籍。<br>这就很奇怪！</p>
+<p><img src="/assets/blogImg/nginx0.jpg" alt=""></p>
+<p>Nginx，一名<strong>网红</strong>（网络服务器红人…），就算没有自传和回忆录，争着介绍它的花边新闻也该有吧。</p>
+<p>后来找到仅有的一两本书籍，也直接深入到“源码剖析”的阶段。写得并不十分满意，况且我还不需要这些。<br>后来发现了原因，大概是因为<strong>“使用太简单了，都不值得出书”</strong>。<br>是的，Nginx把纷繁复杂的功能，浓缩成一份简单的配置，极易上手。<br>当它呈现到你面前时，感觉独具匠心。</p>
+<a id="more"></a>
+<h3 id="Nginx与NodeJs"><a href="#Nginx与NodeJs" class="headerlink" title="Nginx与NodeJs"></a>Nginx与NodeJs</h3><p>（这里的标题有点歧义。此处的NodeJs，皆引申为NodeJs所搭建的服务器。）</p>
+<p>有人说，作为一名前端，<strong>我的真爱是NodeJs</strong>。<br>同时也认同，抛去性能之类的比较，单纯从实现的角度，NodeJs编写的服务器也能实现Nginx的各种功能。                </p>
+<p>这些我都赞成，但使用Nginx并不意味着抛弃NodeJs。事实上，它们并不冲突，还可以在一起愉快的玩耍。              </p>
+<p>在业内，这样的模型已很常见：资源转发，反向代理，静态资源处理，负载均衡，这些事情扔给Nginx来处理，只是几行配置的事情；同时在上游，让NodeJs去处理它最擅长的I/O等事情。               </p>
+<p>合理分配各自<strong>擅长</strong>的事情，这样的思路，同样可以运用于前端开发中。                </p>
+<p>以前用NodeJs几百行实现的服务器功能，在npm与github的海洋里花尽心思去寻找的模块，也许在Nginx里是一条成熟的配置。它能帮其分担很多事情，节约了成本。                  </p>
+<h3 id="场景一：环境切换"><a href="#场景一：环境切换" class="headerlink" title="场景一：环境切换"></a>场景一：环境切换</h3><p>前端开发中，经常面临多个部署环境切换的问题。<br>我们通常用配hosts的方式去实现。更优化些，我们将机器的服务绑定了不同的域名：比如正式环境是a.qq.com，测试环境是test.a.qq.com。 </p>
+<p>然而在拓展性和易用性方面，还不足够好。<br>而Nginx作为反向代理，就很容易处理资源转发的问题。                 </p>
+<p>思路很简单：</p>
+<blockquote>
+<ol>
+<li>读取请求里的cookie，如果键名host_id有值，则代理到这个IP地址；</li>
+<li>如果没有，则代理到默认的正式环境（此处举例为1.1.1.1）;</li>
+</ol>
+</blockquote>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> $env_id <span class="comment">"1.1.1.1"</span>;</div><div class="line"><span class="keyword">if</span> ( <span class="symbol">$</span>http_cookie ~* <span class="string">"host_id=(\S+)(;.*|$)"</span>) &#123;</div><div class="line">    <span class="keyword">set</span> $env_id <span class="comment">$1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">location / &#123;</div><div class="line">    proxy_set_header Host <span class="symbol">$</span>host;</div><div class="line">    proxy_pass   http:<span class="comment">//$env_id:80;</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>那接下来的事情，就是<strong>怎样用最简便的方式，把IP种在cookie里？</strong><br>我们应用了nginx-http-footer-filter模块，html文件经过代理时，都注入了一小段js代码。</p>
+<p>这段代码，会帮我们展示小菜单，点击某个环境时，则将IP种到cookie里，同时刷新页面，让Nginx完成环境切换。<br><img src="/assets/blogImg/nginx1.jpg" alt=""></p>
+<p>切换环境，如今只需点击一次。</p>
+<h3 id="场景二：SourceMap"><a href="#场景二：SourceMap" class="headerlink" title="场景二：SourceMap"></a>场景二：SourceMap</h3><p>在线上环境调试Js代码是件麻烦的事情，因为目前合格的前端部署，代码都应经过压缩。性能问题是优化了，debug可不怎么方便。</p>
+<p>而SourceMap正好可以解决此问题。</p>
+<p>在最新的各版本浏览器里，如果满足：</p>
+<ol>
+<li>压缩后的js文件后面有<code>//# sourceMappingURL=xxx.map</code>格式的注释</li>
+<li>浏览器能正常访问到sourceMappingURL</li>
+</ol>
+<p>那么，就能把压缩过的代码还原。<br>要实现这样的功能，就必须：</p>
+<ol>
+<li>现网环境不带以上形式的注释，同时访问不到sourceMap（安全性考虑）</li>
+<li>测试环境带注释，能访问sourceMap</li>
+</ol>
+<p>这样的模型，用<code>反向代理+内容纂改</code>的思路再合适不过。<br>每次构建编译时，我们会把sourceMap文件存放到一台机器（举例为1.1.1.1），命名为js文件名后加<code>.map</code>后缀。随后，使用Nginx，通过这几行配置就能把此功能实现：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span> <span class="regexp">~ \.js$</span> &#123;</div><div class="line">    <span class="attribute">footer</span> <span class="string">"\n//# sourceMappingURL=<span class="variable">$request_uri</span>.map"</span>;</div><div class="line">    <span class="attribute">footer_types</span> <span class="string">"*"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>只要经过代理，在chrome里，我们能看到每份被压缩过的js文件，都有一个对应的源码文件。<br>你可以直接使用它来做打断点之类的操作，大大的提升了调试质量。<br><img src="/assets/blogImg/nginx2.jpg" alt=""></p>
+<h3 id="场景三：内容纂改"><a href="#场景三：内容纂改" class="headerlink" title="场景三：内容纂改"></a>场景三：内容纂改</h3><p>其实在以上两个场景里，都涉及了“内容纂改”。<br>无论是说“纂改”还是“劫持”，大家的印象都不是什么好事情，但另一方面，他们又可以让事情有趣起来。</p>
+<p>统一介绍下，Nginx涉及纂改的模块有：</p>
+<ul>
+<li><a href="https://m.oschina.net/blog/156826" target="_blank" rel="external">nginx_http_footer_filter</a>：往文件的底部添加文字，可包含Nginx的内置变量；</li>
+<li><a href="http://nginx.org/en/docs/http/ngx_http_addition_module.html" target="_blank" rel="external">nginx_http_addition_module</a>：从一个url去读取内容，将之添加到文件的头部或顶部；</li>
+<li><a href="http://nginx.org/en/docs/http/ngx_http_sub_module.html" target="_blank" rel="external">nginx_http_sub_module</a>：替换字符</li>
+</ul>
+<p>除去上面两种场景，合理运用这些模块对应的配置，可以做出许多小工具，这是很有想象力的事情。<br>单单针对移动web前端开发，就可以实现： </p>
+<blockquote>
+<ol>
+<li>将<a href="http://people.apache.org/~pmuellr/weinre-docs/latest/" target="_blank" rel="external">weinre</a>脚本插入到html里，让移动web调试更加便捷。</li>
+<li>移动web经常用到localStorage优化首屏，但debug时又会受到干扰，通过一个按钮很方便的清除本地缓存。</li>
+<li>手机APP内嵌页面，很难将其网址分享给另一个人。通过一个按钮就能生成url对应的二维码等</li>
+</ol>
+</blockquote>
+<h3 id="场景四：本地映射"><a href="#场景四：本地映射" class="headerlink" title="场景四：本地映射"></a>场景四：本地映射</h3><p>在Windows下的前端抓包调试，Fiddler+Willow的能力毋庸置疑。<br>而脱离了.NET体系的Linux和Mac，即使有一些代替工具，但某些方面还是略显不足。   </p>
+<p>比如：<strong>线上接口映射到本地文件</strong>。<br>想到Fiddler的本质也是一个代理，而开启一个有这样能力的Nginx服务，并不是太难的事情。           </p>
+<p>而且，我们可以做得更灵活，比如：</p>
+<ul>
+<li>同时支持慢速调试</li>
+<li>同时支持目录层级映射</li>
+<li>同时支持正则匹配</li>
+<li>JSON返回的数据有可能是变化的（比如分页时候），同时支持动态数据</li>
+</ul>
+<p>这些场景，只运用到Nginx里的“<a href="http://www.linuxidc.com/Linux/2014-01/95493.htm" target="_blank" rel="external">rewrite规则</a>”。<br>从参考的文档可以大致看到，rewrite规则非常灵活，能完成各种场景的转发。 </p>
+<p>最简单的模型中，我们把所有带<code>cgi-bin</code>路径的请求，rewite到本地的一个服务，同时带上请求的所有参数，<br>仅需这三行配置即可：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span> <span class="regexp">~ /cgi-bin/*</span> &#123;</div><div class="line">    <span class="attribute">rewrite</span><span class="regexp"> ^(.*)$</span> http://127.0.0.1:8080/cgi-bin/ <span class="literal">last</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>后续的事情，可以在本地创建一个cgi-bin文件夹，在里面放置需要映射的文本，并开启服务到8080端口即可。 </p>
+<p>##场景五：移动侧调试</p>
+<p><code>Fiddler</code> 有一个勾选项 <code>Allow remote computers to connect</code>，并可以指定 <code>listen port</code> 可以使得手机/其它终端通过将本机设为代理而访问本机环境，与 <code>hosts</code> 配合会很实用。</p>
+<p>这个功能，用Nginx也很容易做到。<br>通过 <code>default_server</code> 作为代理，手机终端通过设置网络代理为本机IP和相应的 <code>listen port</code>，从而可以访问本机的 Web 服务。</p>
+<p>其中也是用到了<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="external">ngx_http_proxy_module</a>模块的配置：<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> <span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span>  <span class="number">80</span> default_server;</div><div class="line">    <span class="attribute">server_name</span>  localhost;</div><div class="line">    <span class="attribute">resolver</span> <span class="number">8.8.8.8</span>;</div><div class="line">    <span class="attribute">location</span> / &#123;</div><div class="line">        <span class="attribute">proxy_set_header</span> Host <span class="variable">$host</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Real-Ip <span class="variable">$remote_addr</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$remote_addr</span>;</div><div class="line">        <span class="attribute">proxy_pass</span> http://<span class="variable">$host</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="section">server</span> &#123;</div><div class="line">    <span class="attribute">listen</span>  <span class="number">80</span>;</div><div class="line">    <span class="attribute">server_name</span>  ke.qq.com;</div><div class="line">    <span class="attribute">location</span> / &#123;</div><div class="line">        <span class="attribute">proxy_set_header</span> Host <span class="variable">$host</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Real-Ip <span class="variable">$remote_addr</span>;</div><div class="line">        <span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$remote_addr</span>;</div><div class="line">        <span class="attribute">proxy_pass</span> http://127.0.0.1:9091/;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="边角料"><a href="#边角料" class="headerlink" title="边角料"></a>边角料</h3><p>除去特定场景，Nginx的一些配置也跟前端息息相关。以下简单罗列，作为边角材料。</p>
+<p>1.<a href="https://github.com/alibaba/nginx-http-concat" target="_blank" rel="external">nginx_http_concat</a><br>资源合并，处理CDN combo。例如通过这样的方式<code>http://example.com/??style1.css,style2.css,foo/style3.css</code>访问合并后的资源。</p>
+<p>2.<a href="http://nginx.org/en/docs/http/ngx_http_image_filter_module.html" target="_blank" rel="external">ngx_http_image_filter_module</a><br>图片处理。提供图片缩放，jpg压缩，旋转等特性。</p>
+<p>3.适配PC与移动web<br>总体可运用<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="external">ngx_http_proxy_module</a>，去实现路径转发。判断平台类型的Nginx配置，在开源项目<a href="http://detectmobilebrowsers.com/" target="_blank" rel="external">detectmobilebrowsers</a>中可以找到。</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>学习Nginx，我本身只是出于开开眼界的目的。而的确发现了一些很有启发性的特质。<br>于前端开发，无论线上线下，熟练掌握基本配置，可以做出许多提高效率的工具。<br><strong>但既然是工具，熟手就好</strong>。 </p>
+<p>比如Fiddler直观，但Nginx更底层，更灵活，应当按照实际选择即可。</p>
+<p>话说回来，后来心情有些惆怅。<br>想起之前，我用NodeJs写过一个八百行的本地调试服务，如今更习惯用Nginx的几行配置。<br>不过我又想，<strong>既然我已经花了时间去写，为什么还要花时间去用？！</strong> </p>
+<p>心情又好起来了。（等等有什么不对，管它呢…）</p>
+<hr>
+<p>END.<br>15.11.03 sunshine.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Nginx那么好，我想去看看。&lt;br&gt;接连逛了两个书城后，我发现并没有Nginx相关的书籍。&lt;br&gt;这就很奇怪！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogImg/nginx0.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Nginx，一名&lt;strong&gt;网红&lt;/strong&gt;（网络服务器红人…），就算没有自传和回忆录，争着介绍它的花边新闻也该有吧。&lt;/p&gt;
+&lt;p&gt;后来找到仅有的一两本书籍，也直接深入到“源码剖析”的阶段。写得并不十分满意，况且我还不需要这些。&lt;br&gt;后来发现了原因，大概是因为&lt;strong&gt;“使用太简单了，都不值得出书”&lt;/strong&gt;。&lt;br&gt;是的，Nginx把纷繁复杂的功能，浓缩成一份简单的配置，极易上手。&lt;br&gt;当它呈现到你面前时，感觉独具匠心。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="//sushaolian.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css实现九宫格(一)</title>
+    <link href="//sushaolian.me/2015/03/14/css-jiugongge/"/>
+    <id>//sushaolian.me/2015/03/14/css-jiugongge/</id>
+    <published>2015-03-14T11:15:00.000Z</published>
+    <updated>2016-11-25T12:56:05.422Z</updated>
+    
+    <content type="html"><![CDATA[<p>前段时间，我的 leader Henry在群里面分享了一道<a href="http://www.etao.com/" target="_blank" rel="external">一淘</a>的面试题。         题目非常的有趣，忙完前阵的工作之后突然记起，也尝试做了一下。</p>
+<blockquote>
+<p>9个元素，每个50*50px，排成九宫格<br>默认是border颜色为blue，hover到格子上变成red（兼容到IE6）</p>
+</blockquote>
+<p><img src="/assets/blogImg/jiugongge1.jpg" alt="css题目">    </p>
+<a id="more"></a>
+<p>做成九宫格大家都会，但题目的陷阱就在hover上。鼠标hover到格子4，格子5时，其实他们“共用”了一条边。由于是纯css实现的，我们不可能说用js去动态改变dom，因此怎样实现“公用边”就成为了难点。</p>
+<p><strong>尝试的过程：</strong>           </p>
+<ul>
+<li>我的第一个想法，用“叠加”的方式实现“公用边”；        </li>
+<li>后来的想法，用table的border-collapse实现“公用边”；          </li>
+<li>在table想法的基础上改进；</li>
+<li>一种更简便的做法，不需要border，见九宫格(二)                       </li>
+</ul>
+<p>##<strong>我的第一个想法</strong>       </p>
+<p>先做做看，尝试永远是第一步。我将9个div都设置了5px的border，排成了九宫格，添加了hover，这时候初始的效果是：<br><img src="/assets/blogImg/jiugongge2.jpg" alt="初始效果"><br>这样其实格子之间的距离是两倍border（10px）。需要再将中间的一竖（2，5，8）设置<code>margin-left:-5px;margin-right:-5px;</code>,再将中间的一横（3，4，5）设置<code>margin-top:-5px;margin-bottom:-5px;</code>，这样等于是强制把格子间的距离“拉”到5px。<br><img src="/assets/blogImg/jiugongge3.jpg" alt="把格子间的距离“拉”到5px"><br>到这一步，简单的九宫格是完成了，但hover之后会发现，格子的边会被挡住（格子5的下边和右边分别被格子8和格子6挡住）。因为这里“公用边”的思路准确来说是“重合边”，是用负值的margin强制定位的。而我的解决方式是hover时添加<code>z-index:999</code>，让hover到的格子在最上层显示而不会被挡住。同时，不要忘记在9个div的css里面添加一句让z-index生效的<code>position: relative;</code>，具体原因看<a href="http://www.csser.com/question/4f4332dedbc7b0ac4c00034e" target="_blank" rel="external">这里</a>。     </p>
+<p>代码君：<br>1.html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"test0"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"lr_indent"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tb_indent"</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"lr_indent tb_indent"</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tb_indent"</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"lr_indent"</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>2.css:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#test0</span>&#123;</div><div class="line">	<span class="attribute">margin</span>: <span class="number">30px</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test0</span> <span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">background</span>: <span class="number">#eee</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#00f</span>;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">	<span class="attribute">line-height</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#090</span>;</div><div class="line">	<span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test0</span> <span class="selector-class">.lr_indent</span>&#123;</div><div class="line">	<span class="attribute">margin-left</span>: -<span class="number">5px</span>;</div><div class="line">	<span class="attribute">margin-right</span>: -<span class="number">5px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test0</span> <span class="selector-class">.tb_indent</span>&#123;</div><div class="line">	<span class="attribute">margin-top</span>: -<span class="number">5px</span>;</div><div class="line">	<span class="attribute">margin-bottom</span>: -<span class="number">5px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test0</span> <span class="selector-tag">div</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#f00</span>;</div><div class="line">	<span class="attribute">z-index</span>: <span class="number">999</span>;</div><div class="line">	<span class="attribute">background</span>: <span class="number">#eee</span>;<span class="comment">/*必须加这一句，在IE6，7有bug*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>思考：这样的方式好吗？不够好。<br>这才是9宫格，如果是16，25，…，81个格子，设置margin缩进的人力代价是很高的。<br>兼容性，在IE6，7下，负值margin在hover时候有bug。</p>
+</blockquote>
+<p><img src="/assets/blogImg/jiugongge4.jpg" alt="ie6，7下，hover时负值margin-left不起效">      </p>
+<p>##<strong>后来的想法</strong>      </p>
+<p>经过第一次尝试，我得到一个经验：<code>要用一种通用的方法去解决“公用边”</code>，而不是分别设置.lr_indent和.tb_indent。<br>随即我想到了表格。作为table，它有个很突出的属性，就是合并border，css里面的设置为<code>border-collapse:collapse;</code>。ok，这就是key point。</p>
+<p>按照这个思路，我简单的编写了代码，一开始我把hover定位到td上面去，发现hover时也会出现第一个想法中“挡住”的情况。而且，去将td的position改变，再添加z-index的方法是不可能有用的(z-index不会起效)。   </p>
+<p>我的方法是在td中包含一个span，把hover定位到span中去，td设置为<code>position:relative;</code>，span设置为<code>position:absolute;</code>，这时候的hover就可以设置让span的border不被挡住展示了。<br>代码君又来了：<br>html：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"test1"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>3<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>4<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>5<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>6<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>7<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>8<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>9<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>css：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">	<span class="attribute">margin</span>:<span class="number">0</span>;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">table</span>&#123;</div><div class="line">	<span class="attribute">border-collapse</span>: collapse;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test1</span> <span class="selector-tag">td</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">background</span>: <span class="number">#eee</span>;</div><div class="line">	<span class="attribute">position</span>: relative;</div><div class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#00f</span>;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test1</span> <span class="selector-tag">td</span> <span class="selector-tag">span</span>&#123;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#090</span>;</div><div class="line">	<span class="attribute">display</span>:block;</div><div class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">line-height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test1</span> <span class="selector-tag">td</span> <span class="selector-tag">span</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#f00</span>;</div><div class="line">	<span class="attribute">margin-top</span>:-<span class="number">5px</span>;</div><div class="line">	<span class="attribute">margin-left</span>: -<span class="number">5px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>别忘了span在hover时，必须设置一个负的<code>margein-top</code>和<code>margein-left</code>，以保证红色边框恰好定位在格子四周。见css君最后的片段。假如不设置，你看到的将是这样：<br><img src="/assets/blogImg/jiugongge5.jpg" alt="未设置span:hover的margin"><br>本以为已经大功告成了，在IE中测试却让我傻了眼：<br><img src="/assets/blogImg/jiugongge6.jpg" alt="IE7下的情景"><br>（ps：作为前端一枚，我已经做好了妥妥的心理准备，但此情此景还是让人喷出一口老血……）</p>
+<p>##<strong>改进，改进</strong>         </p>
+<p>说实话，table和div之争这么多年，大家都在页面中用越来越多的div，而越发的鄙视table，反而对table的熟悉程度反应了前端们的基础是否扎实。吃一堑长一智，这句话特别适用于在table中翻江倒海的亲们。</p>
+<p>改进！</p>
+<p>首先这个bug（也无所谓是不是bug，算是浏览器的差异性吧）我知道，在table的td里面设置了<code>position:relative;</code>就会在IE中出现这样的情况。注意是所有的IE哦，包括IE10。而根据第二个思路，最后的hover定位的元素为span，它本身设定为<code>position:absolute;</code>它的父级元素必须得设置<code>position:relative;</code>才能完成题目功能，这是毋庸置疑的。</p>
+<p>既然现在span的父级td不能设置<code>position:relative;</code>，我就在它们之间添加一个div，用来做span的容器。 </p>
+<p>代码君再一次来了：<br>html:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"test2"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>3<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>4<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>5<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>6<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>7<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>8<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>9<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">table</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>css:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">	<span class="attribute">margin</span>:<span class="number">0</span>;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">table</span>&#123;</div><div class="line">	<span class="attribute">border-collapse</span>: collapse;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test2</span> <span class="selector-tag">td</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">background</span>: <span class="number">#eee</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#00f</span>;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">	<span class="attribute">vertical-align</span>: top;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test2</span> <span class="selector-tag">td</span> <span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">position</span>:relative;</div><div class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test2</span> <span class="selector-tag">td</span> <span class="selector-tag">div</span> <span class="selector-tag">span</span>&#123;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#090</span>;</div><div class="line">	<span class="attribute">display</span>:block;</div><div class="line">	<span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">line-height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#test2</span> <span class="selector-tag">td</span> <span class="selector-tag">div</span> <span class="selector-tag">span</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#f00</span>;</div><div class="line">	<span class="attribute">margin-left</span>: -<span class="number">5px</span>;</div><div class="line">	<span class="attribute">margin-top</span>: -<span class="number">5px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>OK，效果达成！<br><img src="/assets/blogImg/jiugongge7.jpg" alt="最终完成的效果"><br>可以猛点这里看看<a href="/assets/demo/jiugongge_demo.html">demo</a>。        </p>
+<p><strong>最后吐槽，不对，总结一下下：</strong>           </p>
+<blockquote>
+<p>先到IE上去测，再转到其它浏览器，以少走弯路，这叫擒贼先擒王-_-!；<br>win8的metro布局最近挺流行的，有时候table比div好用；<br>IE君，你真是……此处省略1024个字                </p>
+</blockquote>
+<p>这个系列打算写两篇文章，下一篇介绍另外一种更简洁的方法。:)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间，我的 leader Henry在群里面分享了一道&lt;a href=&quot;http://www.etao.com/&quot;&gt;一淘&lt;/a&gt;的面试题。         题目非常的有趣，忙完前阵的工作之后突然记起，也尝试做了一下。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;9个元素，每个50*50px，排成九宫格&lt;br&gt;默认是border颜色为blue，hover到格子上变成red（兼容到IE6）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blogImg/jiugongge1.jpg&quot; alt=&quot;css题目&quot;&gt;    &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="css" scheme="//sushaolian.me/tags/css/"/>
+    
+  </entry>
+  
+</feed>
