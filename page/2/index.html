@@ -133,6 +133,140 @@
       <div class="body-wrap">
         
   
+    <article id="post-hexo-base" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/21/hexo-base/">hexo在github的搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>其实用hexo搭建博客，简单便捷，而且好看！下面我分享一下我的做法吧！<br><img src="/assets/newImg/hexo1.jpg" alt="安装图片"> </p>
+<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>下载-安装<br><img src="/assets/newImg/hexo2.jpg" alt="安装"><br>参考链接：<br><a href="http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html" target="_blank" rel="external">http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html</a><br>打开Telent客户端（如果没打开会出错）<br>如果是windowXP<br>输入<br>win7:<br><img src="/assets/newImg/hexo3.jpg" alt="win7"><br>xp:<br>在[运行]中输入”services.msc”，确定后出现[服务管理器]；<br>或者在[控制面板]里进入[管理工具]，运行[服务]就会出现[服务管理器]；<br>在[服务管理器]中找到[Telnet] 项，按键盘的”t”-“e”-“l”键很快就能找着；<br>在双击后出现的[属性对话框]中[启动类型]改为[自动]或[手动]；<br>启动Telnet服务<br>在[属性对话框]中的[服务状态]项中点击[启动]；<br>在[运行]中输入”cmd”，确定后在光标提示符输入”net start telnet”回车，当屏幕显示”Telnet服务正在启动…Telnet 服务已经启动成功。”后，说明Telnet服务已经在你本机启动了。</p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p><img src="/assets/newImg/hexo4.jpg" alt="git"><br>点击下一步完成即可</p>
+<h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>生成SSH密钥<br>查看是否已经有了ssh密钥：</p>
+<blockquote>
+<p><code>cd ~/.ssh</code><br>如果没有密钥则不会有此文件夹，有则备份删除<br>生成密钥：<br><code>$ ssh-keygen -t rsa -C “you@gmail.com”</code><br><code>按3个回车，密码为空。</code><br>最后得到了两个文件：id_rsa和id_rsa.pub<br><img src="/assets/newImg/hexo5.jpg" alt="安装图片"><br>打开github网站<br>在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。<br>选择Settings<br><img src="/assets/newImg/hexo6.jpg" alt="github"><br>选择 SSH and GDP keys<br><img src="/assets/newImg/hexo7.jpg" alt="githubkey"><br>点击new ssh key<br><img src="/assets/newImg/hexo8.jpg" alt="sshkey"><br>添加id_rsa.pub里面的公钥到key中提交即可<br><img src="/assets/newImg/hexo9.jpg" alt="安装图片"></p>
+<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><pre><code>npm install hexo-deployer-git --save
+</code></pre><p>安装HEXO<br>官网：<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">https://hexo.io/zh-cn/</a><br>右击选择 Bash<br><img src="/assets/newImg/hexo10.jpg" alt="安装图片"><br>    选择想要存放盘 cd</p>
+</blockquote>
+<pre><code>npm install hexo-cli -g//安装
+
+hexo -v//查看版本号（如果可以显示说明安装成功）
+
+hexo init myblog//初始化一个博客（myblog随便取）
+
+cd myblog//选择（同上面myblog的取名）
+
+npm install//初始化博客
+
+hexo g//生成静态网页（输入后查看根目录是否有public文件夹，如果没有请重装）
+
+hexo server//开启服务器
+</code></pre><p><img src="/assets/newImg/hexoyy.jpg" alt="安装图片"><br>在浏览器中输入：<a href="http://127.0.0.1:4000/" target="_blank" rel="external">http://127.0.0.1:4000/</a><br><img src="/assets/newImg/hexo11.jpg" alt="安装图片"><br>安装完成</p>
+<h2 id="建github库与推送"><a href="#建github库与推送" class="headerlink" title="建github库与推送"></a>建github库与推送</h2><p><img src="/assets/newImg/hexo12.jpg" alt="安装图片"><br>复制克隆码（一定要是SSH的）<br><img src="/assets/newImg/hexo13.jpg" alt="安装图片"><br>打开博客存放位置进入_config.yml（配置文件）<br><img src="/assets/newImg/hexo14.jpg" alt="安装图片"></p>
+<p>在deploy:位置输入</p>
+<blockquote>
+<pre><code>deploy://前面不能有有空格 
+type: git
+repo: git@github.com:crazezy2333/crazezy2333.github.io.git //克隆码
+branch: master
+</code></pre><p>推送<br>hexo clean//清除原静态网页<br>hexo generate//生成静态网页<br>hexo deploy//推送<br>完成</p>
+</blockquote>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/06/21/hexo-base/" class="archive-article-date">
+  	<time datetime="2016-06-20T16:02:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-06-21</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-css3-animater" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/31/css3-animater/">当我想用css3实现一个动作类库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当我如是想的时候，事实上我已想了很久。后来被各种纠结的差事冲乱了生活和心绪，并且心里认为这是个妥当无比的借口。找到了借口后一拖再拖，果然认识到deadline才是第一生产力的真理。最近，却是被朋友的一句话逼急了，他跟我说：我们的业务用到了css4的新属性！</p>
+<p>这句话的意思，大体等同于说，我买到了一个iphone6，亲你怎么看？<br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2015/12/31/css3-animater/#more">more >></a>
+        </p>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2015/12/31/css3-animater/" class="archive-article-date">
+  	<time datetime="2015-12-30T16:02:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2015-12-31</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css3/">css3</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-css-jiugongge2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -368,7 +502,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/作品/" style="font-size: 10px;">作品</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/生活/" style="font-size: 10px;">生活</a>
+    				<a href="/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/作品/" style="font-size: 10px;">作品</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/心情/" style="font-size: 15px;">心情</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/生活/" style="font-size: 15px;">生活</a>
     			</div>
     	</section>
     
