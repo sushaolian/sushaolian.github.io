@@ -121,9 +121,9 @@ touch Staticfile  #名字必须是Staticfile
     </summary>
     
     
-      <category term="生活" scheme="//sushaolian.top/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="心情" scheme="//sushaolian.top/tags/%E5%BF%83%E6%83%85/"/>
+    
+      <category term="生活" scheme="//sushaolian.top/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -317,9 +317,9 @@ touch Staticfile  #名字必须是Staticfile
     </summary>
     
     
-      <category term="生活" scheme="//sushaolian.top/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="心情" scheme="//sushaolian.top/tags/%E5%BF%83%E6%83%85/"/>
+    
+      <category term="生活" scheme="//sushaolian.top/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -378,9 +378,9 @@ touch Staticfile  #名字必须是Staticfile
     </summary>
     
     
-      <category term="微信" scheme="//sushaolian.top/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
       <category term="PHP" scheme="//sushaolian.top/tags/PHP/"/>
+    
+      <category term="微信" scheme="//sushaolian.top/tags/%E5%BE%AE%E4%BF%A1/"/>
     
   </entry>
   
@@ -712,9 +712,9 @@ touch Staticfile  #名字必须是Staticfile
     </summary>
     
     
-      <category term="浏览器" scheme="//sushaolian.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
       <category term="前端" scheme="//sushaolian.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="浏览器" scheme="//sushaolian.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
   </entry>
   
