@@ -25,7 +25,7 @@
 <meta property="og:image" content="//sushaolian.top/assets/newImg/weixin9.png">
 <meta property="og:image" content="//sushaolian.top/assets/newImg/weixin9.png">
 <meta property="og:image" content="//sushaolian.top/assets/newImg/weixin10.png">
-<meta property="og:updated_time" content="2016-11-24T17:14:10.231Z">
+<meta property="og:updated_time" content="2016-11-29T07:02:26.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信开发详细教程">
 <meta name="twitter:description" content="一、准备工作a)账号i.在SAE上面注册一个账号。http://t.cn/RbuZZHk  我的SAE推荐链接ii.在微信公众号开发平台地址 https://mp.weixin.qq.com  注册一个微信公众号。注意：1、个人只能申请到个人类型的订阅号。2、微信公众号认证需要300大洋。iii.申请公众号测试号地址http://mp.weixin.qq.com/debug/cgi-bin/san">
@@ -162,8 +162,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a></p>
-<p>二、微信公众账号介绍</p>
+        <p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a><br><a id="more"></a><br>二、微信公众账号介绍</p>
 <p><img src="/assets/newImg/weixin1.png" alt=""><br>服务号、订阅号、企业号的介绍（区别）<br>1、订阅号：主要偏于为用户传达资讯（类似报纸杂志），认证前后都是每天只可以群发一条消息；<br>2、服务号：主要偏于服务交互（类似银行，114，提供服务查询），认证前后都是每个月可群发4条消息；<br>3、企业号：主要用于公司内部通讯使用，需要先有成员的通讯信息验证才可以关注成功企业号；<br>温馨提示：<br>1、如果想简单的发送消息，达到宣传效果，建议可选择订阅号；<br>2、如果想进行商品销售，进行商品售卖，建议可申请服务号；<br>3、如果想用来管理内部企业员工、团队，对内使用，可申请企业号。<br><img src="/assets/newImg/weixin2.png" alt=""> </p>
 <p>三、微信数据收发原理以及消息数据格式</p>
 <p>3、1 开发者模式成为开发者时的消息校验原理<br>开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，并且带上四个参数(signature、timestamp、nonce、echostr)，开发者通过对签名(signature)的检验，来判断此条信息的真实性。<br>验证成功之后，开发者接受用户消息的时候，微信也都会带上前面三个参数(signature、timestamp、nonce)访问开发者设置的URL，开发者依然通过签名的校验判断消息的真实性。<br>加密/校验流程如下：</p>

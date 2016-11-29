@@ -151,66 +151,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近发现，我之前把hexo托管在github上的访问速度太慢了，估计是因为github是国外的，访问速度才慢。所以想着部署一套在国内的托管平台。所以上网查找，看到胖逆的嘟嘟的博客:<a href="http://www.cnblogs.com/tengj/p/5352572.html,有相关的介绍，根据博客的介绍，经了一番折腾，终于成功的把hexo的博客同时更新到github和coding上了。" target="_blank" rel="external">http://www.cnblogs.com/tengj/p/5352572.html,有相关的介绍，根据博客的介绍，经了一番折腾，终于成功的把hexo的博客同时更新到github和coding上了。</a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近发现，我之前把hexo托管在github上的访问速度太慢了，估计是因为github是国外的，访问速度才慢。所以想着部署一套在国内的托管平台。所以上网查找，看到胖逆的嘟嘟的博客:<a href="http://www.cnblogs.com/tengj/p/5352572.html">http://www.cnblogs.com/tengj/p/5352572.html</a>, 有相关的介绍，根据博客的介绍，经了一番折腾，终于成功的把hexo的博客同时更新到github和coding上了。</p>
 <p><img src="/assets/newImg/hexo2_1.jpg" alt="coding"></p>
-<h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><p><strong>_config.yml配置</strong><br>想要同时部署到2个平台，就要修改博客根目录下面的_config.yml文件中的deploy如下<br>根据Hexo官方文档需要修改成下面的形式</p>
-<pre><code>deploy:
-  type: git
-  message: [message]
-  repo:
-        github: &lt;repository url&gt;,[branch]
-        gitcafe: &lt;repository url&gt;,[branch] 
-</code></pre><p>所以我的是这样：</p>
-<pre><code>deploy:
-  type: git
-  repo:
-        github: git@github.com:sushaolian/sushaolian.github.io.git,master
-        coding: git@git.coding.net:sushaolian/sushaolian.git,master 
-</code></pre><h2 id="申请conding的账号"><a href="#申请conding的账号" class="headerlink" title="申请conding的账号"></a>申请conding的账号</h2><p>这是申请的网址：<a href="https://coding.net/" target="_blank" rel="external">https://coding.net/</a></p>
-<p>进入到网页中，点击注册，填写相关的信息。我这里已经注册成功的了，所以我就随便注册一个账号，方便演示给大家看。<br><img src="/assets/newImg/hexo2_2.png" alt=""></p>
-<h2 id="注册成功之后，点击登录，创建一个新项目。"><a href="#注册成功之后，点击登录，创建一个新项目。" class="headerlink" title="注册成功之后，点击登录，创建一个新项目。"></a>注册成功之后，点击登录，创建一个新项目。</h2><p><img src="/assets/newImg/hexo2_3.png" alt=""></p>
-<p>同步本地hexo到coding上<br>把获取到了ssh配置在上面的_config.yml文件中的deploy下，如果是第一次使用coding的话，需要设置SSH公钥，生成的方法可以参考<a href="https://coding.net/help/doc/git/ssh-key.html" title="配置SSH的帮助文档" target="_blank" rel="external">coding帮助中心</a><br>如果你看过我的<a href="http://sushaolian.top/2016/06/21/hexo-base/" target="_blank" rel="external">hexo在github的搭建</a>，里面也有介绍如果如果生成，我这里直接使用之前部署github时已经生成的公钥。</p>
-<p><img src="/assets/newImg/hexo2_4.png" alt=""></p>
-<p>本地打开 id_rsa.pub 文件，复制其中全部内容，填写到SSH_RSA公钥key下的一栏，公钥名称可以随意起名字。完成后点击“添加”，然后输入密码或动态码即可添加完成。</p>
-<p><img src="/assets/newImg/hexo2_5.png" alt=""></p>
-<blockquote>
-<p>如果是和github用相同的公钥的话，那么请在.ssh文件夹中新建一个config文件，然后输入内容：</p>
-</blockquote>
-<pre><code>Host github.com
-User 1243856760@qq.com (这里请填写你github的邮箱)
-Hostname ssh.github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa
-Port 443
-</code></pre><p>添加后，在git bash命令输入：</p>
-<pre><code>ssh -T git@git.coding.net
-</code></pre><p>如果得到下面提示就表示公钥添加成功了：</p>
-<pre><code>Coding.net Tips : [Hello ! You&apos;ve conected to Coding.net by SSH successfully! ]
-</code></pre><p>最后使用部署命令就能把博客同步到coding上面：</p>
-<pre><code>hexo deploy -g
-</code></pre><p>如果在coding中，点击代码，如果能够看到上传的文件，那么就OK了。</p>
-<p><img src="/assets/newImg/hexo2_6.png" alt=""></p>
-<h2 id="pages服务方式部署"><a href="#pages服务方式部署" class="headerlink" title="pages服务方式部署"></a>pages服务方式部署</h2><p>部署博客方式有两种，第一种就是pages服务的方式，也推荐这种方式，因为可以绑定域名，而第二种演示的方式必须升级会员才能绑定自定义域名。<br>我这里只介绍第一种，第二种方式请大家参考胖逆的嘟嘟的博客<a href="http://www.cnblogs.com/tengj/p/5352572.html，第二种要给钱的，所以这里就不推荐大家使用了。" target="_blank" rel="external">http://www.cnblogs.com/tengj/p/5352572.html，第二种要给钱的，所以这里就不推荐大家使用了。</a></p>
-<p><strong>第一种就是pages服务的方式</strong><br>就是在source/需要创建一个空白文件，至于原因，是因为 coding.net需要这个文件来作为以静态文件部署的标志。就是说看到这个Staticfile就知道按照静态文件来发布。</p>
-<pre><code>cd source/
-touch Staticfile  #名字必须是Staticfile
-</code></pre><p>点击pages,部署分支填写master，因为我们的代码是提交到分支master上的，点击开启就可以了。</p>
-<p><img src="/assets/newImg/hexo2_7.png" alt=""></p>
-<blockquote>
-<p>注意：</p>
-<p>如果你的项目名称跟你coding的用户名一样，比如我的用户是叫susaolian,博客项目名也叫susaolian<br>那直接访问 susaolian.coding.me就能访问博客，否则就要带上项目名：susaolian.coding.me/项目名 才能访问<br>推荐项目名跟用户名一样，这样就可以省略项目名了</p>
-</blockquote>
-<p>开启成功之后，就可以访问了。如果出现404的错误，那么就等10分钟左右。</p>
-<p><img src="/assets/newImg/hexo2_9.png" alt=""></p>
-<h2 id="个人域名绑定"><a href="#个人域名绑定" class="headerlink" title="个人域名绑定"></a>个人域名绑定</h2><p>我在万网上面购买了tengj.top域名，第一年只要2元哈哈，个人用的就不用com这种超级贵的域名了。现在要实现国内的走coding，海外的走github，只要配置2个CNAME就行。域名解析如下：</p>
-<p><img src="/assets/newImg/hexo2_8.png" alt=""></p>
-<p>接着你们要在source文件中，新建一个文件CNAME，里面填写github上的博客地址。我的是sushaolian.github.io。然后把更新上去就可以了。</p>
-<pre><code>hexo deploy -g
-</code></pre><p>接着在coding中，点击pages,填写绑定域名的地址，sushaolian.top</p>
-<p><img src="/assets/newImg/hexo2_10.png" alt=""></p>
-<p>最后访问：sushaolian.top就可以看到自己的博客来了。</p>
-<p>更多详情，请访问：<a href="http://www.cnblogs.com/tengj/p/5352572.html" target="_blank" rel="external">http://www.cnblogs.com/tengj/p/5352572.html</a></p>
-
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/11/28/hexo-coding-github/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -261,13 +206,10 @@ touch Staticfile  #名字必须是Staticfile
       
         <p><img src="/assets/newImg/me.png" alt=""></p>
 <p>本来今天是要去天河城搬东西回白云区的，可是临时被别人放了鸽子，所以搬家的事情只能改期！</p>
-<p>现在还是在忙着找工作的事情，投了一些简历，可是都没有收到面试的通知。朋友也是失业了。就和朋友商量着，如果现在找不到合适自己专业喜欢的，就先做着其他先，毕竟现在快过年了，过完年再重新找，利用这一段时间好好学习，充充电！现在我也是身体不适，想着先把自己身体养好再说。</p>
-<p>其实，我自己不怎么着急工作的时候，就是怕妈妈担心。妈妈已经打了几个电话问我有没有找到工作了。每次我也只能说“快找到了”。长这么大了，还要母亲如此为我担心实在是不应该！本来想着好好工作，过年给点多钱爸妈过年的，可是谁知道，工作没有多久，那家公司就运营不下去了，我也没有存什么钱。想着今年过年，都没有钱给父母过年，槽糕的心情都不知道该用什么形容了。</p>
-<p>之前读大学的时候，就是想着快点毕业工作。现在毕业了，发现工作与在学校对比，相差太远了。可能说在学校的日子会比较无忧一点，思想单纯一点。出来社会了，面对生活，面对不同的人，很多事情觉得复杂了好多。现在我自己做事也会留三分余地，已经没有那么任性了。有一些东西即使不喜欢，可是生活需要我也会逼迫着我自己做。可能这就是生活的无奈吧！</p>
-<p>生活在一线城市，每天都要为柴米油盐忧愁。这座城市，不仅物价高，房价高，工作压力大。坐在写字楼里面工作，在别人看来非常的光鲜亮丽，其实有着很多不为人知的心酸。</p>
-<p>还是不想了，无论如何，生活还是得继续。先增进自己技术再说。我相信只要努力与拼搏，懦弱如我，也可以在这座繁华城市里面找到一席之地的！</p>
-<p><img src="/assets/newImg/city.jpg" alt=""></p>
-
+<p>现在还是在忙着找工作的事情，投了一些简历，可是都没有收到面试的通知。朋友也是失业了。就和朋友商量着，如果现在找不到合适自己专业喜欢的，就先做着其他先，毕竟现在快过年了，过完年再重新找，利用这一段时间好好学习，充充电！现在我也是身体不适，想着先把自己身体养好再说。<br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/11/27/diary-2016-11-27/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -319,151 +261,9 @@ touch Staticfile  #名字必须是Staticfile
         <p><img src="/assets/newImg/flexbox.png" alt=""> </p>
 <p>2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。</p>
 <p><img src="/assets/newImg/flex-brower.jpg" alt=""></p>
-<h2 id="Flex布局的定义"><a href="#Flex布局的定义" class="headerlink" title="Flex布局的定义:"></a>Flex布局的定义:</h2><p>Flex是Flexible Box的缩写，意为”弹性布局”,用来为盒状模型提供最大的灵活性。<br>任何一个容器都可以指定为Flex布局。</p>
-<pre><code>.flexbox{
-    display:flex;
-}
-</code></pre><p>行内元素也可以使用Flex布局</p>
-<pre><code>.flexbox{
-     display:inline-flex;
-}
-</code></pre><p>Webkit内核的浏览器，必须加上-webkit前缀</p>
-<pre><code>.flexbox{
-    display:-webkit-flex;
-    display:flex;
-}
-</code></pre><blockquote>
-<p>tips:设置flex布局之后，子元素的float/clear/vertical-align属性将失效。</p>
-</blockquote>
-<h2 id="Flex布局的基本概念"><a href="#Flex布局的基本概念" class="headerlink" title="Flex布局的基本概念"></a>Flex布局的基本概念</h2><p>采用Flex布局的元素，称为Flex容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称”项目”。</p>
-<p><img src="/assets/newImg/flex-item.png" alt=""></p>
-<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）.而且这个方向可以根据容器属性flex-direction来改变的。</p>
-<h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><ol>
-<li>flex-direction</li>
-<li>flex-wrap</li>
-<li>flex-flow</li>
-<li>justify-content</li>
-<li>align-items</li>
-<li>align-content</li>
-</ol>
-<p><strong>1、flex-direction属性</strong><br>flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
-<pre><code>.flexbox{
-    flex-direction:row | row-reverse | column | column-reverse;
-}
-</code></pre><p>flex-direction一共有四个值分别是：</p>
-<ul>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li>row-reverse：主轴为水平方向，起点在右端。</li>
-<li>column：主轴为垂直方向，起点在上沿。</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
-</ul>
-<p>上面对应的值如下图所示：</p>
-<p><img src="/assets/newImg/flex_direction.png" alt=""></p>
-<p><strong>2.flex-wrap属性</strong><br>flex-wrap决定元素如何换行(排列不下的时候)</p>
-<pre><code>.flexbox{
-    flex-wrap:nowwrap | wrap | wrap-reverse
-}
-</code></pre><p>他的三个值，</p>
-<ul>
-<li>nowrap(默认)；不换行。</li>
-<li>wrap换行，第一行在上方</li>
-<li>wrap-reverse:换行，第一行在下方</li>
-</ul>
-<p><strong>3.flex-flow属性</strong><br>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</p>
-<pre><code>.flexbox {
-  flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;
-}
-</code></pre><p><strong>4.justify-content属性</strong><br>justify-content属性定义了项目在主轴上的对齐方式。</p>
-<p>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
-<blockquote>
-<ul>
-<li>flex-start(默认值):左对齐</li>
-<li>flex-end:右对齐</li>
-<li>center:居中对齐</li>
-<li>space-between：两端对齐，项目之间的间隔都相等。</li>
-<li>space-around：每个项目两侧的间隔相等。所以，项目两侧的间隔相等。所以，项目之间比项目与边框的间隔大一倍。</li>
-</ul>
-</blockquote>
-<p><img src="/assets/newImg/flex_start.png" alt=""></p>
-<p><strong>5.align-items属性</strong><br>align-items属性定义项目在交叉轴上如何对齐。</p>
-<pre><code>.flexbox{
-    align-items:flex-start | flex-end | center | baseline | stretch;
-}
-</code></pre><p><img src="/assets/newImg/align_item.png" alt=""></p>
-<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
-<blockquote>
-<ul>
-<li>flex-start：交叉轴的起点对齐。</li>
-<li>flex-end：交叉轴的终点对齐。</li>
-<li>center：交叉轴的中点对齐。</li>
-<li>baseline: 项目的第一行文字的基线对齐。</li>
-<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
-</ul>
-</blockquote>
-<p><strong>6.align-content属性</strong><br>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
-<pre><code>.flexbox {
-  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
-}
-</code></pre><p><img src="/assets/newImg/align_content.png" alt=""></p>
-<p>该属性可能取6个值。</p>
-<blockquote>
-<ul>
-<li>flex-start：与交叉轴的起点对齐。</li>
-<li>flex-end：与交叉轴的终点对齐。</li>
-<li>center：与交叉轴的中点对齐。</li>
-<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
-<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
-<li>stretch（默认值）：轴线占满整个交叉轴。</li>
-<li></li>
-</ul>
-</blockquote>
-<h2 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h2><ol>
-<li>order</li>
-<li>flex-grow</li>
-<li>flex-shrink</li>
-<li>flex-basis</li>
-<li>flex</li>
-<li>align-self</li>
-</ol>
-<p><strong>1.1 order属性</strong><br>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0.</p>
-<pre><code>.items{
-  order:&lt;integer&gt;;
-}
-</code></pre><p><img src="/assets/newImg/order.png" alt=""></p>
-<p><strong>1.2 flex-grow属性</strong></p>
-<p>flex-grow属性定义项目的发大比例，默认为0，如果存在剩余空间，也不放大。</p>
-<pre><code>.item
-{
-    flex-grow:&lt;number&gt;;
-}
-</code></pre><p><img src="/assets/newImg/flex_grow.png" alt=""></p>
-<blockquote>
-<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
-</blockquote>
-<p><strong>1.3 flex-shrink属性</strong><br>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
-<pre><code>.items{
-    flex-shrink:&lt;number&gt;;
-}
-</code></pre><p><img src="/assets/newImg/flex_shrink.jpg" alt=""></p>
-<blockquote>
-<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。<br>负值对该属性无效。</p>
-</blockquote>
-<p><strong>1.4 flex-basis属性</strong><br>flex-basis元素在主轴占据的空间</p>
-<pre><code>.item {
-  flex-basis: &lt;length&gt; | auto; /* default auto */
-}
-</code></pre><p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
-<p><strong>1.5 flex属性</strong><br>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
-<pre><code>.item {
-  flex: none | [ &lt;&apos;flex-grow&apos;&gt; &lt;&apos;flex-shrink&apos;&gt;? || &lt;&apos;flex-basis&apos;&gt; ]
-}
-</code></pre><p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值</p>
-<p><strong>1.6    align-self属性</strong><br>定义元素自身的对齐方式</p>
-<pre><code>.item {
-  align-self: auto | flex-start | flex-end | center | baseline | stretch;
-}
-</code></pre><p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。<br>来源：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
-
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/11/27/flex/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -512,9 +312,10 @@ touch Staticfile  #名字必须是Staticfile
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><audio src="/assets/video/xiaoxingyun.mp3" controls></audio><br>    耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不<br>知道！生活总是喜怒哀乐交差在一起，快乐与否取决你自己的态度和心态！不开心是一天，开心也是一天，为什么我们不快快乐乐的过每一天呢？<br><img src="/assets/newImg/diary1.jpg" alt=""><br>    最近的我，不但失业还失恋了，我觉得我这运气也是没有谁了吧！现在是11月份底，马上就过年，<br>现在这段时间想找一份前端的工作也不易！我采取海投简历的办法，希望得到面试的机会多一点，可是这样子收到面试机会却很少。这些公司拒绝的原因都很简单又直接：都是经验不足和项目偏少。很多公司招收前端这样的岗位都要求要有2年的工作经历以上，而我只是一个刚刚毕业没多久的大学生，才工作了几个月。估计很少公司会选择我这样的新人吧！其实我上一家公司也不错的，和同事相处也很愉快，可是公司无法运营下去，我也没有办法。有人都跟说女生不应该选择编程的，那样太辛苦了。可是我是真的热爱这个行业，尽管很辛苦，我也想努力坚持走下去。人的一生，能够做自己喜欢的事情，可以自己做选择，那是一件幸福的事情！我觉得我何其幸运，能够做自己喜欢的事。也有收到一些面试的机会，可是要求却很严格，有一家公司面试的时候，单单是笔试题就有6页，我是做，可是正确率是多少我就不知道了，最后我也没有接到要我去复试的机会。估计是我的笔试太差了！所以最近在恶补一些前端方面的知识。相信努力总会找到工作的！<br><img src="/assets/newImg/diary2.jpg" alt=""><br>    冬天来了，在这寒冷的天气里，我还是感觉到了好朋友带给我的一丝丝温暖，暖和了我的一颗心。<br>我幸运此生能够认识他们，我会珍惜这些友情。我知道我是那种非常冷漠的女孩子，喜欢假装坚强，其实我的内心很柔弱。阳光总在风雨后，冬天过了，春天自然会来的！我要对自己说：加油！你是永远都不服输的女孩子！</p>
-<p>——–author:苏少莲———————</p>
-
+        <p><audio src="/assets/video/xiaoxingyun.mp3" controls></audio><br>耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不<br>知道！生活总是喜怒哀乐交差在一起，快乐与否取决你自己的态度和心态！不开心是一天，开心也是一天，为什么我们不快快乐乐的过每一天呢？<br><img src="/assets/newImg/diary1.jpg" alt=""><br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/11/25/diary-2016-11-25/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -563,47 +364,10 @@ touch Staticfile  #名字必须是Staticfile
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a></p>
-<p>二、微信公众账号介绍</p>
-<p><img src="/assets/newImg/weixin1.png" alt=""><br>服务号、订阅号、企业号的介绍（区别）<br>1、订阅号：主要偏于为用户传达资讯（类似报纸杂志），认证前后都是每天只可以群发一条消息；<br>2、服务号：主要偏于服务交互（类似银行，114，提供服务查询），认证前后都是每个月可群发4条消息；<br>3、企业号：主要用于公司内部通讯使用，需要先有成员的通讯信息验证才可以关注成功企业号；<br>温馨提示：<br>1、如果想简单的发送消息，达到宣传效果，建议可选择订阅号；<br>2、如果想进行商品销售，进行商品售卖，建议可申请服务号；<br>3、如果想用来管理内部企业员工、团队，对内使用，可申请企业号。<br><img src="/assets/newImg/weixin2.png" alt=""> </p>
-<p>三、微信数据收发原理以及消息数据格式</p>
-<p>3、1 开发者模式成为开发者时的消息校验原理<br>开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，并且带上四个参数(signature、timestamp、nonce、echostr)，开发者通过对签名(signature)的检验，来判断此条信息的真实性。<br>验证成功之后，开发者接受用户消息的时候，微信也都会带上前面三个参数(signature、timestamp、nonce)访问开发者设置的URL，开发者依然通过签名的校验判断消息的真实性。<br>加密/校验流程如下：</p>
-<ol>
-<li>将token、timestamp、nonce三个参数进行字典序排序</li>
-<li>将三个参数字符串拼接成一个字符串进行sha1加密</li>
-<li><p>开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</p>
-<p> 3、2 成为开发者后消息收发的原理<br>微信消息收发原理图：<br><img src="/assets/newImg/weixin3.png" alt=""><br>其实，我们需要做的事情，就是对HTTP请求，做出响应。也就是拿到微信服务器给我们的数据，然后处理后再返回去。</p>
-</li>
-</ol>
-<p>上图的消息收发过程是这样的：用户用手机发送一个?给微信公众号，微信服务器接受到? 然后组装一个消息发送给我们自己的服务器，我们的服务器回复一个时间，并且将时间也按照一定的规则组装，回复给公众号，公众号所在的服务器再回复给用户。</p>
-<p>四、接入指南<br>接入微信公众号平台开发，需要按照如下步骤：<br>1、填写服务器配置<br>2、验证服务器地址的有效性<br>3、依据接口文档实现业务逻辑</p>
-<p>第一步：填写服务器配置<br>    进入微信公众平台<a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a><br>在左侧列表中最下方，找到基本配置，点击进入<br><img src="/assets/newImg/weixin4.png" alt=""> </p>
-<p>点击启用，如果编辑模式开启了。那就先把编辑模式关闭。<br><img src="/assets/newImg/weixin5.png" alt=""><br>点击“修改配置”按钮，按照要求填写。<br>参数说明：<br>其中URL是开发者用来接收微信消息和事件的接口URL。<br>Token是开发者任意填写的，但是填写的要与代码中的一致。Token是用作签名(填写的Token会和接口URL中包含的Token进行对比，从而验证安全性),Token是为了用来验证发送我们的信息是否来自微信服务器。</p>
-<p>第二步：验证服务器地址的有效性<br>开发者提供信息后，微信服务器将发送GET请求到填写的服务器地址URL上，GET请求携带四个参数：<br><img src="/assets/newImg/weixin6.png" alt=""> </p>
-<p>开发者通过检验signature对请求进行校验。若确认此次GET请求来自微信服务器，需要原样返回echostr参数的内容。这样就接入成功了，否则接入失败。</p>
-<p>接入的代码如下：<br>        //获得参数 signature nonce token timestamp echostr<br>        $nonce = $_GET[‘nonce’];<br>        $token = ‘imooc’;<br>        $timestamp = $_GET[‘timestamp’];<br>        $echostr   = $_GET[‘echostr’];<br>        $signature = $_GET[‘signature’];<br>        //第一步：形成数组，然后按字典序排序<br>        $array = array();<br>        $tmpArr= array($nonce, $timestamp, $token);<br>        sort($tmpArr,SORT_STRING);<br>        //第二步：拼接成字符串,sha1加密 ，然后与signature进行校验<br>        $str = sha1( implode( $tmpArr ) );<br>        //第三步：获得加密后的字符串与signature对比<br>        if( $str  == $signature &amp;&amp; $echostr ){<br>            //第一次接入weixin api接口的时候<br>            echo  $echostr;<br>            exit;<br>        }</p>
-<p>第三部：依据接口文档实现业务逻辑<br>    验证URL有效性后即接入生效，成为开发者。<br>经历过第一次验证后，此后用户每次向公众号发送消息、或者产生自定义菜单点击事件时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，然后开发者可以依据自身业务逻辑进行相应，例如回复消息等。</p>
-<p>其他需要知道的：<br>1、用户向公众号发送消息时，公众号收到的消息发送者是一个OpenID，每个用户对每个公众号有一个唯一的OpenID。<br>2、微信公众号接口只支持80端口<br>五、接受普通消息<br>当普通微信用户向微信公众账号发消息时，微信服务器将POST消息的XML数据发送到我们自己的服务器上，也就是我们在微信公众平台填写的URL<br><img src="/assets/newImg/weixin7.png" alt=""> </p>
-<p>普通消息有：文本消息、图片消息、语言消息、视频消息、地理位置消息。</p>
-<p>接受文本消息的XML格式</p>
-<xml><br> <tousername>&lt;![CDATA[toUser]]&gt;</tousername><br> <fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br> <createtime>1348831860</createtime><br> <msgtype>&lt;![CDATA[text]]&gt;</msgtype><br> <content>&lt;![CDATA[this is a test]]&gt;</content><br> <msgid>1234567890123456</msgid><br> </xml>
-
-<p><img src="/assets/newImg/weixin8.png" alt=""><br>当微信服务器接受到用户发送的消息，微信服务器再把这条消息通过XML格式组装后，发送给我们的服务器。那么，如果我们想要回复文本消息。我们也需要把消息通过XML格式组装好发送给微信服务器，微信服务器再发送给用户。</p>
-<p>回复文本消息的XML格式：</p>
-<xml><br><tousername>&lt;![CDATA[toUser]]&gt;</tousername><br><fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br><createtime>12345678</createtime><br><msgtype>&lt;![CDATA[text]]&gt;</msgtype><br><content>&lt;![CDATA[你好]]&gt;</content><br></xml>
-
-<p>实例代码：</p>
-<p><img src="/assets/newImg/weixin9.png" alt=""><br>注意，$toUser 是指将这个消息返回给谁。因为我们是将消息回复给用户的，所以<br>$toUser = $this-&gt;postObj-&gt;FromUserName;//获取到发送消息给微信公众号的用户openId</p>
-<p>素材管理<br>新增临时素材<br>公众号经常需要用到一些临时性的多媒体素材的场景，例如在使用接口特别是发送消息时，对多媒体文件、多媒体消息的获取和调用等操作，是通过media_id来进行的。素材管理接口对所有认证的订阅号和服务号开发。通过本接口，公众号可以新增一些临时素材（即上传临时多媒体文件）。<br>请注意：<br>1、对于临时素材，每个素材（media_id）会在开发者上传或粉丝发送到微信服务器3天后自动删除（所以用户发送给开发者的素材，若开发者需要，应尽快下载到本地），以节省服务器资源。<br>2、media_id是可复用的。<br>3、素材的格式大小等要求与公众平台官网一致。具体是，图片大小不超过2M，支持bmp/png/jpeg/png/gif格式，语音大小不超过2M，长度不超过60秒（公众平台官网可以在文章中插入小于30分钟的语音，但这些语音不能用于群发等场景，只能放在文章内，这方面接口暂不支持），支持mp3/wma/wav/amr格式<br>4、需使用https调用本接口。</p>
-<p>调用接口地址<br><a href="https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE</a></p>
-<p>其他需要注意的问题：<br>1、文件上传时通过CURL POST方式提交的，POST内容需要是数组格式。<br><img src="/assets/newImg/weixin9.png" alt=""><br>2、上传的文件必须先在你的服务器，然后获取到上传文件所在服务器的绝对路径。并且需要在绝对路径前面加上@以示区分。<br>3、在Window服务上，路径分隔符为斜杠\，例子：@D:\soft\logo.png<br>而在Linux服务器上，路径分隔符为反斜杠/ 例子：@/tmp/logo.png</p>
-<p>代码示例：</p>
-<p><img src="/assets/newImg/weixin10.png" alt=""> </p>
-<p>获取临时素材<br>公众号可以使用本接口从微信服务器下载临时的多媒体素材。<br>接口调用URL<br>http请求方式: GET,https调用<br><a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a><br>参数说明<br>参数    是否必须    说明<br>access_token    是    调用接口凭证<br>media_id    是    媒体文件ID<br>返回说明<br>正确情况下的返回HTTP头如下：<br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Type: image/jpeg<br>    Content-disposition: attachment; filename=”MEDIA_ID.png”<br>    Date: Sun, 06 Jan 2013 10:20:18 GMT<br>    Cache-Control: no-cache, must-revalidate<br>    Content-Length: 339721<br>    curl -G “<a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a>“</p>
-<p>发送消息<br>    发送客服消息<br>当用户主动发消息给公众号的时候（包括发送信息、点击自定义菜单、订阅事件、扫描二维码事件），微信将会把消息数据推送给开发者，开发者在一段时间内可以调用客服消息接口，通过POST一个JSON数据包来发送消息给普通用户，在48小时内不限制发送次数。此接口主要用于客服等有人工消息处理环节的功能，方便开发者为用户提供更加优质的服务。</p>
-<p>调用的接口URL<br><a href="https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN</a><br>具体参考文档<a href="http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html" target="_blank" rel="external">http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html</a><br>至于为什么需要客服接口呢？<br>因为微信公众平台一直没有推出手机客服端，除了程序的自动应答，运营者还需要一些人工回复，而人工回复目前一般都是通过电脑端操作，有了客服接口可以使运营者使用手机回复。</p>
-<p>获取用户基本信息<br>在关注者与公众号产生消息交互后，公众号可获得关注者的OpenID（加密后的微信号，每个用户对每个公众号的OpenID是唯一的。对于不同公众号，同一用户的openid不同）。公众号可通过本接口来根据OpenID获取用户基本信息，包括昵称、头像、性别、所在城市、语言和关注时间。</p>
-
+        <p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a><br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/11/25/weixin/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -654,225 +418,17 @@ touch Staticfile  #名字必须是Staticfile
       
         <p><img src="/assets/newImg/php1.png" alt="第三方接口文档"> </p>
 <ol>
-<li><p>天气预报接口 [20130901]<br>city：城市名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/weather/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3" target="_blank" rel="external">http://apix.sinaapp.com/weather/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3</a></p>
+<li><p>天气预报接口 [20130901]<br>city：城市名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/weather/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3">http://apix.sinaapp.com/weather/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3</a></p>
 </li>
-<li><p>空气质量指数接口 [20130901]<br>city：城市名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3" target="_blank" rel="external">http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3</a></p>
+<li><p>空气质量指数接口 [20130901]<br>city：城市名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3">http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3</a></p>
 </li>
-<li><p>快递查询接口 [20130901]<br>company：快递公司英文代码 点击查看英文代码列表<br>number：快递单号<br><a href="http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877" target="_blank" rel="external">http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877</a></p>
-</li>
-</ol>
-<p>新版Web页查询<br><a href="http://apix.sinaapp.com/express2/index.php" target="_blank" rel="external">http://apix.sinaapp.com/express2/index.php</a></p>
-<ol>
-<li>智能快递查询接口 [20130901]<br>number：快递单号<br><a href="http://apix.sinaapp.com/expressauto/?appkey=trialuser&amp;number=3143490877" target="_blank" rel="external">http://apix.sinaapp.com/expressauto/?appkey=trialuser&amp;number=3143490877</a><br>备注：支持EMS,申通快递,圆通快递,中通快递,汇通快递,天天快递,韵达快递,顺丰快递,宅急送,速尔快递,德邦物流,联昊通物流,全峰快递,中国邮政，如风达</li>
-<li>股票查询接口 [20130901]</li>
-</ol>
-<p>code：股票代码[通达信代码]<br><a href="http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063" target="_blank" rel="external">http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063</a></p>
-<ol>
-<li><p>股票分析接口 [20131004]<br>code：股票代码<br><a href="http://apix.sinaapp.com/stockanalysis/?appkey=trialuser&amp;code=000063" target="_blank" rel="external">http://apix.sinaapp.com/stockanalysis/?appkey=trialuser&amp;code=000063</a></p>
-</li>
-<li><p>公交线路接口 [20131004]<br>city：城市名，传递时须做urlencode<br>line：线路，传递时须做urlencode<br><a href="http://apix.sinaapp.com/busline/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;line=209" target="_blank" rel="external">http://apix.sinaapp.com/busline/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;line=209</a></p>
-</li>
-<li><p>公交、地铁换乘接口 [20131004]<br>city：城市名，传递时须做urlencode<br>start：起点，传递时须做urlencode<br>end：终点，传递时须做urlencode<br><a href="http://apix.sinaapp.com/bus/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;start=%E4%B8%96%E7%95%8C%E4%B9%8B%E7%AA%97&amp;end=%E7%AB%B9%E5%AD%90%E6%9E%97" target="_blank" rel="external">http://apix.sinaapp.com/bus/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;start=%E4%B8%96%E7%95%8C%E4%B9%8B%E7%AA%97&amp;end=%E7%AB%B9%E5%AD%90%E6%9E%97</a></p>
-</li>
-<li><p>地铁查询接口 [20131004]<br><a href="http://apix.sinaapp.com/subway/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/subway/?appkey=trialuser</a></p>
-</li>
-<li><p>火车查询 [20131004]<br><a href="http://apix.sinaapp.com/train/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/train/?appkey=trialuser</a></p>
-</li>
-<li><p>汽车查询接口 [20131004]<br><a href="http://apix.sinaapp.com/coach/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/coach/?appkey=trialuser</a></p>
-</li>
-<li><p>自驾线路 [20131004]<br>startcity：起点城市，传递时须做urlencode<br>startplace：起点地名，传递时须做urlencode<br>endcity：终点城市，传递时须做urlencode<br>endplace：终点地名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/driving/?appkey=trailuser&amp;startcity=%E5%8C%97%E4%BA%AC&amp;startplace=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;endcity=%E5%8C%97%E4%BA%AC&amp;endplace=%E5%A4%A9%E5%AE%89%E9%97%A8" target="_blank" rel="external">http://apix.sinaapp.com/driving/?appkey=trailuser&amp;startcity=%E5%8C%97%E4%BA%AC&amp;startplace=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;endcity=%E5%8C%97%E4%BA%AC&amp;endplace=%E5%A4%A9%E5%AE%89%E9%97%A8</a></p>
-</li>
-<li><p>出租车费用 [20131004]<br>city：城市名，传递时须做urlencode<br>start：起点，传递时须做urlencode<br>end：终点，传递时须做urlencode</p>
+<li><p>快递查询接口 [20130901]<br>company：快递公司英文代码 点击查看英文代码列表<br>number：快递单号<br><a href="http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877">http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877</a></p>
 </li>
 </ol>
-<p><a href="http://apix.sinaapp.com/taxi/?appkey=trailuser&amp;city=%E5%8C%97%E4%BA%AC&amp;start=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;end=%E5%A4%A9%E5%AE%89%E9%97%A8" target="_blank" rel="external">http://apix.sinaapp.com/taxi/?appkey=trailuser&amp;city=%E5%8C%97%E4%BA%AC&amp;start=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6&amp;end=%E5%A4%A9%E5%AE%89%E9%97%A8</a></p>
-<ol>
-<li>航班状态接口 [20131004]</li>
-</ol>
-<p>number：航班号<br><a href="http://apix.sinaapp.com/flight/?appkey=trialuser&amp;number=ca1111" target="_blank" rel="external">http://apix.sinaapp.com/flight/?appkey=trialuser&amp;number=ca1111</a></p>
-<ol>
-<li>笑话接口 [20131004]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/joke/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/joke/?appkey=trialuser</a></p>
-<ol>
-<li>周公解梦接口 [20131004]</li>
-</ol>
-<p>content: 梦见内容，传递时须做urlencode<br><a href="http://apix.sinaapp.com/dream/?appkey=trialuser&amp;content=%E8%80%81%E5%B8%88" target="_blank" rel="external">http://apix.sinaapp.com/dream/?appkey=trialuser&amp;content=%E8%80%81%E5%B8%88</a></p>
-<ol>
-<li>中英互译 [20131104]</li>
-</ol>
-<p>content: 翻译内容，传递时须做urlencode<br><a href="http://apix.sinaapp.com/translate/?appkey=trialuser&amp;content=%E8%A1%A8%E7%A4%BA" target="_blank" rel="external">http://apix.sinaapp.com/translate/?appkey=trialuser&amp;content=%E8%A1%A8%E7%A4%BA</a></p>
-<ol>
-<li>星座运势接口 [20131104]</li>
-</ol>
-<p>name: 星座名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/astrology/?appkey=trialuser&amp;name=%E7%99%BD%E7%BE%8A%E5%BA%A7" target="_blank" rel="external">http://apix.sinaapp.com/astrology/?appkey=trialuser&amp;name=%E7%99%BD%E7%BE%8A%E5%BA%A7</a></p>
-<ol>
-<li>彩票开奖结果接口 [20131104]</li>
-</ol>
-<p>name：彩票名称，传递时须做urlencode<br><a href="http://apix.sinaapp.com/lottery/?appkey=trailuser&amp;name=%E5%8F%8C%E8%89%B2%E7%90%83" target="_blank" rel="external">http://apix.sinaapp.com/lottery/?appkey=trailuser&amp;name=%E5%8F%8C%E8%89%B2%E7%90%83</a><br>备注：支持双色球,大乐透,3D,排列3,排列5,七星彩,七乐彩,胜负彩,任选九,六场半全场,四场进球</p>
-<ol>
-<li>苹果IMEI/序列号查询接口 [20131104]</li>
-</ol>
-<p>number: IMEI号或序列号<br><a href="http://apix.sinaapp.com/apple/?appkey=trialuser&amp;number=358031058974471" target="_blank" rel="external">http://apix.sinaapp.com/apple/?appkey=trialuser&amp;number=358031058974471</a></p>
-<ol>
-<li>百科全书接口 [20131204]</li>
-</ol>
-<p>word: 词条，传递时须做urlencode<br><a href="http://apix.sinaapp.com/encyclopedia/?appkey=trialuser&amp;word=%e5%be%ae%e4%bf%a1" target="_blank" rel="external">http://apix.sinaapp.com/encyclopedia/?appkey=trialuser&amp;word=%e5%be%ae%e4%bf%a1</a></p>
-<ol>
-<li>图书介绍 [20131104]</li>
-</ol>
-<p>name: 图书名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/book/?appkey=trialuser&amp;name=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0" target="_blank" rel="external">http://apix.sinaapp.com/book/?appkey=trialuser&amp;name=%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0</a></p>
-<ol>
-<li>歌曲介绍 [20131104]</li>
-</ol>
-<p>name: 音乐名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/song/?appkey=trialuser&amp;name=%E6%96%B0%E5%B9%B4%E5%A5%BD" target="_blank" rel="external">http://apix.sinaapp.com/song/?appkey=trialuser&amp;name=%E6%96%B0%E5%B9%B4%E5%A5%BD</a></p>
-<ol>
-<li>影片介绍 [20131104]</li>
-</ol>
-<p>name: 电影名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/movie/?appkey=trialuser&amp;name=%E9%BE%99%E7%8C%AB" target="_blank" rel="external">http://apix.sinaapp.com/movie/?appkey=trialuser&amp;name=%E9%BE%99%E7%8C%AB</a></p>
-<ol>
-<li>历史上的今天接口 [20140104]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/history/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/history/?appkey=trialuser</a></p>
-<ol>
-<li><p>经济指标</p>
-</li>
-<li><p>财经大事</p>
-</li>
-<li><p>手机充值</p>
-</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/recharge/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/recharge/?appkey=trialuser</a><br>备注：腾讯财付通官方网站充值接口，基于微信安全支付</p>
-<ol>
-<li>城市团购 [20140104]</li>
-</ol>
-<p>city: 城市名，传递时须做urlencode，你可以指定一个固定城市 查看支持城市列表<br>keyword：关键字，传递时须做urlencode，可为商户名、商品名、地址等<br><a href="http://apix.sinaapp.com/groupon/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;keyword=%E5%8D%8E%E5%BC%BA%E5%8C%97" target="_blank" rel="external">http://apix.sinaapp.com/groupon/?appkey=trialuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;keyword=%E5%8D%8E%E5%BC%BA%E5%8C%97</a></p>
-<ol>
-<li><p>城市优惠</p>
-</li>
-<li><p>黄金</p>
-</li>
-<li><p>白银</p>
-</li>
-<li><p>外汇</p>
-</li>
-<li><p>图片检索</p>
-</li>
-<li><p>视频检索</p>
-</li>
-<li><p>地图位置服务 [20140104]</p>
-</li>
-</ol>
-<p>lat：纬度<br>lng：经度<br>entity：查询名称，传递时须做urlencode<br><a href="http://apix.sinaapp.com/map/?appkey=trialuser&amp;lat=39.915&amp;lng=116.404&amp;entity=%E5%8C%BB%E9%99%A2" target="_blank" rel="external">http://apix.sinaapp.com/map/?appkey=trialuser&amp;lat=39.915&amp;lng=116.404&amp;entity=%E5%8C%BB%E9%99%A2</a></p>
-<ol>
-<li>菜谱 [20140104]</li>
-</ol>
-<p>name: 菜谱名称，传递时须做urlencode<br><a href="http://apix.sinaapp.com/recipe/?appkey=trialuser&amp;name=%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4" target="_blank" rel="external">http://apix.sinaapp.com/recipe/?appkey=trialuser&amp;name=%E5%89%81%E6%A4%92%E9%B1%BC%E5%A4%B4</a></p>
-<ol>
-<li>手机号码归属地查询接口 [20140105]</li>
-</ol>
-<p>number: 手机号码<br><a href="http://apix.sinaapp.com/mobilephone/?appkey=trialuser&amp;number=13456789000" target="_blank" rel="external">http://apix.sinaapp.com/mobilephone/?appkey=trialuser&amp;number=13456789000</a></p>
-<ol>
-<li>身份证归属查询查询接口 [20140105]</li>
-</ol>
-<p>number: 15或18位身份证号码<br><a href="http://apix.sinaapp.com/idcard/?appkey=trialuser&amp;number=542621201212210003" target="_blank" rel="external">http://apix.sinaapp.com/idcard/?appkey=trialuser&amp;number=542621201212210003</a></p>
-<ol>
-<li>电视节目表 [20140116]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/tvprogram/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/tvprogram/?appkey=trialuser</a></p>
-<ol>
-<li>IP地址查询接口 [20140116]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/ip/?appkey=trialuser&amp;ip=202.203.208.80" target="_blank" rel="external">http://apix.sinaapp.com/ip/?appkey=trialuser&amp;ip=202.203.208.80</a></p>
-<ol>
-<li>每日宜忌查询接口 [20140116][源网站已关闭，失效]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/almanac/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/almanac/?appkey=trialuser</a></p>
-<ol>
-<li>疾病查询 [20140121]</li>
-</ol>
-<p>name: 疾病名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/illness/?appkey=trailuser&amp;name=%E6%84%9F%E5%86%92" target="_blank" rel="external">http://apix.sinaapp.com/illness/?appkey=trailuser&amp;name=%E6%84%9F%E5%86%92</a></p>
-<ol>
-<li><p>号码吉凶</p>
-</li>
-<li><p>邮政编码</p>
-</li>
-</ol>
-<p>code：邮政编码<br><a href="http://apix.sinaapp.com/postcode/?appkey=trailuser&amp;code=518057" target="_blank" rel="external">http://apix.sinaapp.com/postcode/?appkey=trailuser&amp;code=518057</a></p>
-<ol>
-<li>产品比价查询接口 [20140118]</li>
-</ol>
-<p>name: 商品名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/price/?appkey=trialuser&amp;name=iphone%205s" target="_blank" rel="external">http://apix.sinaapp.com/price/?appkey=trialuser&amp;name=iphone%205s</a></p>
-<ol>
-<li>食物热量查询接口 [20140120]</li>
-</ol>
-<p>name：食物名<br><a href="http://apix.sinaapp.com/calorie/?appkey=trailuser&amp;name=%E9%B8%A1%E8%9B%8B" target="_blank" rel="external">http://apix.sinaapp.com/calorie/?appkey=trailuser&amp;name=%E9%B8%A1%E8%9B%8B</a></p>
-<ol>
-<li>人品计算 [20140118]</li>
-</ol>
-<p>name: 人名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/moral/?appkey=trialuser&amp;name=%E5%BC%A0%E4%B8%89" target="_blank" rel="external">http://apix.sinaapp.com/moral/?appkey=trialuser&amp;name=%E5%BC%A0%E4%B8%89</a></p>
-<ol>
-<li>违章查询 [20140118]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/peccancy/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/peccancy/?appkey=trialuser</a></p>
-<ol>
-<li>药物查询 [20140117]</li>
-</ol>
-<p>name: 药物名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/medicine/?appkey=trialuser&amp;name=%E9%9D%92%E9%9C%89%E7%B4%A0" target="_blank" rel="external">http://apix.sinaapp.com/medicine/?appkey=trialuser&amp;name=%E9%9D%92%E9%9C%89%E7%B4%A0</a></p>
-<ol>
-<li>周易算命 [20140117]</li>
-</ol>
-<p>name: 人名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/fortune/?appkey=trailuser&amp;name=%E5%BC%A0%E4%B8%89" target="_blank" rel="external">http://apix.sinaapp.com/fortune/?appkey=trailuser&amp;name=%E5%BC%A0%E4%B8%89</a></p>
-<ol>
-<li>机票查询 [20140118]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/airline/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/airline/?appkey=trialuser</a></p>
-<ol>
-<li>酒店查询 [20140119]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/hotel/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/hotel/?appkey=trialuser</a></p>
-<ol>
-<li>驾照模拟考试 [20140119]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/drivingtest/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/drivingtest/?appkey=trialuser</a></p>
-<ol>
-<li>在线点歌查询接口 [20140119]</li>
-</ol>
-<p>singer: 歌手名，传递时须做urlencode<br>song: 歌曲名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/music/?appkey=trialuser&amp;singer=%E5%87%A4%E5%87%B0%E4%BC%A0%E5%A5%87&amp;song=%E6%9C%80%E7%82%AB%E6%B0%91%E6%97%8F%E9%A3%8E" target="_blank" rel="external">http://apix.sinaapp.com/music/?appkey=trialuser&amp;singer=%E5%87%A4%E5%87%B0%E4%BC%A0%E5%A5%87&amp;song=%E6%9C%80%E7%82%AB%E6%B0%91%E6%97%8F%E9%A3%8E</a></p>
-<ol>
-<li>车牌归属地吉凶 [20140119]</li>
-</ol>
-<p>number：车牌号码。例如：湘C12345，传递时须做urlencode<br><a href="http://apix.sinaapp.com/platenumber/?appkey=trialuser&amp;number=%E6%B9%98C12345" target="_blank" rel="external">http://apix.sinaapp.com/platenumber/?appkey=trialuser&amp;number=%E6%B9%98C12345</a></p>
-<ol>
-<li>冬吴相对论 [20140120]</li>
-</ol>
-<p>number：节目期号<br><a href="http://apix.sinaapp.com/dongwu/?appkey=trialuser&amp;number=123" target="_blank" rel="external">http://apix.sinaapp.com/dongwu/?appkey=trialuser&amp;number=123</a></p>
-<ol>
-<li>每日英语 [20140120]</li>
-</ol>
-<p>type：类型，目前支持translation, listening<br><a href="http://apix.sinaapp.com/daily/?appkey=trailuser&amp;type=translation" target="_blank" rel="external">http://apix.sinaapp.com/daily/?appkey=trailuser&amp;type=translation</a></p>
-<ol>
-<li>实时路况 [20140120]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/traffic/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/traffic/?appkey=trialuser</a></p>
-<ol>
-<li>菜价查询 [20140121]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/foodprice/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/foodprice/?appkey=trialuser</a></p>
-<ol>
-<li>成语词典 [20140121]</li>
-</ol>
-<p>word：成语名，传递时须做urlencode<br><a href="http://apix.sinaapp.com/idiom/?appkey=trailuser&amp;word=%E6%96%B9%E5%85%B4%E6%9C%AA%E8%89%BE" target="_blank" rel="external">http://apix.sinaapp.com/idiom/?appkey=trailuser&amp;word=%E6%96%B9%E5%85%B4%E6%9C%AA%E8%89%BE</a></p>
-<ol>
-<li>人脸识别接口 [20140315]</li>
-</ol>
-<p>picurl：图片地址，传递时须做urlencode</p>
-<p><a href="http://apix.sinaapp.com/face/?appkey=trialuser&amp;picurl=http://www.ineiyi.com/uploads/allimg/1312/79-131213142315.jpg" target="_blank" rel="external">http://apix.sinaapp.com/face/?appkey=trialuser&amp;picurl=http://www.ineiyi.com/uploads/allimg/1312/79-131213142315.jpg</a></p>
-<ol>
-<li>四六级成绩查询接口 [20140317]</li>
-</ol>
-<p><a href="http://apix.sinaapp.com/cet/?appkey=trialuser" target="_blank" rel="external">http://apix.sinaapp.com/cet/?appkey=trialuser</a></p>
-
+<p>新版Web页查询<br><a href="http://apix.sinaapp.com/express2/index.php">http://apix.sinaapp.com/express2/index.php</a><br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/11/25/jiekou/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -974,8 +530,10 @@ touch Staticfile  #名字必须是Staticfile
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>项目名称：广州京牛教育科技有限公司<br><a href="http://www.jn199.cn/" title="广州京牛教育科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box1.jpg" alt=""><br></a><br>项目名称：天元乾程科技有限公司<br><a href="http://www.sctyqc.cn/index.html" title="天元乾程科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box2.jpg" alt=""><br></a><br>项目名称：四川卓煌企业管理有限公司<br><a href="http://www.sczhuohuang.com/" title="四川卓煌企业管理有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box3.jpg" alt=""><br></a><br>项目名称：成都兰途网络科技有限公司<br><a href="http://www.lantunet.com/" title="成都兰途网络科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box4.jpg" alt=""><br></a></p>
-
+        <p>项目名称：广州京牛教育科技有限公司<br><a href="http://www.jn199.cn/" title="广州京牛教育科技有限公司"><br><img src="/assets/newImg/demo_box1.jpg" alt=""><br></a><br>项目名称：天元乾程科技有限公司<br><a href="http://www.sctyqc.cn/index.html" title="天元乾程科技有限公司"><br><img src="/assets/newImg/demo_box2.jpg" alt=""><br></a><br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/10/08/items/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">

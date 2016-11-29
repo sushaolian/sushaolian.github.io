@@ -166,94 +166,10 @@
 <ol>
 <li>作为三大基本元素之一的内联元素。 它跟块级元素的主要区别在哪？</li>
 <li>Clear属性取right值时怎么理解？ 貌似实验情况总跟理论不符.</li>
-<li>内联元素是什么意思呢？什么是块级别元素？</li>
-</ol>
-<p>《CSS权威指南》中文字显示：任何不是块级元素的可见元素都是内联元素。其表现的特性是“行布局”形式，这里的“行布局”的意思就是说其表现形式始终以行进行显示。比如，我们设定一个内联元素border-bottom:1px solid #000;时其表现是以每行进行重复，每一行下方都会有一条黑色的细线。如果是块级元素那么所显示的的黑线只会在块的下方出现。</p>
-<p>p、h1、或div等元素常常称为块级元素，这些元素显示为一块内容；Strong。span等元素称为行内元素，它们的内容显示在行中，即“行内框”。（可以使用display=block将行内元素转换成块元素，display=none表示生成的元素根本没有框，也既不显示元素，不占用文档中的空间）</p>
-<pre><code>&gt; 行内就是在一行内的元素，只能放在行内；块级元素，就是一个四方块，可以放在页面上任何地方。
-&gt; 说白了，行内元素就好像一个单词；块级元素就好像一个段落，如果不另加定义的话，它将独立一行出现。
-&gt; 一般的 块级元素诸如段落&lt;p&gt;、标 题&lt;h1&gt;&lt;h2&gt;...、列表。&lt;ul&gt;&lt;ol&gt;&lt;li、表格&lt;table&gt;、表单&lt;form&gt;、DIV&lt;div&gt;和BODY&lt;body&gt;等元素。而内联元素则如: 表单元素&lt;input&gt;、超级链接&lt;a&gt;、图像&lt;img&gt;、&lt;span........
-&gt; 块级无素的显著特点是：每个块级元素都是从一个新行开始显示，而且其后的无素也需另起一行进行显示。
-&gt; &lt;span&gt;在CSS定义中属于一个行内元素，而&lt;div&gt;是块级元素。
-</code></pre><p>对于学过CSS的人来说一听就能明白。可对于新手来说不易理解，我主要对新手说通熟点吧!</p>
-<p>用容器这一词会更容易形象理解它们的存在与用途，行内元素相当一个小容器，而div相当于一个大容器，大容器当然可以放一个小容器了。<span>就是小容器，这样一说你也许会在脑海中有一个初步的印象了吧，如果我们想在大容器中装一些清水。但我也想在里装一些墨水怎么 办？很简单，我们把小容器拿出来装上墨水然后放入大容器里的清水中不就成了吗。</span></p>
-<p>块元素（block element）一般是其他元素的容器元素<br>块元素一般都从新行开始，它可以容纳内联元素和其他块元素。常见块元素是段落标签’P”。“form”这个块元素比较特殊，它只能用来容纳其他块元素。</p>
-<p>如果没有css的作用，块元素会顺序以每次另起一行的方式一直往下排。而有了css以后，我们可以改变这种html的默认布局模式，把块元素摆放到你想要 的位置上去。而不是每次都愚蠢的另起一行。需要指出的是，table标签也是块元素的一种，table based layout和css based layout从一般使用者（不包括视力障碍者、盲人等）的角度来看这两种布局，除了页面载入速度的差别外，没有其他的差别。但是如果普通使用者不经意点了 查看页面源代码按钮后，两者所表现出来的差异就非常大了。基于良好重构理念设计的css布局页面源码，至少也能让没有web开发经验的普通使用者把内容快速的读懂。从这个角度来说，css layout code应该有更好的美学体验吧。</p>
-<p>你能够把块容器元素div想象成一个个box，或者如果你玩过剪贴文载的话，那就更加容易理解了。我们先把需要的文章从各种报纸、杂志总剪 下来。每块剪下来的内容就是一个block。然后我们把这些纸块按照自己的排版意图，用胶水重新贴到一张空白的新纸上。这样就形成了你自己独特的文摘快报了。作为一种技术的延伸，网页布局设计也遵循了同样的模式。</p>
-<p>内联元素（inline element）一般都是基于语义级（semantic）的基本元素。内联元素只能容纳文本或者其他内联元素，常见内联元素 “a”。</p>
-<p>块元素（block element）和内联元素（inline element）都是html规范中的概念。块元素和内联元素的基本差异是块元素一般都从新行开始。而当加入了css控制以后，块元素和内联元素的这种属 性差异就不成为差异了。比如，我们完全可以把内联元素cite加上display:block这样的属性，让他也有每次都从新行开始的属性。</p>
-<p>可变元素的基本概念就是他需要根据上下文关系确定该元素是块元素或者内联元素。可变元素还是属于上述两种元素类别，一旦上下文关系确定了他的类别，他就要遵循块元素或者内联元素的规则限制。大致的元素分类见全文。</p>
-<p>关于inline element的中文叫法，有多种内联元素、内嵌元素、行内元素、直进式元素。基本上没有统一的翻译，爱怎么叫怎么叫吧。另外提到内联元素，我们会想到有个display的属性是display:inline;这个属性能够修复著名的IE双倍浮动边界问题。</p>
-<h2 id="块元素（block-element）"><a href="#块元素（block-element）" class="headerlink" title="块元素（block element）"></a>块元素（block element）</h2><ol>
-<li>address 地址</li>
-<li>blockquote 块引用</li>
-<li>center 举中对齐块</li>
-<li>dir 目录列表</li>
-<li>div 常用块级容易，也是css layout的主要标签</li>
-<li>dl 定义列表</li>
-<li>fieldset form控制组</li>
-<li>form 交互表单</li>
-<li>h1 大标题</li>
-<li>h2 副标题</li>
-<li>h3 3级标题</li>
-<li>h4 4级标题</li>
-<li>h5 5级标题</li>
-<li>h6 6级标题</li>
-<li>hr 水平分隔线</li>
-<li>isindex input prompt</li>
-<li>menu 菜单列表</li>
-<li>noframes frames可选内容（对于不支持frame的浏览器显示此区块内容）</li>
-<li>noscript 可选脚本内容（对于不支持script的浏览器显示此内容）</li>
-<li>ol 排序列表</li>
-<li>p 段落</li>
-<li>pre 格式化文本</li>
-<li>table 表格</li>
-<li>ul 非排序列表</li>
-</ol>
-<h2 id="内联元素（inline-element）"><a href="#内联元素（inline-element）" class="headerlink" title="内联元素（inline element）"></a>内联元素（inline element）</h2><ol>
-<li>a - 锚点</li>
-<li>abbr - 缩写</li>
-<li>acronym - 首字</li>
-<li>b - 粗体（不推荐）</li>
-<li>bdo - bidi override</li>
-<li>big - 大字体</li>
-<li>br - 换行</li>
-<li>cite - 引用</li>
-<li>code - 计算机代码（在引用源码的时候需要）</li>
-<li>dfn - 定义字段</li>
-<li>em - 强调</li>
-<li>font - 字体设定（不推荐）</li>
-<li>i - 斜体</li>
-<li>img - 图片</li>
-<li>input - 输入框</li>
-<li>kbd - 定义键盘文本</li>
-<li>label - 表格标签</li>
-<li>q - 短引用</li>
-<li>s - 中划线（不推荐）</li>
-<li>samp - 定义范例计算机代码</li>
-<li>select - 项目选择</li>
-<li>small - 小字体文本</li>
-<li>span - 常用内联容器，定义文本内区块</li>
-<li>strike - 中划线</li>
-<li>strong - 粗体强调</li>
-<li>sub - 下标</li>
-<li>sup - 上标</li>
-<li>textarea - 多行文本输入框</li>
-<li>tt - 电传文本</li>
-<li>u - 下划线</li>
-<li>var - 定义变量</li>
-<li>可变元素</li>
-<li>可变元素为根据上下文语境决定该元素为块元素或者内联元素。</li>
-<li>applet - java applet</li>
-<li>button - 按钮</li>
-<li>del - 删除文本</li>
-<li>iframe - inline frame</li>
-<li>ins - 插入的文本</li>
-<li>map - 图片区块（map）</li>
-<li>object - object对象</li>
-<li>script - 客户端脚本</li>
-</ol>
-
+<li>内联元素是什么意思呢？什么是块级别元素？
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/07/25/css-wendang/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">
@@ -303,13 +219,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>其实用hexo搭建博客，简单便捷，而且好看！下面我分享一下我的做法吧！<br><img src="/assets/newImg/hexo1.jpg" alt="安装图片"> </p>
-<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>下载-安装<br><img src="/assets/newImg/hexo2.jpg" alt="安装"><br>参考链接：<br><a href="http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html" target="_blank" rel="external">http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html</a><br>打开Telent客户端（如果没打开会出错）<br>如果是windowXP<br>输入<br>win7:<br><img src="/assets/newImg/hexo3.jpg" alt="win7"><br>xp:<br>在[运行]中输入”services.msc”，确定后出现[服务管理器]；<br>或者在[控制面板]里进入[管理工具]，运行[服务]就会出现[服务管理器]；<br>在[服务管理器]中找到[Telnet] 项，按键盘的”t”-“e”-“l”键很快就能找着；<br>在双击后出现的[属性对话框]中[启动类型]改为[自动]或[手动]；<br>启动Telnet服务<br>在[属性对话框]中的[服务状态]项中点击[启动]；<br>在[运行]中输入”cmd”，确定后在光标提示符输入”net start telnet”回车，当屏幕显示”Telnet服务正在启动…Telnet 服务已经启动成功。”后，说明Telnet服务已经在你本机启动了。</p>
+<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>下载-安装<br><img src="/assets/newImg/hexo2.jpg" alt="安装"><br>参考链接：<br><a href="http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html">http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html</a><br>打开Telent客户端（如果没打开会出错）<br>如果是windowXP<br>输入<br>win7:<br><img src="/assets/newImg/hexo3.jpg" alt="win7"><br>xp:<br>在[运行]中输入”services.msc”，确定后出现[服务管理器]；<br>或者在[控制面板]里进入[管理工具]，运行[服务]就会出现[服务管理器]；<br>在[服务管理器]中找到[Telnet] 项，按键盘的”t”-“e”-“l”键很快就能找着；<br>在双击后出现的[属性对话框]中[启动类型]改为[自动]或[手动]；<br>启动Telnet服务<br>在[属性对话框]中的[服务状态]项中点击[启动]；<br>在[运行]中输入”cmd”，确定后在光标提示符输入”net start telnet”回车，当屏幕显示”Telnet服务正在启动…Telnet 服务已经启动成功。”后，说明Telnet服务已经在你本机启动了。</p>
 <h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p><img src="/assets/newImg/hexo4.jpg" alt="git"><br>点击下一步完成即可</p>
 <h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>生成SSH密钥<br>查看是否已经有了ssh密钥：</p>
 <blockquote>
 <p><code>cd ~/.ssh</code><br>如果没有密钥则不会有此文件夹，有则备份删除<br>生成密钥：<br><code>$ ssh-keygen -t rsa -C “you@gmail.com”</code><br><code>按3个回车，密码为空。</code><br>最后得到了两个文件：id_rsa和id_rsa.pub<br><img src="/assets/newImg/hexo5.jpg" alt="安装图片"><br>打开github网站<br>在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。<br>选择Settings<br><img src="/assets/newImg/hexo6.jpg" alt="github"><br>选择 SSH and GDP keys<br><img src="/assets/newImg/hexo7.jpg" alt="githubkey"><br>点击new ssh key<br><img src="/assets/newImg/hexo8.jpg" alt="sshkey"><br>添加id_rsa.pub里面的公钥到key中提交即可<br><img src="/assets/newImg/hexo9.jpg" alt="安装图片"></p>
 <h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><pre><code>npm install hexo-deployer-git --save
-</code></pre><p>安装HEXO<br>官网：<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">https://hexo.io/zh-cn/</a><br>右击选择 Bash<br><img src="/assets/newImg/hexo10.jpg" alt="安装图片"><br>    选择想要存放盘 cd</p>
+</code></pre><p>安装HEXO<br>官网：<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a><br>右击选择 Bash<br><img src="/assets/newImg/hexo10.jpg" alt="安装图片"><br>    选择想要存放盘 cd</p>
 </blockquote>
 <pre><code>npm install hexo-cli -g//安装
 
@@ -324,17 +240,10 @@ npm install//初始化博客
 hexo g//生成静态网页（输入后查看根目录是否有public文件夹，如果没有请重装）
 
 hexo server//开启服务器
-</code></pre><p><img src="/assets/newImg/hexoyy.jpg" alt="安装图片"><br>在浏览器中输入：<a href="http://127.0.0.1:4000/" target="_blank" rel="external">http://127.0.0.1:4000/</a><br><img src="/assets/newImg/hexo11.jpg" alt="安装图片"><br>安装完成</p>
-<h2 id="建github库与推送"><a href="#建github库与推送" class="headerlink" title="建github库与推送"></a>建github库与推送</h2><p><img src="/assets/newImg/hexo12.jpg" alt="安装图片"><br>复制克隆码（一定要是SSH的）<br><img src="/assets/newImg/hexo13.jpg" alt="安装图片"><br>打开博客存放位置进入_config.yml（配置文件）<br><img src="/assets/newImg/hexo14.jpg" alt="安装图片"></p>
-<p>在deploy:位置输入</p>
-<blockquote>
-<pre><code>deploy://前面不能有有空格 
-type: git
-repo: git@github.com:crazezy2333/crazezy2333.github.io.git //克隆码
-branch: master
-</code></pre><p>推送<br>hexo clean//清除原静态网页<br>hexo generate//生成静态网页<br>hexo deploy//推送<br>完成</p>
-</blockquote>
-
+</code></pre><p><img src="/assets/newImg/hexoyy.jpg" alt="安装图片"><br>在浏览器中输入：<a href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a><br><img src="/assets/newImg/hexo11.jpg" alt="安装图片"><br>安装完成<br>
+        <p class="article-more-link">
+          <a class="article-more-a"  href="/2016/06/21/hexo-base/#more">more >></a>
+        </p>
       
     </div>
     <div class="article-info article-info-index">

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//sushaolian.top/"/>
-  <updated>2016-11-28T14:35:10.053Z</updated>
+  <updated>2016-11-29T06:54:58.629Z</updated>
   <id>//sushaolian.top/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="//sushaolian.top/2016/11/28/hexo-coding-github/"/>
     <id>//sushaolian.top/2016/11/28/hexo-coding-github/</id>
     <published>2016-11-28T12:33:00.000Z</published>
-    <updated>2016-11-28T14:35:10.053Z</updated>
+    <updated>2016-11-29T06:54:58.629Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近发现，我之前把hexo托管在github上的访问速度太慢了，估计是因为github是国外的，访问速度才慢。所以想着部署一套在国内的托管平台。所以上网查找，看到胖逆的嘟嘟的博客:<a href="http://www.cnblogs.com/tengj/p/5352572.html,有相关的介绍，根据博客的介绍，经了一番折腾，终于成功的把hexo的博客同时更新到github和coding上了。" target="_blank" rel="external">http://www.cnblogs.com/tengj/p/5352572.html,有相关的介绍，根据博客的介绍，经了一番折腾，终于成功的把hexo的博客同时更新到github和coding上了。</a></p>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近发现，我之前把hexo托管在github上的访问速度太慢了，估计是因为github是国外的，访问速度才慢。所以想着部署一套在国内的托管平台。所以上网查找，看到胖逆的嘟嘟的博客:<a href="http://www.cnblogs.com/tengj/p/5352572.html" target="_blank" rel="external">http://www.cnblogs.com/tengj/p/5352572.html</a>, 有相关的介绍，根据博客的介绍，经了一番折腾，终于成功的把hexo的博客同时更新到github和coding上了。</p>
 <p><img src="/assets/newImg/hexo2_1.jpg" alt="coding"></p>
+<a id="more"></a>
 <h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><p><strong>_config.yml配置</strong><br>想要同时部署到2个平台，就要修改博客根目录下面的_config.yml文件中的deploy如下<br>根据Hexo官方文档需要修改成下面的形式</p>
 <pre><code>deploy:
   type: git
@@ -85,7 +86,8 @@ touch Staticfile  #名字必须是Staticfile
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近发现，我之前把hexo托管在github上的访问速度太慢了，估计是因为github是国外的，访问速度才慢。所以想着部署一套在国内的托管平
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近发现，我之前把hexo托管在github上的访问速度太慢了，估计是因为github是国外的，访问速度才慢。所以想着部署一套在国内的托管平台。所以上网查找，看到胖逆的嘟嘟的博客:&lt;a href=&quot;http://www.cnblogs.com/tengj/p/5352572.html&quot;&gt;http://www.cnblogs.com/tengj/p/5352572.html&lt;/a&gt;, 有相关的介绍，根据博客的介绍，经了一番折腾，终于成功的把hexo的博客同时更新到github和coding上了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/newImg/hexo2_1.jpg&quot; alt=&quot;coding&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -99,12 +101,11 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/11/27/diary-2016-11-27/"/>
     <id>//sushaolian.top/2016/11/27/diary-2016-11-27/</id>
     <published>2016-11-27T11:00:00.000Z</published>
-    <updated>2016-11-27T11:54:39.891Z</updated>
+    <updated>2016-11-29T06:52:16.832Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/newImg/me.png" alt=""></p>
 <p>本来今天是要去天河城搬东西回白云区的，可是临时被别人放了鸽子，所以搬家的事情只能改期！</p>
-<p>现在还是在忙着找工作的事情，投了一些简历，可是都没有收到面试的通知。朋友也是失业了。就和朋友商量着，如果现在找不到合适自己专业喜欢的，就先做着其他先，毕竟现在快过年了，过完年再重新找，利用这一段时间好好学习，充充电！现在我也是身体不适，想着先把自己身体养好再说。</p>
-<p>其实，我自己不怎么着急工作的时候，就是怕妈妈担心。妈妈已经打了几个电话问我有没有找到工作了。每次我也只能说“快找到了”。长这么大了，还要母亲如此为我担心实在是不应该！本来想着好好工作，过年给点多钱爸妈过年的，可是谁知道，工作没有多久，那家公司就运营不下去了，我也没有存什么钱。想着今年过年，都没有钱给父母过年，槽糕的心情都不知道该用什么形容了。</p>
+<p>现在还是在忙着找工作的事情，投了一些简历，可是都没有收到面试的通知。朋友也是失业了。就和朋友商量着，如果现在找不到合适自己专业喜欢的，就先做着其他先，毕竟现在快过年了，过完年再重新找，利用这一段时间好好学习，充充电！现在我也是身体不适，想着先把自己身体养好再说。<br><a id="more"></a><br>其实，我自己不怎么着急工作的时候，就是怕妈妈担心。妈妈已经打了几个电话问我有没有找到工作了。每次我也只能说“快找到了”。长这么大了，还要母亲如此为我担心实在是不应该！本来想着好好工作，过年给点多钱爸妈过年的，可是谁知道，工作没有多久，那家公司就运营不下去了，我也没有存什么钱。想着今年过年，都没有钱给父母过年，槽糕的心情都不知道该用什么形容了。</p>
 <p>之前读大学的时候，就是想着快点毕业工作。现在毕业了，发现工作与在学校对比，相差太远了。可能说在学校的日子会比较无忧一点，思想单纯一点。出来社会了，面对生活，面对不同的人，很多事情觉得复杂了好多。现在我自己做事也会留三分余地，已经没有那么任性了。有一些东西即使不喜欢，可是生活需要我也会逼迫着我自己做。可能这就是生活的无奈吧！</p>
 <p>生活在一线城市，每天都要为柴米油盐忧愁。这座城市，不仅物价高，房价高，工作压力大。坐在写字楼里面工作，在别人看来非常的光鲜亮丽，其实有着很多不为人知的心酸。</p>
 <p>还是不想了，无论如何，生活还是得继续。先增进自己技术再说。我相信只要努力与拼搏，懦弱如我，也可以在这座繁华城市里面找到一席之地的！</p>
@@ -115,7 +116,7 @@ touch Staticfile  #名字必须是Staticfile
     
       &lt;p&gt;&lt;img src=&quot;/assets/newImg/me.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;本来今天是要去天河城搬东西回白云区的，可是临时被别人放了鸽子，所以搬家的事情只能改期！&lt;/p&gt;
-&lt;p&gt;现在还是在忙着找工作的事情，投了一些简历，可是都没有收到面试的通知。朋友也是
+&lt;p&gt;现在还是在忙着找工作的事情，投了一些简历，可是都没有收到面试的通知。朋友也是失业了。就和朋友商量着，如果现在找不到合适自己专业喜欢的，就先做着其他先，毕竟现在快过年了，过完年再重新找，利用这一段时间好好学习，充充电！现在我也是身体不适，想着先把自己身体养好再说。&lt;br&gt;
     
     </summary>
     
@@ -131,11 +132,12 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/11/27/flex/"/>
     <id>//sushaolian.top/2016/11/27/flex/</id>
     <published>2016-11-27T07:36:00.000Z</published>
-    <updated>2016-11-27T12:01:37.240Z</updated>
+    <updated>2016-11-29T06:56:47.819Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/newImg/flexbox.png" alt=""> </p>
 <p>2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。</p>
 <p><img src="/assets/newImg/flex-brower.jpg" alt=""></p>
+<a id="more"></a>
 <h2 id="Flex布局的定义"><a href="#Flex布局的定义" class="headerlink" title="Flex布局的定义:"></a>Flex布局的定义:</h2><p>Flex是Flexible Box的缩写，意为”弹性布局”,用来为盒状模型提供最大的灵活性。<br>任何一个容器都可以指定为Flex布局。</p>
 <pre><code>.flexbox{
     display:flex;
@@ -285,7 +287,8 @@ touch Staticfile  #名字必须是Staticfile
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;/assets/newImg/flexbox.png&quot; alt=&quot;&quot;&gt; &lt;/p&gt;
-&lt;p&gt;2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项
+&lt;p&gt;2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/newImg/flex-brower.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -301,15 +304,15 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/11/25/diary-2016-11-25/"/>
     <id>//sushaolian.top/2016/11/25/diary-2016-11-25/</id>
     <published>2016-11-25T11:16:54.895Z</published>
-    <updated>2016-11-25T12:16:48.671Z</updated>
+    <updated>2016-11-29T06:53:23.864Z</updated>
     
-    <content type="html"><![CDATA[<p><audio src="/assets/video/xiaoxingyun.mp3" controls></audio><br>    耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不<br>知道！生活总是喜怒哀乐交差在一起，快乐与否取决你自己的态度和心态！不开心是一天，开心也是一天，为什么我们不快快乐乐的过每一天呢？<br><img src="/assets/newImg/diary1.jpg" alt=""><br>    最近的我，不但失业还失恋了，我觉得我这运气也是没有谁了吧！现在是11月份底，马上就过年，<br>现在这段时间想找一份前端的工作也不易！我采取海投简历的办法，希望得到面试的机会多一点，可是这样子收到面试机会却很少。这些公司拒绝的原因都很简单又直接：都是经验不足和项目偏少。很多公司招收前端这样的岗位都要求要有2年的工作经历以上，而我只是一个刚刚毕业没多久的大学生，才工作了几个月。估计很少公司会选择我这样的新人吧！其实我上一家公司也不错的，和同事相处也很愉快，可是公司无法运营下去，我也没有办法。有人都跟说女生不应该选择编程的，那样太辛苦了。可是我是真的热爱这个行业，尽管很辛苦，我也想努力坚持走下去。人的一生，能够做自己喜欢的事情，可以自己做选择，那是一件幸福的事情！我觉得我何其幸运，能够做自己喜欢的事。也有收到一些面试的机会，可是要求却很严格，有一家公司面试的时候，单单是笔试题就有6页，我是做，可是正确率是多少我就不知道了，最后我也没有接到要我去复试的机会。估计是我的笔试太差了！所以最近在恶补一些前端方面的知识。相信努力总会找到工作的！<br><img src="/assets/newImg/diary2.jpg" alt=""><br>    冬天来了，在这寒冷的天气里，我还是感觉到了好朋友带给我的一丝丝温暖，暖和了我的一颗心。<br>我幸运此生能够认识他们，我会珍惜这些友情。我知道我是那种非常冷漠的女孩子，喜欢假装坚强，其实我的内心很柔弱。阳光总在风雨后，冬天过了，春天自然会来的！我要对自己说：加油！你是永远都不服输的女孩子！</p>
+    <content type="html"><![CDATA[<p><audio src="/assets/video/xiaoxingyun.mp3" controls></audio><br>耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不<br>知道！生活总是喜怒哀乐交差在一起，快乐与否取决你自己的态度和心态！不开心是一天，开心也是一天，为什么我们不快快乐乐的过每一天呢？<br><img src="/assets/newImg/diary1.jpg" alt=""><br><a id="more"></a><br>最近的我，不但失业还失恋了，我觉得我这运气也是没有谁了吧！现在是11月份底，马上就过年，<br>现在这段时间想找一份前端的工作也不易！我采取海投简历的办法，希望得到面试的机会多一点，可是这样子收到面试机会却很少。这些公司拒绝的原因都很简单又直接：都是经验不足和项目偏少。很多公司招收前端这样的岗位都要求要有2年的工作经历以上，而我只是一个刚刚毕业没多久的大学生，才工作了几个月。估计很少公司会选择我这样的新人吧！其实我上一家公司也不错的，和同事相处也很愉快，可是公司无法运营下去，我也没有办法。有人都跟说女生不应该选择编程的，那样太辛苦了。可是我是真的热爱这个行业，尽管很辛苦，我也想努力坚持走下去。人的一生，能够做自己喜欢的事情，可以自己做选择，那是一件幸福的事情！我觉得我何其幸运，能够做自己喜欢的事。也有收到一些面试的机会，可是要求却很严格，有一家公司面试的时候，单单是笔试题就有6页，我是做，可是正确率是多少我就不知道了，最后我也没有接到要我去复试的机会。估计是我的笔试太差了！所以最近在恶补一些前端方面的知识。相信努力总会找到工作的！<br><img src="/assets/newImg/diary2.jpg" alt=""><br>    冬天来了，在这寒冷的天气里，我还是感觉到了好朋友带给我的一丝丝温暖，暖和了我的一颗心。<br>我幸运此生能够认识他们，我会珍惜这些友情。我知道我是那种非常冷漠的女孩子，喜欢假装坚强，其实我的内心很柔弱。阳光总在风雨后，冬天过了，春天自然会来的！我要对自己说：加油！你是永远都不服输的女孩子！</p>
 <p>——–author:苏少莲———————</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;audio src=&quot;/assets/video/xiaoxingyun.mp3&quot; controls&gt;&lt;/audio&gt;&lt;br&gt;    耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不&lt;br&gt;知道！生活总是喜怒哀乐交差在一起，快乐与否
+      &lt;p&gt;&lt;audio src=&quot;/assets/video/xiaoxingyun.mp3&quot; controls&gt;&lt;/audio&gt;&lt;br&gt;耳边总是在循环不断的响起小幸运这首歌，我觉得很好听！究竟怎样的人生才算是幸运的呢?我也不&lt;br&gt;知道！生活总是喜怒哀乐交差在一起，快乐与否取决你自己的态度和心态！不开心是一天，开心也是一天，为什么我们不快快乐乐的过每一天呢？&lt;br&gt;&lt;img src=&quot;/assets/newImg/diary1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -325,10 +328,9 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/11/25/weixin/"/>
     <id>//sushaolian.top/2016/11/25/weixin/</id>
     <published>2016-11-24T16:58:00.000Z</published>
-    <updated>2016-11-24T17:14:10.231Z</updated>
+    <updated>2016-11-29T07:02:26.521Z</updated>
     
-    <content type="html"><![CDATA[<p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a></p>
-<p>二、微信公众账号介绍</p>
+    <content type="html"><![CDATA[<p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a><br><a id="more"></a><br>二、微信公众账号介绍</p>
 <p><img src="/assets/newImg/weixin1.png" alt=""><br>服务号、订阅号、企业号的介绍（区别）<br>1、订阅号：主要偏于为用户传达资讯（类似报纸杂志），认证前后都是每天只可以群发一条消息；<br>2、服务号：主要偏于服务交互（类似银行，114，提供服务查询），认证前后都是每个月可群发4条消息；<br>3、企业号：主要用于公司内部通讯使用，需要先有成员的通讯信息验证才可以关注成功企业号；<br>温馨提示：<br>1、如果想简单的发送消息，达到宣传效果，建议可选择订阅号；<br>2、如果想进行商品销售，进行商品售卖，建议可申请服务号；<br>3、如果想用来管理内部企业员工、团队，对内使用，可申请企业号。<br><img src="/assets/newImg/weixin2.png" alt=""> </p>
 <p>三、微信数据收发原理以及消息数据格式</p>
 <p>3、1 开发者模式成为开发者时的消息校验原理<br>开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，并且带上四个参数(signature、timestamp、nonce、echostr)，开发者通过对签名(signature)的检验，来判断此条信息的真实性。<br>验证成功之后，开发者接受用户消息的时候，微信也都会带上前面三个参数(signature、timestamp、nonce)访问开发者设置的URL，开发者依然通过签名的校验判断消息的真实性。<br>加密/校验流程如下：</p>
@@ -371,7 +373,7 @@ touch Staticfile  #名字必须是Staticfile
     
     <summary type="html">
     
-      &lt;p&gt;一、准备工作&lt;br&gt;a)账号&lt;br&gt;i.在SAE上面注册一个账号。&lt;a href=&quot;http://t.cn/RbuZZHk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://t.cn/RbuZZHk&lt;/a&gt;  我的SAE推荐链接&lt;br&gt;ii.在微
+      &lt;p&gt;一、准备工作&lt;br&gt;a)账号&lt;br&gt;i.在SAE上面注册一个账号。&lt;a href=&quot;http://t.cn/RbuZZHk&quot;&gt;http://t.cn/RbuZZHk&lt;/a&gt;  我的SAE推荐链接&lt;br&gt;ii.在微信公众号开发平台地址 &lt;a href=&quot;https://mp.weixin.qq.com&quot;&gt;https://mp.weixin.qq.com&lt;/a&gt;  注册一个微信公众号。&lt;br&gt;注意：1、个人只能申请到个人类型的订阅号。&lt;br&gt;2、微信公众号认证需要300大洋。&lt;br&gt;iii.申请公众号测试号地址&lt;br&gt;&lt;a href=&quot;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&quot;&gt;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -387,7 +389,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/11/25/jiekou/"/>
     <id>//sushaolian.top/2016/11/25/jiekou/</id>
     <published>2016-11-24T16:58:00.000Z</published>
-    <updated>2016-11-25T14:11:01.006Z</updated>
+    <updated>2016-11-29T07:03:34.867Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/newImg/php1.png" alt="第三方接口文档"> </p>
 <ol>
@@ -398,13 +400,11 @@ touch Staticfile  #名字必须是Staticfile
 <li><p>快递查询接口 [20130901]<br>company：快递公司英文代码 点击查看英文代码列表<br>number：快递单号<br><a href="http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877" target="_blank" rel="external">http://apix.sinaapp.com/express/?appkey=trialuser&amp;company=yuantong&amp;number=3143490877</a></p>
 </li>
 </ol>
-<p>新版Web页查询<br><a href="http://apix.sinaapp.com/express2/index.php" target="_blank" rel="external">http://apix.sinaapp.com/express2/index.php</a></p>
+<p>新版Web页查询<br><a href="http://apix.sinaapp.com/express2/index.php" target="_blank" rel="external">http://apix.sinaapp.com/express2/index.php</a><br><a id="more"></a></p>
 <ol>
 <li>智能快递查询接口 [20130901]<br>number：快递单号<br><a href="http://apix.sinaapp.com/expressauto/?appkey=trialuser&amp;number=3143490877" target="_blank" rel="external">http://apix.sinaapp.com/expressauto/?appkey=trialuser&amp;number=3143490877</a><br>备注：支持EMS,申通快递,圆通快递,中通快递,汇通快递,天天快递,韵达快递,顺丰快递,宅急送,速尔快递,德邦物流,联昊通物流,全峰快递,中国邮政，如风达</li>
-<li>股票查询接口 [20130901]</li>
-</ol>
-<p>code：股票代码[通达信代码]<br><a href="http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063" target="_blank" rel="external">http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063</a></p>
-<ol>
+<li><p>股票查询接口 [20130901]<br>code：股票代码[通达信代码]<br><a href="http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063" target="_blank" rel="external">http://apix.sinaapp.com/stock/?appkey=trialuser&amp;code=000063</a></p>
+</li>
 <li><p>股票分析接口 [20131004]<br>code：股票代码<br><a href="http://apix.sinaapp.com/stockanalysis/?appkey=trialuser&amp;code=000063" target="_blank" rel="external">http://apix.sinaapp.com/stockanalysis/?appkey=trialuser&amp;code=000063</a></p>
 </li>
 <li><p>公交线路接口 [20131004]<br>city：城市名，传递时须做urlencode<br>line：线路，传递时须做urlencode<br><a href="http://apix.sinaapp.com/busline/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;line=209" target="_blank" rel="external">http://apix.sinaapp.com/busline/?appkey=trailuser&amp;city=%E6%B7%B1%E5%9C%B3&amp;line=209</a></p>
@@ -615,7 +615,14 @@ touch Staticfile  #名字必须是Staticfile
     
       &lt;p&gt;&lt;img src=&quot;/assets/newImg/php1.png&quot; alt=&quot;第三方接口文档&quot;&gt; &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;天气预报接口 [20130901]&lt;br&gt;city：城市名，传递时须做urlencode&lt;br&gt;&lt;a href=&quot;http://apix.s
+&lt;li&gt;&lt;p&gt;天气预报接口 [20130901]&lt;br&gt;city：城市名，传递时须做urlencode&lt;br&gt;&lt;a href=&quot;http://apix.sinaapp.com/weather/?appkey=trialuser&amp;amp;city=%E6%B7%B1%E5%9C%B3&quot;&gt;http://apix.sinaapp.com/weather/?appkey=trialuser&amp;amp;city=%E6%B7%B1%E5%9C%B3&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;空气质量指数接口 [20130901]&lt;br&gt;city：城市名，传递时须做urlencode&lt;br&gt;&lt;a href=&quot;http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;amp;city=%E6%B7%B1%E5%9C%B3&quot;&gt;http://apix.sinaapp.com/airquality/?appkey=trialuser&amp;amp;city=%E6%B7%B1%E5%9C%B3&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;快递查询接口 [20130901]&lt;br&gt;company：快递公司英文代码 点击查看英文代码列表&lt;br&gt;number：快递单号&lt;br&gt;&lt;a href=&quot;http://apix.sinaapp.com/express/?appkey=trialuser&amp;amp;company=yuantong&amp;amp;number=3143490877&quot;&gt;http://apix.sinaapp.com/express/?appkey=trialuser&amp;amp;company=yuantong&amp;amp;number=3143490877&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;新版Web页查询&lt;br&gt;&lt;a href=&quot;http://apix.sinaapp.com/express2/index.php&quot;&gt;http://apix.sinaapp.com/express2/index.php&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -716,14 +723,14 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/10/08/items/"/>
     <id>//sushaolian.top/2016/10/08/items/</id>
     <published>2016-10-08T02:36:00.000Z</published>
-    <updated>2016-11-24T16:58:07.358Z</updated>
+    <updated>2016-11-29T07:00:13.771Z</updated>
     
-    <content type="html"><![CDATA[<p>项目名称：广州京牛教育科技有限公司<br><a href="http://www.jn199.cn/" title="广州京牛教育科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box1.jpg" alt=""><br></a><br>项目名称：天元乾程科技有限公司<br><a href="http://www.sctyqc.cn/index.html" title="天元乾程科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box2.jpg" alt=""><br></a><br>项目名称：四川卓煌企业管理有限公司<br><a href="http://www.sczhuohuang.com/" title="四川卓煌企业管理有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box3.jpg" alt=""><br></a><br>项目名称：成都兰途网络科技有限公司<br><a href="http://www.lantunet.com/" title="成都兰途网络科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box4.jpg" alt=""><br></a></p>
+    <content type="html"><![CDATA[<p>项目名称：广州京牛教育科技有限公司<br><a href="http://www.jn199.cn/" title="广州京牛教育科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box1.jpg" alt=""><br></a><br>项目名称：天元乾程科技有限公司<br><a href="http://www.sctyqc.cn/index.html" title="天元乾程科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box2.jpg" alt=""><br></a><br><a id="more"></a><br>项目名称：四川卓煌企业管理有限公司<br><a href="http://www.sczhuohuang.com/" title="四川卓煌企业管理有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box3.jpg" alt=""><br></a><br>项目名称：成都兰途网络科技有限公司<br><a href="http://www.lantunet.com/" title="成都兰途网络科技有限公司" target="_blank" rel="external"><br><img src="/assets/newImg/demo_box4.jpg" alt=""><br></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;项目名称：广州京牛教育科技有限公司&lt;br&gt;&lt;a href=&quot;http://www.jn199.cn/&quot; title=&quot;广州京牛教育科技有限公司&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;br&gt;&lt;img src=&quot;/assets/newImg/demo
+      &lt;p&gt;项目名称：广州京牛教育科技有限公司&lt;br&gt;&lt;a href=&quot;http://www.jn199.cn/&quot; title=&quot;广州京牛教育科技有限公司&quot;&gt;&lt;br&gt;&lt;img src=&quot;/assets/newImg/demo_box1.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/a&gt;&lt;br&gt;项目名称：天元乾程科技有限公司&lt;br&gt;&lt;a href=&quot;http://www.sctyqc.cn/index.html&quot; title=&quot;天元乾程科技有限公司&quot;&gt;&lt;br&gt;&lt;img src=&quot;/assets/newImg/demo_box2.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
@@ -737,7 +744,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/07/25/css-wendang/"/>
     <id>//sushaolian.top/2016/07/25/css-wendang/</id>
     <published>2016-07-24T16:58:00.000Z</published>
-    <updated>2016-11-27T12:02:01.075Z</updated>
+    <updated>2016-11-29T06:57:45.106Z</updated>
     
     <content type="html"><![CDATA[<p>将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。<br>每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。</p>
 <p>内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。</p>
@@ -754,9 +761,9 @@ touch Staticfile  #名字必须是Staticfile
 <ol>
 <li>作为三大基本元素之一的内联元素。 它跟块级元素的主要区别在哪？</li>
 <li>Clear属性取right值时怎么理解？ 貌似实验情况总跟理论不符.</li>
-<li>内联元素是什么意思呢？什么是块级别元素？</li>
+<li>内联元素是什么意思呢？什么是块级别元素？<a id="more"></a>
+《CSS权威指南》中文字显示：任何不是块级元素的可见元素都是内联元素。其表现的特性是“行布局”形式，这里的“行布局”的意思就是说其表现形式始终以行进行显示。比如，我们设定一个内联元素border-bottom:1px solid #000;时其表现是以每行进行重复，每一行下方都会有一条黑色的细线。如果是块级元素那么所显示的的黑线只会在块的下方出现。</li>
 </ol>
-<p>《CSS权威指南》中文字显示：任何不是块级元素的可见元素都是内联元素。其表现的特性是“行布局”形式，这里的“行布局”的意思就是说其表现形式始终以行进行显示。比如，我们设定一个内联元素border-bottom:1px solid #000;时其表现是以每行进行重复，每一行下方都会有一条黑色的细线。如果是块级元素那么所显示的的黑线只会在块的下方出现。</p>
 <p>p、h1、或div等元素常常称为块级元素，这些元素显示为一块内容；Strong。span等元素称为行内元素，它们的内容显示在行中，即“行内框”。（可以使用display=block将行内元素转换成块元素，display=none表示生成的元素根本没有框，也既不显示元素，不占用文档中的空间）</p>
 <pre><code>&gt; 行内就是在一行内的元素，只能放在行内；块级元素，就是一个四方块，可以放在页面上任何地方。
 &gt; 说白了，行内元素就好像一个单词；块级元素就好像一个段落，如果不另加定义的话，它将独立一行出现。
@@ -846,7 +853,21 @@ touch Staticfile  #名字必须是Staticfile
     <summary type="html">
     
       &lt;p&gt;将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。&lt;br&gt;每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。&lt;/p&gt;
-&lt;p&gt;内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成
+&lt;p&gt;内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。&lt;/p&gt;
+&lt;p&gt;有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位， 固定定位。 但是在IE中浮动元素也存在于文档流中（还让我觉得这样很合理&amp;gt;&amp;lt;）。&lt;/p&gt;
+&lt;p&gt;浮动元素不占任何正常文档流空间，而浮动元素的定位还是基于正常的文档流，然后从文档流中抽出并尽可能远的移动至左侧或者右侧。文字内容会围绕在浮动元素周围。当一个元素从正常文档流中抽出后，仍然在文档流中的其他元素将忽略该元素并填补他原先的空间。&lt;/p&gt;
+&lt;p&gt;浮动概念让人迷惑根源在于浏览器对理论的解读造成的。只能说很多人以IE做标准，其实它不是。&lt;/p&gt;
+&lt;p&gt;基于文档流， 我们可以很容易理解以下的定位模式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;相对定位， 即相对于元素在文档流中位置进行偏移。 但保留原占位。&lt;/li&gt;
+&lt;li&gt;绝对定位， 即完全脱离文档流， 相对于position属性非static值的最近父级元素进行偏移。&lt;/li&gt;
+&lt;li&gt;固定定位， 即完全脱离文档流， 相对于视区进行偏移。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;几个问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作为三大基本元素之一的内联元素。 它跟块级元素的主要区别在哪？&lt;/li&gt;
+&lt;li&gt;Clear属性取right值时怎么理解？ 貌似实验情况总跟理论不符.&lt;/li&gt;
+&lt;li&gt;内联元素是什么意思呢？什么是块级别元素？
     
     </summary>
     
@@ -862,7 +883,7 @@ touch Staticfile  #名字必须是Staticfile
     <link href="//sushaolian.top/2016/06/21/hexo-base/"/>
     <id>//sushaolian.top/2016/06/21/hexo-base/</id>
     <published>2016-06-20T16:02:00.000Z</published>
-    <updated>2016-11-25T13:13:07.893Z</updated>
+    <updated>2016-11-29T06:56:29.876Z</updated>
     
     <content type="html"><![CDATA[<p>其实用hexo搭建博客，简单便捷，而且好看！下面我分享一下我的做法吧！<br><img src="/assets/newImg/hexo1.jpg" alt="安装图片"> </p>
 <h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>下载-安装<br><img src="/assets/newImg/hexo2.jpg" alt="安装"><br>参考链接：<br><a href="http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html" target="_blank" rel="external">http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html</a><br>打开Telent客户端（如果没打开会出错）<br>如果是windowXP<br>输入<br>win7:<br><img src="/assets/newImg/hexo3.jpg" alt="win7"><br>xp:<br>在[运行]中输入”services.msc”，确定后出现[服务管理器]；<br>或者在[控制面板]里进入[管理工具]，运行[服务]就会出现[服务管理器]；<br>在[服务管理器]中找到[Telnet] 项，按键盘的”t”-“e”-“l”键很快就能找着；<br>在双击后出现的[属性对话框]中[启动类型]改为[自动]或[手动]；<br>启动Telnet服务<br>在[属性对话框]中的[服务状态]项中点击[启动]；<br>在[运行]中输入”cmd”，确定后在光标提示符输入”net start telnet”回车，当屏幕显示”Telnet服务正在启动…Telnet 服务已经启动成功。”后，说明Telnet服务已经在你本机启动了。</p>
@@ -886,7 +907,7 @@ npm install//初始化博客
 hexo g//生成静态网页（输入后查看根目录是否有public文件夹，如果没有请重装）
 
 hexo server//开启服务器
-</code></pre><p><img src="/assets/newImg/hexoyy.jpg" alt="安装图片"><br>在浏览器中输入：<a href="http://127.0.0.1:4000/" target="_blank" rel="external">http://127.0.0.1:4000/</a><br><img src="/assets/newImg/hexo11.jpg" alt="安装图片"><br>安装完成</p>
+</code></pre><p><img src="/assets/newImg/hexoyy.jpg" alt="安装图片"><br>在浏览器中输入：<a href="http://127.0.0.1:4000/" target="_blank" rel="external">http://127.0.0.1:4000/</a><br><img src="/assets/newImg/hexo11.jpg" alt="安装图片"><br>安装完成<br><a id="more"></a></p>
 <h2 id="建github库与推送"><a href="#建github库与推送" class="headerlink" title="建github库与推送"></a>建github库与推送</h2><p><img src="/assets/newImg/hexo12.jpg" alt="安装图片"><br>复制克隆码（一定要是SSH的）<br><img src="/assets/newImg/hexo13.jpg" alt="安装图片"><br>打开博客存放位置进入_config.yml（配置文件）<br><img src="/assets/newImg/hexo14.jpg" alt="安装图片"></p>
 <p>在deploy:位置输入</p>
 <blockquote>
@@ -901,7 +922,28 @@ branch: master
     <summary type="html">
     
       &lt;p&gt;其实用hexo搭建博客，简单便捷，而且好看！下面我分享一下我的做法吧！&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo1.jpg&quot; alt=&quot;安装图片&quot;&gt; &lt;/p&gt;
-&lt;h3 id=&quot;安装node-js&quot;&gt;&lt;a href=&quot;#安装node-js&quot; class
+&lt;h3 id=&quot;安装node-js&quot;&gt;&lt;a href=&quot;#安装node-js&quot; class=&quot;headerlink&quot; title=&quot;安装node.js&quot;&gt;&lt;/a&gt;安装node.js&lt;/h3&gt;&lt;p&gt;下载-安装&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo2.jpg&quot; alt=&quot;安装&quot;&gt;&lt;br&gt;参考链接：&lt;br&gt;&lt;a href=&quot;http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html&quot;&gt;http://jingyan.baidu.com/article/b0b63dbfca599a4a483070a5.html&lt;/a&gt;&lt;br&gt;打开Telent客户端（如果没打开会出错）&lt;br&gt;如果是windowXP&lt;br&gt;输入&lt;br&gt;win7:&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo3.jpg&quot; alt=&quot;win7&quot;&gt;&lt;br&gt;xp:&lt;br&gt;在[运行]中输入”services.msc”，确定后出现[服务管理器]；&lt;br&gt;或者在[控制面板]里进入[管理工具]，运行[服务]就会出现[服务管理器]；&lt;br&gt;在[服务管理器]中找到[Telnet] 项，按键盘的”t”-“e”-“l”键很快就能找着；&lt;br&gt;在双击后出现的[属性对话框]中[启动类型]改为[自动]或[手动]；&lt;br&gt;启动Telnet服务&lt;br&gt;在[属性对话框]中的[服务状态]项中点击[启动]；&lt;br&gt;在[运行]中输入”cmd”，确定后在光标提示符输入”net start telnet”回车，当屏幕显示”Telnet服务正在启动…Telnet 服务已经启动成功。”后，说明Telnet服务已经在你本机启动了。&lt;/p&gt;
+&lt;h2 id=&quot;安装git&quot;&gt;&lt;a href=&quot;#安装git&quot; class=&quot;headerlink&quot; title=&quot;安装git&quot;&gt;&lt;/a&gt;安装git&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/assets/newImg/hexo4.jpg&quot; alt=&quot;git&quot;&gt;&lt;br&gt;点击下一步完成即可&lt;/p&gt;
+&lt;h2 id=&quot;SSH&quot;&gt;&lt;a href=&quot;#SSH&quot; class=&quot;headerlink&quot; title=&quot;SSH&quot;&gt;&lt;/a&gt;SSH&lt;/h2&gt;&lt;p&gt;生成SSH密钥&lt;br&gt;查看是否已经有了ssh密钥：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;cd ~/.ssh&lt;/code&gt;&lt;br&gt;如果没有密钥则不会有此文件夹，有则备份删除&lt;br&gt;生成密钥：&lt;br&gt;&lt;code&gt;$ ssh-keygen -t rsa -C “you@gmail.com”&lt;/code&gt;&lt;br&gt;&lt;code&gt;按3个回车，密码为空。&lt;/code&gt;&lt;br&gt;最后得到了两个文件：id_rsa和id_rsa.pub&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo5.jpg&quot; alt=&quot;安装图片&quot;&gt;&lt;br&gt;打开github网站&lt;br&gt;在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。&lt;br&gt;选择Settings&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo6.jpg&quot; alt=&quot;github&quot;&gt;&lt;br&gt;选择 SSH and GDP keys&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo7.jpg&quot; alt=&quot;githubkey&quot;&gt;&lt;br&gt;点击new ssh key&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo8.jpg&quot; alt=&quot;sshkey&quot;&gt;&lt;br&gt;添加id_rsa.pub里面的公钥到key中提交即可&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo9.jpg&quot; alt=&quot;安装图片&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;npm install hexo-deployer-git --save
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装HEXO&lt;br&gt;官网：&lt;a href=&quot;https://hexo.io/zh-cn/&quot;&gt;https://hexo.io/zh-cn/&lt;/a&gt;&lt;br&gt;右击选择 Bash&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo10.jpg&quot; alt=&quot;安装图片&quot;&gt;&lt;br&gt;    选择想要存放盘 cd&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;npm install hexo-cli -g//安装
+
+hexo -v//查看版本号（如果可以显示说明安装成功）
+
+hexo init myblog//初始化一个博客（myblog随便取）
+
+cd myblog//选择（同上面myblog的取名）
+
+npm install//初始化博客
+
+hexo g//生成静态网页（输入后查看根目录是否有public文件夹，如果没有请重装）
+
+hexo server//开启服务器
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&quot;/assets/newImg/hexoyy.jpg&quot; alt=&quot;安装图片&quot;&gt;&lt;br&gt;在浏览器中输入：&lt;a href=&quot;http://127.0.0.1:4000/&quot;&gt;http://127.0.0.1:4000/&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;/assets/newImg/hexo11.jpg&quot; alt=&quot;安装图片&quot;&gt;&lt;br&gt;安装完成&lt;br&gt;
     
     </summary>
     
