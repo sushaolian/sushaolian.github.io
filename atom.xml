@@ -121,9 +121,9 @@ touch Staticfile  #名字必须是Staticfile
     </summary>
     
     
-      <category term="心情" scheme="//sushaolian.top/tags/%E5%BF%83%E6%83%85/"/>
-    
       <category term="生活" scheme="//sushaolian.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="心情" scheme="//sushaolian.top/tags/%E5%BF%83%E6%83%85/"/>
     
   </entry>
   
@@ -317,9 +317,70 @@ touch Staticfile  #名字必须是Staticfile
     </summary>
     
     
+      <category term="生活" scheme="//sushaolian.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
       <category term="心情" scheme="//sushaolian.top/tags/%E5%BF%83%E6%83%85/"/>
     
-      <category term="生活" scheme="//sushaolian.top/tags/%E7%94%9F%E6%B4%BB/"/>
+  </entry>
+  
+  <entry>
+    <title>微信开发详细教程</title>
+    <link href="//sushaolian.top/2016/11/25/weixin/"/>
+    <id>//sushaolian.top/2016/11/25/weixin/</id>
+    <published>2016-11-24T16:58:00.000Z</published>
+    <updated>2016-11-29T07:02:26.521Z</updated>
+    
+    <content type="html"><![CDATA[<p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a><br><a id="more"></a><br>二、微信公众账号介绍</p>
+<p><img src="/assets/newImg/weixin1.png" alt=""><br>服务号、订阅号、企业号的介绍（区别）<br>1、订阅号：主要偏于为用户传达资讯（类似报纸杂志），认证前后都是每天只可以群发一条消息；<br>2、服务号：主要偏于服务交互（类似银行，114，提供服务查询），认证前后都是每个月可群发4条消息；<br>3、企业号：主要用于公司内部通讯使用，需要先有成员的通讯信息验证才可以关注成功企业号；<br>温馨提示：<br>1、如果想简单的发送消息，达到宣传效果，建议可选择订阅号；<br>2、如果想进行商品销售，进行商品售卖，建议可申请服务号；<br>3、如果想用来管理内部企业员工、团队，对内使用，可申请企业号。<br><img src="/assets/newImg/weixin2.png" alt=""> </p>
+<p>三、微信数据收发原理以及消息数据格式</p>
+<p>3、1 开发者模式成为开发者时的消息校验原理<br>开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，并且带上四个参数(signature、timestamp、nonce、echostr)，开发者通过对签名(signature)的检验，来判断此条信息的真实性。<br>验证成功之后，开发者接受用户消息的时候，微信也都会带上前面三个参数(signature、timestamp、nonce)访问开发者设置的URL，开发者依然通过签名的校验判断消息的真实性。<br>加密/校验流程如下：</p>
+<ol>
+<li>将token、timestamp、nonce三个参数进行字典序排序</li>
+<li>将三个参数字符串拼接成一个字符串进行sha1加密</li>
+<li><p>开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</p>
+<p> 3、2 成为开发者后消息收发的原理<br>微信消息收发原理图：<br><img src="/assets/newImg/weixin3.png" alt=""><br>其实，我们需要做的事情，就是对HTTP请求，做出响应。也就是拿到微信服务器给我们的数据，然后处理后再返回去。</p>
+</li>
+</ol>
+<p>上图的消息收发过程是这样的：用户用手机发送一个?给微信公众号，微信服务器接受到? 然后组装一个消息发送给我们自己的服务器，我们的服务器回复一个时间，并且将时间也按照一定的规则组装，回复给公众号，公众号所在的服务器再回复给用户。</p>
+<p>四、接入指南<br>接入微信公众号平台开发，需要按照如下步骤：<br>1、填写服务器配置<br>2、验证服务器地址的有效性<br>3、依据接口文档实现业务逻辑</p>
+<p>第一步：填写服务器配置<br>    进入微信公众平台<a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a><br>在左侧列表中最下方，找到基本配置，点击进入<br><img src="/assets/newImg/weixin4.png" alt=""> </p>
+<p>点击启用，如果编辑模式开启了。那就先把编辑模式关闭。<br><img src="/assets/newImg/weixin5.png" alt=""><br>点击“修改配置”按钮，按照要求填写。<br>参数说明：<br>其中URL是开发者用来接收微信消息和事件的接口URL。<br>Token是开发者任意填写的，但是填写的要与代码中的一致。Token是用作签名(填写的Token会和接口URL中包含的Token进行对比，从而验证安全性),Token是为了用来验证发送我们的信息是否来自微信服务器。</p>
+<p>第二步：验证服务器地址的有效性<br>开发者提供信息后，微信服务器将发送GET请求到填写的服务器地址URL上，GET请求携带四个参数：<br><img src="/assets/newImg/weixin6.png" alt=""> </p>
+<p>开发者通过检验signature对请求进行校验。若确认此次GET请求来自微信服务器，需要原样返回echostr参数的内容。这样就接入成功了，否则接入失败。</p>
+<p>接入的代码如下：<br>        //获得参数 signature nonce token timestamp echostr<br>        $nonce = $_GET[‘nonce’];<br>        $token = ‘imooc’;<br>        $timestamp = $_GET[‘timestamp’];<br>        $echostr   = $_GET[‘echostr’];<br>        $signature = $_GET[‘signature’];<br>        //第一步：形成数组，然后按字典序排序<br>        $array = array();<br>        $tmpArr= array($nonce, $timestamp, $token);<br>        sort($tmpArr,SORT_STRING);<br>        //第二步：拼接成字符串,sha1加密 ，然后与signature进行校验<br>        $str = sha1( implode( $tmpArr ) );<br>        //第三步：获得加密后的字符串与signature对比<br>        if( $str  == $signature &amp;&amp; $echostr ){<br>            //第一次接入weixin api接口的时候<br>            echo  $echostr;<br>            exit;<br>        }</p>
+<p>第三部：依据接口文档实现业务逻辑<br>    验证URL有效性后即接入生效，成为开发者。<br>经历过第一次验证后，此后用户每次向公众号发送消息、或者产生自定义菜单点击事件时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，然后开发者可以依据自身业务逻辑进行相应，例如回复消息等。</p>
+<p>其他需要知道的：<br>1、用户向公众号发送消息时，公众号收到的消息发送者是一个OpenID，每个用户对每个公众号有一个唯一的OpenID。<br>2、微信公众号接口只支持80端口<br>五、接受普通消息<br>当普通微信用户向微信公众账号发消息时，微信服务器将POST消息的XML数据发送到我们自己的服务器上，也就是我们在微信公众平台填写的URL<br><img src="/assets/newImg/weixin7.png" alt=""> </p>
+<p>普通消息有：文本消息、图片消息、语言消息、视频消息、地理位置消息。</p>
+<p>接受文本消息的XML格式</p>
+<xml><br> <tousername>&lt;![CDATA[toUser]]&gt;</tousername><br> <fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br> <createtime>1348831860</createtime><br> <msgtype>&lt;![CDATA[text]]&gt;</msgtype><br> <content>&lt;![CDATA[this is a test]]&gt;</content><br> <msgid>1234567890123456</msgid><br> </xml>
+
+<p><img src="/assets/newImg/weixin8.png" alt=""><br>当微信服务器接受到用户发送的消息，微信服务器再把这条消息通过XML格式组装后，发送给我们的服务器。那么，如果我们想要回复文本消息。我们也需要把消息通过XML格式组装好发送给微信服务器，微信服务器再发送给用户。</p>
+<p>回复文本消息的XML格式：</p>
+<xml><br><tousername>&lt;![CDATA[toUser]]&gt;</tousername><br><fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br><createtime>12345678</createtime><br><msgtype>&lt;![CDATA[text]]&gt;</msgtype><br><content>&lt;![CDATA[你好]]&gt;</content><br></xml>
+
+<p>实例代码：</p>
+<p><img src="/assets/newImg/weixin9.png" alt=""><br>注意，$toUser 是指将这个消息返回给谁。因为我们是将消息回复给用户的，所以<br>$toUser = $this-&gt;postObj-&gt;FromUserName;//获取到发送消息给微信公众号的用户openId</p>
+<p>素材管理<br>新增临时素材<br>公众号经常需要用到一些临时性的多媒体素材的场景，例如在使用接口特别是发送消息时，对多媒体文件、多媒体消息的获取和调用等操作，是通过media_id来进行的。素材管理接口对所有认证的订阅号和服务号开发。通过本接口，公众号可以新增一些临时素材（即上传临时多媒体文件）。<br>请注意：<br>1、对于临时素材，每个素材（media_id）会在开发者上传或粉丝发送到微信服务器3天后自动删除（所以用户发送给开发者的素材，若开发者需要，应尽快下载到本地），以节省服务器资源。<br>2、media_id是可复用的。<br>3、素材的格式大小等要求与公众平台官网一致。具体是，图片大小不超过2M，支持bmp/png/jpeg/png/gif格式，语音大小不超过2M，长度不超过60秒（公众平台官网可以在文章中插入小于30分钟的语音，但这些语音不能用于群发等场景，只能放在文章内，这方面接口暂不支持），支持mp3/wma/wav/amr格式<br>4、需使用https调用本接口。</p>
+<p>调用接口地址<br><a href="https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE</a></p>
+<p>其他需要注意的问题：<br>1、文件上传时通过CURL POST方式提交的，POST内容需要是数组格式。<br><img src="/assets/newImg/weixin9.png" alt=""><br>2、上传的文件必须先在你的服务器，然后获取到上传文件所在服务器的绝对路径。并且需要在绝对路径前面加上@以示区分。<br>3、在Window服务上，路径分隔符为斜杠\，例子：@D:\soft\logo.png<br>而在Linux服务器上，路径分隔符为反斜杠/ 例子：@/tmp/logo.png</p>
+<p>代码示例：</p>
+<p><img src="/assets/newImg/weixin10.png" alt=""> </p>
+<p>获取临时素材<br>公众号可以使用本接口从微信服务器下载临时的多媒体素材。<br>接口调用URL<br>http请求方式: GET,https调用<br><a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a><br>参数说明<br>参数    是否必须    说明<br>access_token    是    调用接口凭证<br>media_id    是    媒体文件ID<br>返回说明<br>正确情况下的返回HTTP头如下：<br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Type: image/jpeg<br>    Content-disposition: attachment; filename=”MEDIA_ID.png”<br>    Date: Sun, 06 Jan 2013 10:20:18 GMT<br>    Cache-Control: no-cache, must-revalidate<br>    Content-Length: 339721<br>    curl -G “<a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a>“</p>
+<p>发送消息<br>    发送客服消息<br>当用户主动发消息给公众号的时候（包括发送信息、点击自定义菜单、订阅事件、扫描二维码事件），微信将会把消息数据推送给开发者，开发者在一段时间内可以调用客服消息接口，通过POST一个JSON数据包来发送消息给普通用户，在48小时内不限制发送次数。此接口主要用于客服等有人工消息处理环节的功能，方便开发者为用户提供更加优质的服务。</p>
+<p>调用的接口URL<br><a href="https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN</a><br>具体参考文档<a href="http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html" target="_blank" rel="external">http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html</a><br>至于为什么需要客服接口呢？<br>因为微信公众平台一直没有推出手机客服端，除了程序的自动应答，运营者还需要一些人工回复，而人工回复目前一般都是通过电脑端操作，有了客服接口可以使运营者使用手机回复。</p>
+<p>获取用户基本信息<br>在关注者与公众号产生消息交互后，公众号可获得关注者的OpenID（加密后的微信号，每个用户对每个公众号的OpenID是唯一的。对于不同公众号，同一用户的openid不同）。公众号可通过本接口来根据OpenID获取用户基本信息，包括昵称、头像、性别、所在城市、语言和关注时间。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一、准备工作&lt;br&gt;a)账号&lt;br&gt;i.在SAE上面注册一个账号。&lt;a href=&quot;http://t.cn/RbuZZHk&quot;&gt;http://t.cn/RbuZZHk&lt;/a&gt;  我的SAE推荐链接&lt;br&gt;ii.在微信公众号开发平台地址 &lt;a href=&quot;https://mp.weixin.qq.com&quot;&gt;https://mp.weixin.qq.com&lt;/a&gt;  注册一个微信公众号。&lt;br&gt;注意：1、个人只能申请到个人类型的订阅号。&lt;br&gt;2、微信公众号认证需要300大洋。&lt;br&gt;iii.申请公众号测试号地址&lt;br&gt;&lt;a href=&quot;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&quot;&gt;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="微信" scheme="//sushaolian.top/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="PHP" scheme="//sushaolian.top/tags/PHP/"/>
     
   </entry>
   
@@ -571,67 +632,6 @@ touch Staticfile  #名字必须是Staticfile
   </entry>
   
   <entry>
-    <title>微信开发详细教程</title>
-    <link href="//sushaolian.top/2016/11/25/weixin/"/>
-    <id>//sushaolian.top/2016/11/25/weixin/</id>
-    <published>2016-11-24T16:58:00.000Z</published>
-    <updated>2016-11-29T07:02:26.521Z</updated>
-    
-    <content type="html"><![CDATA[<p>一、准备工作<br>a)账号<br>i.在SAE上面注册一个账号。<a href="http://t.cn/RbuZZHk" target="_blank" rel="external">http://t.cn/RbuZZHk</a>  我的SAE推荐链接<br>ii.在微信公众号开发平台地址 <a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a>  注册一个微信公众号。<br>注意：1、个人只能申请到个人类型的订阅号。<br>2、微信公众号认证需要300大洋。<br>iii.申请公众号测试号地址<br><a href="http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index" target="_blank" rel="external">http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;t=sandbox/index</a><br><a id="more"></a><br>二、微信公众账号介绍</p>
-<p><img src="/assets/newImg/weixin1.png" alt=""><br>服务号、订阅号、企业号的介绍（区别）<br>1、订阅号：主要偏于为用户传达资讯（类似报纸杂志），认证前后都是每天只可以群发一条消息；<br>2、服务号：主要偏于服务交互（类似银行，114，提供服务查询），认证前后都是每个月可群发4条消息；<br>3、企业号：主要用于公司内部通讯使用，需要先有成员的通讯信息验证才可以关注成功企业号；<br>温馨提示：<br>1、如果想简单的发送消息，达到宣传效果，建议可选择订阅号；<br>2、如果想进行商品销售，进行商品售卖，建议可申请服务号；<br>3、如果想用来管理内部企业员工、团队，对内使用，可申请企业号。<br><img src="/assets/newImg/weixin2.png" alt=""> </p>
-<p>三、微信数据收发原理以及消息数据格式</p>
-<p>3、1 开发者模式成为开发者时的消息校验原理<br>开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，并且带上四个参数(signature、timestamp、nonce、echostr)，开发者通过对签名(signature)的检验，来判断此条信息的真实性。<br>验证成功之后，开发者接受用户消息的时候，微信也都会带上前面三个参数(signature、timestamp、nonce)访问开发者设置的URL，开发者依然通过签名的校验判断消息的真实性。<br>加密/校验流程如下：</p>
-<ol>
-<li>将token、timestamp、nonce三个参数进行字典序排序</li>
-<li>将三个参数字符串拼接成一个字符串进行sha1加密</li>
-<li><p>开发者获得加密后的字符串可与signature对比，标识该请求来源于微信</p>
-<p> 3、2 成为开发者后消息收发的原理<br>微信消息收发原理图：<br><img src="/assets/newImg/weixin3.png" alt=""><br>其实，我们需要做的事情，就是对HTTP请求，做出响应。也就是拿到微信服务器给我们的数据，然后处理后再返回去。</p>
-</li>
-</ol>
-<p>上图的消息收发过程是这样的：用户用手机发送一个?给微信公众号，微信服务器接受到? 然后组装一个消息发送给我们自己的服务器，我们的服务器回复一个时间，并且将时间也按照一定的规则组装，回复给公众号，公众号所在的服务器再回复给用户。</p>
-<p>四、接入指南<br>接入微信公众号平台开发，需要按照如下步骤：<br>1、填写服务器配置<br>2、验证服务器地址的有效性<br>3、依据接口文档实现业务逻辑</p>
-<p>第一步：填写服务器配置<br>    进入微信公众平台<a href="https://mp.weixin.qq.com" target="_blank" rel="external">https://mp.weixin.qq.com</a><br>在左侧列表中最下方，找到基本配置，点击进入<br><img src="/assets/newImg/weixin4.png" alt=""> </p>
-<p>点击启用，如果编辑模式开启了。那就先把编辑模式关闭。<br><img src="/assets/newImg/weixin5.png" alt=""><br>点击“修改配置”按钮，按照要求填写。<br>参数说明：<br>其中URL是开发者用来接收微信消息和事件的接口URL。<br>Token是开发者任意填写的，但是填写的要与代码中的一致。Token是用作签名(填写的Token会和接口URL中包含的Token进行对比，从而验证安全性),Token是为了用来验证发送我们的信息是否来自微信服务器。</p>
-<p>第二步：验证服务器地址的有效性<br>开发者提供信息后，微信服务器将发送GET请求到填写的服务器地址URL上，GET请求携带四个参数：<br><img src="/assets/newImg/weixin6.png" alt=""> </p>
-<p>开发者通过检验signature对请求进行校验。若确认此次GET请求来自微信服务器，需要原样返回echostr参数的内容。这样就接入成功了，否则接入失败。</p>
-<p>接入的代码如下：<br>        //获得参数 signature nonce token timestamp echostr<br>        $nonce = $_GET[‘nonce’];<br>        $token = ‘imooc’;<br>        $timestamp = $_GET[‘timestamp’];<br>        $echostr   = $_GET[‘echostr’];<br>        $signature = $_GET[‘signature’];<br>        //第一步：形成数组，然后按字典序排序<br>        $array = array();<br>        $tmpArr= array($nonce, $timestamp, $token);<br>        sort($tmpArr,SORT_STRING);<br>        //第二步：拼接成字符串,sha1加密 ，然后与signature进行校验<br>        $str = sha1( implode( $tmpArr ) );<br>        //第三步：获得加密后的字符串与signature对比<br>        if( $str  == $signature &amp;&amp; $echostr ){<br>            //第一次接入weixin api接口的时候<br>            echo  $echostr;<br>            exit;<br>        }</p>
-<p>第三部：依据接口文档实现业务逻辑<br>    验证URL有效性后即接入生效，成为开发者。<br>经历过第一次验证后，此后用户每次向公众号发送消息、或者产生自定义菜单点击事件时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，然后开发者可以依据自身业务逻辑进行相应，例如回复消息等。</p>
-<p>其他需要知道的：<br>1、用户向公众号发送消息时，公众号收到的消息发送者是一个OpenID，每个用户对每个公众号有一个唯一的OpenID。<br>2、微信公众号接口只支持80端口<br>五、接受普通消息<br>当普通微信用户向微信公众账号发消息时，微信服务器将POST消息的XML数据发送到我们自己的服务器上，也就是我们在微信公众平台填写的URL<br><img src="/assets/newImg/weixin7.png" alt=""> </p>
-<p>普通消息有：文本消息、图片消息、语言消息、视频消息、地理位置消息。</p>
-<p>接受文本消息的XML格式</p>
-<xml><br> <tousername>&lt;![CDATA[toUser]]&gt;</tousername><br> <fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br> <createtime>1348831860</createtime><br> <msgtype>&lt;![CDATA[text]]&gt;</msgtype><br> <content>&lt;![CDATA[this is a test]]&gt;</content><br> <msgid>1234567890123456</msgid><br> </xml>
-
-<p><img src="/assets/newImg/weixin8.png" alt=""><br>当微信服务器接受到用户发送的消息，微信服务器再把这条消息通过XML格式组装后，发送给我们的服务器。那么，如果我们想要回复文本消息。我们也需要把消息通过XML格式组装好发送给微信服务器，微信服务器再发送给用户。</p>
-<p>回复文本消息的XML格式：</p>
-<xml><br><tousername>&lt;![CDATA[toUser]]&gt;</tousername><br><fromusername>&lt;![CDATA[fromUser]]&gt;</fromusername><br><createtime>12345678</createtime><br><msgtype>&lt;![CDATA[text]]&gt;</msgtype><br><content>&lt;![CDATA[你好]]&gt;</content><br></xml>
-
-<p>实例代码：</p>
-<p><img src="/assets/newImg/weixin9.png" alt=""><br>注意，$toUser 是指将这个消息返回给谁。因为我们是将消息回复给用户的，所以<br>$toUser = $this-&gt;postObj-&gt;FromUserName;//获取到发送消息给微信公众号的用户openId</p>
-<p>素材管理<br>新增临时素材<br>公众号经常需要用到一些临时性的多媒体素材的场景，例如在使用接口特别是发送消息时，对多媒体文件、多媒体消息的获取和调用等操作，是通过media_id来进行的。素材管理接口对所有认证的订阅号和服务号开发。通过本接口，公众号可以新增一些临时素材（即上传临时多媒体文件）。<br>请注意：<br>1、对于临时素材，每个素材（media_id）会在开发者上传或粉丝发送到微信服务器3天后自动删除（所以用户发送给开发者的素材，若开发者需要，应尽快下载到本地），以节省服务器资源。<br>2、media_id是可复用的。<br>3、素材的格式大小等要求与公众平台官网一致。具体是，图片大小不超过2M，支持bmp/png/jpeg/png/gif格式，语音大小不超过2M，长度不超过60秒（公众平台官网可以在文章中插入小于30分钟的语音，但这些语音不能用于群发等场景，只能放在文章内，这方面接口暂不支持），支持mp3/wma/wav/amr格式<br>4、需使用https调用本接口。</p>
-<p>调用接口地址<br><a href="https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/upload?access_token=ACCESS_TOKEN&amp;type=TYPE</a></p>
-<p>其他需要注意的问题：<br>1、文件上传时通过CURL POST方式提交的，POST内容需要是数组格式。<br><img src="/assets/newImg/weixin9.png" alt=""><br>2、上传的文件必须先在你的服务器，然后获取到上传文件所在服务器的绝对路径。并且需要在绝对路径前面加上@以示区分。<br>3、在Window服务上，路径分隔符为斜杠\，例子：@D:\soft\logo.png<br>而在Linux服务器上，路径分隔符为反斜杠/ 例子：@/tmp/logo.png</p>
-<p>代码示例：</p>
-<p><img src="/assets/newImg/weixin10.png" alt=""> </p>
-<p>获取临时素材<br>公众号可以使用本接口从微信服务器下载临时的多媒体素材。<br>接口调用URL<br>http请求方式: GET,https调用<br><a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a><br>参数说明<br>参数    是否必须    说明<br>access_token    是    调用接口凭证<br>media_id    是    媒体文件ID<br>返回说明<br>正确情况下的返回HTTP头如下：<br>    HTTP/1.1 200 OK<br>    Connection: close<br>    Content-Type: image/jpeg<br>    Content-disposition: attachment; filename=”MEDIA_ID.png”<br>    Date: Sun, 06 Jan 2013 10:20:18 GMT<br>    Cache-Control: no-cache, must-revalidate<br>    Content-Length: 339721<br>    curl -G “<a href="https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&amp;media_id=MEDIA_ID</a>“</p>
-<p>发送消息<br>    发送客服消息<br>当用户主动发消息给公众号的时候（包括发送信息、点击自定义菜单、订阅事件、扫描二维码事件），微信将会把消息数据推送给开发者，开发者在一段时间内可以调用客服消息接口，通过POST一个JSON数据包来发送消息给普通用户，在48小时内不限制发送次数。此接口主要用于客服等有人工消息处理环节的功能，方便开发者为用户提供更加优质的服务。</p>
-<p>调用的接口URL<br><a href="https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN" target="_blank" rel="external">https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN</a><br>具体参考文档<a href="http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html" target="_blank" rel="external">http://mp.weixin.qq.com/wiki/7/12a5a320ae96fecdf0e15cb06123de9f.html</a><br>至于为什么需要客服接口呢？<br>因为微信公众平台一直没有推出手机客服端，除了程序的自动应答，运营者还需要一些人工回复，而人工回复目前一般都是通过电脑端操作，有了客服接口可以使运营者使用手机回复。</p>
-<p>获取用户基本信息<br>在关注者与公众号产生消息交互后，公众号可获得关注者的OpenID（加密后的微信号，每个用户对每个公众号的OpenID是唯一的。对于不同公众号，同一用户的openid不同）。公众号可通过本接口来根据OpenID获取用户基本信息，包括昵称、头像、性别、所在城市、语言和关注时间。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一、准备工作&lt;br&gt;a)账号&lt;br&gt;i.在SAE上面注册一个账号。&lt;a href=&quot;http://t.cn/RbuZZHk&quot;&gt;http://t.cn/RbuZZHk&lt;/a&gt;  我的SAE推荐链接&lt;br&gt;ii.在微信公众号开发平台地址 &lt;a href=&quot;https://mp.weixin.qq.com&quot;&gt;https://mp.weixin.qq.com&lt;/a&gt;  注册一个微信公众号。&lt;br&gt;注意：1、个人只能申请到个人类型的订阅号。&lt;br&gt;2、微信公众号认证需要300大洋。&lt;br&gt;iii.申请公众号测试号地址&lt;br&gt;&lt;a href=&quot;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&quot;&gt;http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&amp;amp;t=sandbox/index&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="PHP" scheme="//sushaolian.top/tags/PHP/"/>
-    
-      <category term="微信" scheme="//sushaolian.top/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>如何避免浏览器兼容问题</title>
     <link href="//sushaolian.top/2016/10/21/brower/"/>
     <id>//sushaolian.top/2016/10/21/brower/</id>
@@ -712,9 +712,9 @@ touch Staticfile  #名字必须是Staticfile
     </summary>
     
     
-      <category term="前端" scheme="//sushaolian.top/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="浏览器" scheme="//sushaolian.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="前端" scheme="//sushaolian.top/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
