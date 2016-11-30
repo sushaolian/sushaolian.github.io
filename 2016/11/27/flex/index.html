@@ -213,13 +213,12 @@ var _hmt = _hmt || [];
             autohidemode: true
         });
     </script>
-	  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
     
         <div class="article-meta">
             <a href="/2016/11/27/flex/" class="article-date">
   	<time datetime="2016-11-27T07:36:00.000Z" itemprop="datePublished">2016-11-27</time>
 </a>
+
 
         </div>
         
@@ -238,7 +237,6 @@ var _hmt = _hmt || [];
 
 
                             </header>
-							<div style="float:right;margin-right:25px;margin-bottom:15px;font-size:16px;color:orange;">阅读次数<span id="busuanzi_value_page_pv"></span>次</div>
                             
                                 <div class="article-info article-info-post">
                                     
@@ -259,7 +257,7 @@ var _hmt = _hmt || [];
 
                                                     <p class="toc-button">目录</p>
 <div id="toc" class="toc-article" style="display:none;">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Flex布局的定义"><span class="toc-number">1.</span> <span class="toc-text">Flex布局的定义:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flex布局的基本概念"><span class="toc-number">2.</span> <span class="toc-text">Flex布局的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容器的属性"><span class="toc-number">3.</span> <span class="toc-text">容器的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目的属性"><span class="toc-number">4.</span> <span class="toc-text">项目的属性</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#flex布局的定义"><span class="toc-number">1.</span> <span class="toc-text">Flex布局的定义:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex布局的基本概念"><span class="toc-number">2.</span> <span class="toc-text">Flex布局的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容器的属性"><span class="toc-number">3.</span> <span class="toc-text">容器的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目的属性"><span class="toc-number">4.</span> <span class="toc-text">项目的属性</span></a></li></ol>
 </div>
 <script>
     $(function(){
@@ -290,30 +288,34 @@ var _hmt = _hmt || [];
                                             
                                             -->
                                             
+                                                    <div id="toc" class="toc-article">
+                                                      <strong class="toc-title">文章目录</strong>
+                                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#flex布局的定义"><span class="toc-number">1.</span> <span class="toc-text">Flex布局的定义:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex布局的基本概念"><span class="toc-number">2.</span> <span class="toc-text">Flex布局的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#容器的属性"><span class="toc-number">3.</span> <span class="toc-text">容器的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目的属性"><span class="toc-number">4.</span> <span class="toc-text">项目的属性</span></a></li></ol>
+                                                    </div>
                                                      <p><img src="/assets/newImg/flexbox.png" alt=""> </p>
-<p>2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。</p>
+<p>2009&#x5E74;&#xFF0C;W3C&#x63D0;&#x51FA;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x65B9;&#x6848;&#x2014;-Flex&#x5E03;&#x5C40;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x4FBF;&#x3001;&#x5B8C;&#x6574;&#x3001;&#x54CD;&#x5E94;&#x5F0F;&#x5730;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x3002;&#x76EE;&#x524D;&#xFF0C;&#x5B83;&#x5DF2;&#x7ECF;&#x5F97;&#x5230;&#x4E86;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x73B0;&#x5728;&#x5C31;&#x80FD;&#x5F88;&#x5B89;&#x5168;&#x5730;&#x4F7F;&#x7528;&#x8FD9;&#x9879;&#x529F;&#x80FD;&#x3002;</p>
 <p><img src="/assets/newImg/flex-brower.jpg" alt=""></p>
 <a id="more"></a>
-<h2 id="Flex布局的定义"><a href="#Flex布局的定义" class="headerlink" title="Flex布局的定义:"></a>Flex布局的定义:</h2><p>Flex是Flexible Box的缩写，意为”弹性布局”,用来为盒状模型提供最大的灵活性。<br>任何一个容器都可以指定为Flex布局。</p>
+<h2 id="flex&#x5E03;&#x5C40;&#x7684;&#x5B9A;&#x4E49;"><a href="#Flex&#x5E03;&#x5C40;&#x7684;&#x5B9A;&#x4E49;" class="headerlink" title="Flex&#x5E03;&#x5C40;&#x7684;&#x5B9A;&#x4E49;:"></a>Flex&#x5E03;&#x5C40;&#x7684;&#x5B9A;&#x4E49;:</h2><p>Flex&#x662F;Flexible Box&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x610F;&#x4E3A;&#x201D;&#x5F39;&#x6027;&#x5E03;&#x5C40;&#x201D;,&#x7528;&#x6765;&#x4E3A;&#x76D2;&#x72B6;&#x6A21;&#x578B;&#x63D0;&#x4F9B;&#x6700;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x3002;<br>&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x90FD;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E3A;Flex&#x5E03;&#x5C40;&#x3002;</p>
 <pre><code>.flexbox{
     display:flex;
 }
-</code></pre><p>行内元素也可以使用Flex布局</p>
+</code></pre><p>&#x884C;&#x5185;&#x5143;&#x7D20;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Flex&#x5E03;&#x5C40;</p>
 <pre><code>.flexbox{
      display:inline-flex;
 }
-</code></pre><p>Webkit内核的浏览器，必须加上-webkit前缀</p>
+</code></pre><p>Webkit&#x5185;&#x6838;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x5FC5;&#x987B;&#x52A0;&#x4E0A;-webkit&#x524D;&#x7F00;</p>
 <pre><code>.flexbox{
     display:-webkit-flex;
     display:flex;
 }
 </code></pre><blockquote>
-<p>tips:设置flex布局之后，子元素的float/clear/vertical-align属性将失效。</p>
+<p>tips:&#x8BBE;&#x7F6E;flex&#x5E03;&#x5C40;&#x4E4B;&#x540E;&#xFF0C;&#x5B50;&#x5143;&#x7D20;&#x7684;float/clear/vertical-align&#x5C5E;&#x6027;&#x5C06;&#x5931;&#x6548;&#x3002;</p>
 </blockquote>
-<h2 id="Flex布局的基本概念"><a href="#Flex布局的基本概念" class="headerlink" title="Flex布局的基本概念"></a>Flex布局的基本概念</h2><p>采用Flex布局的元素，称为Flex容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称”项目”。</p>
+<h2 id="flex&#x5E03;&#x5C40;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;"><a href="#Flex&#x5E03;&#x5C40;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;" class="headerlink" title="Flex&#x5E03;&#x5C40;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;"></a>Flex&#x5E03;&#x5C40;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;</h2><p>&#x91C7;&#x7528;Flex&#x5E03;&#x5C40;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x79F0;&#x4E3A;Flex&#x5BB9;&#x5668;&#xFF08;flex container&#xFF09;&#xFF0C;&#x7B80;&#x79F0;&#x201D;&#x5BB9;&#x5668;&#x201D;&#x3002;&#x5B83;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5143;&#x7D20;&#x81EA;&#x52A8;&#x6210;&#x4E3A;&#x5BB9;&#x5668;&#x6210;&#x5458;&#xFF0C;&#x79F0;&#x4E3A;Flex&#x9879;&#x76EE;&#xFF08;flex item&#xFF09;&#xFF0C;&#x7B80;&#x79F0;&#x201D;&#x9879;&#x76EE;&#x201D;&#x3002;</p>
 <p><img src="/assets/newImg/flex-item.png" alt=""></p>
-<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）.而且这个方向可以根据容器属性flex-direction来改变的。</p>
-<h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><ol>
+<p>&#x5BB9;&#x5668;&#x9ED8;&#x8BA4;&#x5B58;&#x5728;&#x4E24;&#x6839;&#x8F74;&#xFF1A;&#x6C34;&#x5E73;&#x7684;&#x4E3B;&#x8F74;&#xFF08;main axis&#xFF09;&#x548C;&#x5782;&#x76F4;&#x7684;&#x4EA4;&#x53C9;&#x8F74;&#xFF08;cross axis&#xFF09;.&#x800C;&#x4E14;&#x8FD9;&#x4E2A;&#x65B9;&#x5411;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5BB9;&#x5668;&#x5C5E;&#x6027;flex-direction&#x6765;&#x6539;&#x53D8;&#x7684;&#x3002;</p>
+<h2 id="&#x5BB9;&#x5668;&#x7684;&#x5C5E;&#x6027;"><a href="#&#x5BB9;&#x5668;&#x7684;&#x5C5E;&#x6027;" class="headerlink" title="&#x5BB9;&#x5668;&#x7684;&#x5C5E;&#x6027;"></a>&#x5BB9;&#x5668;&#x7684;&#x5C5E;&#x6027;</h2><ol>
 <li>flex-direction</li>
 <li>flex-wrap</li>
 <li>flex-flow</li>
@@ -321,78 +323,78 @@ var _hmt = _hmt || [];
 <li>align-items</li>
 <li>align-content</li>
 </ol>
-<p><strong>1、flex-direction属性</strong><br>flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
+<p><strong>1&#x3001;flex-direction&#x5C5E;&#x6027;</strong><br>flex-direction&#x5C5E;&#x6027;&#x51B3;&#x5B9A;&#x4E3B;&#x8F74;&#x7684;&#x65B9;&#x5411;&#xFF08;&#x5373;&#x9879;&#x76EE;&#x7684;&#x6392;&#x5217;&#x65B9;&#x5411;&#xFF09;&#x3002;</p>
 <pre><code>.flexbox{
     flex-direction:row | row-reverse | column | column-reverse;
 }
-</code></pre><p>flex-direction一共有四个值分别是：</p>
+</code></pre><p>flex-direction&#x4E00;&#x5171;&#x6709;&#x56DB;&#x4E2A;&#x503C;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
 <ul>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li>row-reverse：主轴为水平方向，起点在右端。</li>
-<li>column：主轴为垂直方向，起点在上沿。</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+<li>row&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#xFF1A;&#x4E3B;&#x8F74;&#x4E3A;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#xFF0C;&#x8D77;&#x70B9;&#x5728;&#x5DE6;&#x7AEF;&#x3002;</li>
+<li>row-reverse&#xFF1A;&#x4E3B;&#x8F74;&#x4E3A;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#xFF0C;&#x8D77;&#x70B9;&#x5728;&#x53F3;&#x7AEF;&#x3002;</li>
+<li>column&#xFF1A;&#x4E3B;&#x8F74;&#x4E3A;&#x5782;&#x76F4;&#x65B9;&#x5411;&#xFF0C;&#x8D77;&#x70B9;&#x5728;&#x4E0A;&#x6CBF;&#x3002;</li>
+<li>column-reverse&#xFF1A;&#x4E3B;&#x8F74;&#x4E3A;&#x5782;&#x76F4;&#x65B9;&#x5411;&#xFF0C;&#x8D77;&#x70B9;&#x5728;&#x4E0B;&#x6CBF;&#x3002;</li>
 </ul>
-<p>上面对应的值如下图所示：</p>
+<p>&#x4E0A;&#x9762;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
 <p><img src="/assets/newImg/flex_direction.png" alt=""></p>
-<p><strong>2.flex-wrap属性</strong><br>flex-wrap决定元素如何换行(排列不下的时候)</p>
+<p><strong>2.flex-wrap&#x5C5E;&#x6027;</strong><br>flex-wrap&#x51B3;&#x5B9A;&#x5143;&#x7D20;&#x5982;&#x4F55;&#x6362;&#x884C;(&#x6392;&#x5217;&#x4E0D;&#x4E0B;&#x7684;&#x65F6;&#x5019;)</p>
 <pre><code>.flexbox{
     flex-wrap:nowwrap | wrap | wrap-reverse
 }
-</code></pre><p>他的三个值，</p>
+</code></pre><p>&#x4ED6;&#x7684;&#x4E09;&#x4E2A;&#x503C;&#xFF0C;</p>
 <ul>
-<li>nowrap(默认)；不换行。</li>
-<li>wrap换行，第一行在上方</li>
-<li>wrap-reverse:换行，第一行在下方</li>
+<li>nowrap(&#x9ED8;&#x8BA4;)&#xFF1B;&#x4E0D;&#x6362;&#x884C;&#x3002;</li>
+<li>wrap&#x6362;&#x884C;&#xFF0C;&#x7B2C;&#x4E00;&#x884C;&#x5728;&#x4E0A;&#x65B9;</li>
+<li>wrap-reverse:&#x6362;&#x884C;&#xFF0C;&#x7B2C;&#x4E00;&#x884C;&#x5728;&#x4E0B;&#x65B9;</li>
 </ul>
-<p><strong>3.flex-flow属性</strong><br>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</p>
+<p><strong>3.flex-flow&#x5C5E;&#x6027;</strong><br>flex-flow&#x5C5E;&#x6027;&#x662F;flex-direction&#x5C5E;&#x6027;&#x548C;flex-wrap&#x5C5E;&#x6027;&#x7684;&#x7B80;&#x5199;&#x5F62;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;row nowrap&#x3002;</p>
 <pre><code>.flexbox {
   flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;
 }
-</code></pre><p><strong>4.justify-content属性</strong><br>justify-content属性定义了项目在主轴上的对齐方式。</p>
-<p>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
+</code></pre><p><strong>4.justify-content&#x5C5E;&#x6027;</strong><br>justify-content&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x9879;&#x76EE;&#x5728;&#x4E3B;&#x8F74;&#x4E0A;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x5B83;&#x53EF;&#x80FD;&#x53D6;5&#x4E2A;&#x503C;&#xFF0C;&#x5177;&#x4F53;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x4E0E;&#x8F74;&#x7684;&#x65B9;&#x5411;&#x6709;&#x5173;&#x3002;&#x4E0B;&#x9762;&#x5047;&#x8BBE;&#x4E3B;&#x8F74;&#x4E3A;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x3002;</p>
 <blockquote>
 <ul>
-<li>flex-start(默认值):左对齐</li>
-<li>flex-end:右对齐</li>
-<li>center:居中对齐</li>
-<li>space-between：两端对齐，项目之间的间隔都相等。</li>
-<li>space-around：每个项目两侧的间隔相等。所以，项目两侧的间隔相等。所以，项目之间比项目与边框的间隔大一倍。</li>
+<li>flex-start(&#x9ED8;&#x8BA4;&#x503C;):&#x5DE6;&#x5BF9;&#x9F50;</li>
+<li>flex-end:&#x53F3;&#x5BF9;&#x9F50;</li>
+<li>center:&#x5C45;&#x4E2D;&#x5BF9;&#x9F50;</li>
+<li>space-between&#xFF1A;&#x4E24;&#x7AEF;&#x5BF9;&#x9F50;&#xFF0C;&#x9879;&#x76EE;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x9694;&#x90FD;&#x76F8;&#x7B49;&#x3002;</li>
+<li>space-around&#xFF1A;&#x6BCF;&#x4E2A;&#x9879;&#x76EE;&#x4E24;&#x4FA7;&#x7684;&#x95F4;&#x9694;&#x76F8;&#x7B49;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x9879;&#x76EE;&#x4E24;&#x4FA7;&#x7684;&#x95F4;&#x9694;&#x76F8;&#x7B49;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x9879;&#x76EE;&#x4E4B;&#x95F4;&#x6BD4;&#x9879;&#x76EE;&#x4E0E;&#x8FB9;&#x6846;&#x7684;&#x95F4;&#x9694;&#x5927;&#x4E00;&#x500D;&#x3002;</li>
 </ul>
 </blockquote>
 <p><img src="/assets/newImg/flex_start.png" alt=""></p>
-<p><strong>5.align-items属性</strong><br>align-items属性定义项目在交叉轴上如何对齐。</p>
+<p><strong>5.align-items&#x5C5E;&#x6027;</strong><br>align-items&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x9879;&#x76EE;&#x5728;&#x4EA4;&#x53C9;&#x8F74;&#x4E0A;&#x5982;&#x4F55;&#x5BF9;&#x9F50;&#x3002;</p>
 <pre><code>.flexbox{
     align-items:flex-start | flex-end | center | baseline | stretch;
 }
 </code></pre><p><img src="/assets/newImg/align_item.png" alt=""></p>
-<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+<p>&#x5B83;&#x53EF;&#x80FD;&#x53D6;5&#x4E2A;&#x503C;&#x3002;&#x5177;&#x4F53;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x4E0E;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x65B9;&#x5411;&#x6709;&#x5173;&#xFF0C;&#x4E0B;&#x9762;&#x5047;&#x8BBE;&#x4EA4;&#x53C9;&#x8F74;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x3002;</p>
 <blockquote>
 <ul>
-<li>flex-start：交叉轴的起点对齐。</li>
-<li>flex-end：交叉轴的终点对齐。</li>
-<li>center：交叉轴的中点对齐。</li>
-<li>baseline: 项目的第一行文字的基线对齐。</li>
-<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
+<li>flex-start&#xFF1A;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x8D77;&#x70B9;&#x5BF9;&#x9F50;&#x3002;</li>
+<li>flex-end&#xFF1A;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x7EC8;&#x70B9;&#x5BF9;&#x9F50;&#x3002;</li>
+<li>center&#xFF1A;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x4E2D;&#x70B9;&#x5BF9;&#x9F50;&#x3002;</li>
+<li>baseline: &#x9879;&#x76EE;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x6587;&#x5B57;&#x7684;&#x57FA;&#x7EBF;&#x5BF9;&#x9F50;&#x3002;</li>
+<li>stretch&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#xFF1A;&#x5982;&#x679C;&#x9879;&#x76EE;&#x672A;&#x8BBE;&#x7F6E;&#x9AD8;&#x5EA6;&#x6216;&#x8BBE;&#x4E3A;auto&#xFF0C;&#x5C06;&#x5360;&#x6EE1;&#x6574;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x9AD8;&#x5EA6;</li>
 </ul>
 </blockquote>
-<p><strong>6.align-content属性</strong><br>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<p><strong>6.align-content&#x5C5E;&#x6027;</strong><br>align-content&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x591A;&#x6839;&#x8F74;&#x7EBF;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x9879;&#x76EE;&#x53EA;&#x6709;&#x4E00;&#x6839;&#x8F74;&#x7EBF;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
 <pre><code>.flexbox {
   align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 }
 </code></pre><p><img src="/assets/newImg/align_content.png" alt=""></p>
-<p>该属性可能取6个值。</p>
+<p>&#x8BE5;&#x5C5E;&#x6027;&#x53EF;&#x80FD;&#x53D6;6&#x4E2A;&#x503C;&#x3002;</p>
 <blockquote>
 <ul>
-<li>flex-start：与交叉轴的起点对齐。</li>
-<li>flex-end：与交叉轴的终点对齐。</li>
-<li>center：与交叉轴的中点对齐。</li>
-<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
-<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
-<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+<li>flex-start&#xFF1A;&#x4E0E;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x8D77;&#x70B9;&#x5BF9;&#x9F50;&#x3002;</li>
+<li>flex-end&#xFF1A;&#x4E0E;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x7EC8;&#x70B9;&#x5BF9;&#x9F50;&#x3002;</li>
+<li>center&#xFF1A;&#x4E0E;&#x4EA4;&#x53C9;&#x8F74;&#x7684;&#x4E2D;&#x70B9;&#x5BF9;&#x9F50;&#x3002;</li>
+<li>space-between&#xFF1A;&#x4E0E;&#x4EA4;&#x53C9;&#x8F74;&#x4E24;&#x7AEF;&#x5BF9;&#x9F50;&#xFF0C;&#x8F74;&#x7EBF;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x9694;&#x5E73;&#x5747;&#x5206;&#x5E03;&#x3002;</li>
+<li>space-around&#xFF1A;&#x6BCF;&#x6839;&#x8F74;&#x7EBF;&#x4E24;&#x4FA7;&#x7684;&#x95F4;&#x9694;&#x90FD;&#x76F8;&#x7B49;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x8F74;&#x7EBF;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x9694;&#x6BD4;&#x8F74;&#x7EBF;&#x4E0E;&#x8FB9;&#x6846;&#x7684;&#x95F4;&#x9694;&#x5927;&#x4E00;&#x500D;&#x3002;</li>
+<li>stretch&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#xFF1A;&#x8F74;&#x7EBF;&#x5360;&#x6EE1;&#x6574;&#x4E2A;&#x4EA4;&#x53C9;&#x8F74;&#x3002;</li>
 <li></li>
 </ul>
 </blockquote>
-<h2 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h2><ol>
+<h2 id="&#x9879;&#x76EE;&#x7684;&#x5C5E;&#x6027;"><a href="#&#x9879;&#x76EE;&#x7684;&#x5C5E;&#x6027;" class="headerlink" title="&#x9879;&#x76EE;&#x7684;&#x5C5E;&#x6027;"></a>&#x9879;&#x76EE;&#x7684;&#x5C5E;&#x6027;</h2><ol>
 <li>order</li>
 <li>flex-grow</li>
 <li>flex-shrink</li>
@@ -400,48 +402,47 @@ var _hmt = _hmt || [];
 <li>flex</li>
 <li>align-self</li>
 </ol>
-<p><strong>1.1 order属性</strong><br>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0.</p>
+<p><strong>1.1 order&#x5C5E;&#x6027;</strong><br>order&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x9879;&#x76EE;&#x7684;&#x6392;&#x5217;&#x987A;&#x5E8F;&#x3002;&#x6570;&#x503C;&#x8D8A;&#x5C0F;&#xFF0C;&#x6392;&#x5217;&#x8D8A;&#x9760;&#x524D;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0.</p>
 <pre><code>.items{
   order:&lt;integer&gt;;
 }
 </code></pre><p><img src="/assets/newImg/order.png" alt=""></p>
-<p><strong>1.2 flex-grow属性</strong></p>
-<p>flex-grow属性定义项目的发大比例，默认为0，如果存在剩余空间，也不放大。</p>
+<p><strong>1.2 flex-grow&#x5C5E;&#x6027;</strong></p>
+<p>flex-grow&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x9879;&#x76EE;&#x7684;&#x53D1;&#x5927;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#xFF0C;&#x4E5F;&#x4E0D;&#x653E;&#x5927;&#x3002;</p>
 <pre><code>.item
 {
     flex-grow:&lt;number&gt;;
 }
 </code></pre><p><img src="/assets/newImg/flex_grow.png" alt=""></p>
 <blockquote>
-<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<p>&#x5982;&#x679C;&#x6240;&#x6709;&#x9879;&#x76EE;&#x7684;flex-grow&#x5C5E;&#x6027;&#x90FD;&#x4E3A;1&#xFF0C;&#x5219;&#x5B83;&#x4EEC;&#x5C06;&#x7B49;&#x5206;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x7684;flex-grow&#x5C5E;&#x6027;&#x4E3A;2&#xFF0C;&#x5176;&#x4ED6;&#x9879;&#x76EE;&#x90FD;&#x4E3A;1&#xFF0C;&#x5219;&#x524D;&#x8005;&#x5360;&#x636E;&#x7684;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x5C06;&#x6BD4;&#x5176;&#x4ED6;&#x9879;&#x591A;&#x4E00;&#x500D;&#x3002;</p>
 </blockquote>
-<p><strong>1.3 flex-shrink属性</strong><br>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<p><strong>1.3 flex-shrink&#x5C5E;&#x6027;</strong><br>flex-shrink&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x4E86;&#x9879;&#x76EE;&#x7684;&#x7F29;&#x5C0F;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1&#xFF0C;&#x5373;&#x5982;&#x679C;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#xFF0C;&#x8BE5;&#x9879;&#x76EE;&#x5C06;&#x7F29;&#x5C0F;&#x3002;</p>
 <pre><code>.items{
     flex-shrink:&lt;number&gt;;
 }
 </code></pre><p><img src="/assets/newImg/flex_shrink.jpg" alt=""></p>
 <blockquote>
-<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。<br>负值对该属性无效。</p>
+<p>&#x5982;&#x679C;&#x6240;&#x6709;&#x9879;&#x76EE;&#x7684;flex-shrink&#x5C5E;&#x6027;&#x90FD;&#x4E3A;1&#xFF0C;&#x5F53;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x65F6;&#xFF0C;&#x90FD;&#x5C06;&#x7B49;&#x6BD4;&#x4F8B;&#x7F29;&#x5C0F;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x7684;flex-shrink&#x5C5E;&#x6027;&#x4E3A;0&#xFF0C;&#x5176;&#x4ED6;&#x9879;&#x76EE;&#x90FD;&#x4E3A;1&#xFF0C;&#x5219;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x65F6;&#xFF0C;&#x524D;&#x8005;&#x4E0D;&#x7F29;&#x5C0F;&#x3002;<br>&#x8D1F;&#x503C;&#x5BF9;&#x8BE5;&#x5C5E;&#x6027;&#x65E0;&#x6548;&#x3002;</p>
 </blockquote>
-<p><strong>1.4 flex-basis属性</strong><br>flex-basis元素在主轴占据的空间</p>
+<p><strong>1.4 flex-basis&#x5C5E;&#x6027;</strong><br>flex-basis&#x5143;&#x7D20;&#x5728;&#x4E3B;&#x8F74;&#x5360;&#x636E;&#x7684;&#x7A7A;&#x95F4;</p>
 <pre><code>.item {
   flex-basis: &lt;length&gt; | auto; /* default auto */
 }
-</code></pre><p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
-<p><strong>1.5 flex属性</strong><br>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
+</code></pre><p>&#x5B83;&#x53EF;&#x4EE5;&#x8BBE;&#x4E3A;&#x8DDF;width&#x6216;height&#x5C5E;&#x6027;&#x4E00;&#x6837;&#x7684;&#x503C;&#xFF08;&#x6BD4;&#x5982;350px&#xFF09;&#xFF0C;&#x5219;&#x9879;&#x76EE;&#x5C06;&#x5360;&#x636E;&#x56FA;&#x5B9A;&#x7A7A;&#x95F4;&#x3002;</p>
+<p><strong>1.5 flex&#x5C5E;&#x6027;</strong><br>flex&#x5C5E;&#x6027;&#x662F;flex-grow, flex-shrink &#x548C; flex-basis&#x7684;&#x7B80;&#x5199;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;0 1 auto&#x3002;&#x540E;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x53EF;&#x9009;&#x3002;</p>
 <pre><code>.item {
   flex: none | [ &lt;&apos;flex-grow&apos;&gt; &lt;&apos;flex-shrink&apos;&gt;? || &lt;&apos;flex-basis&apos;&gt; ]
 }
-</code></pre><p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值</p>
-<p><strong>1.6    align-self属性</strong><br>定义元素自身的对齐方式</p>
+</code></pre><p>&#x8BE5;&#x5C5E;&#x6027;&#x6709;&#x4E24;&#x4E2A;&#x5FEB;&#x6377;&#x503C;&#xFF1A;auto (1 1 auto) &#x548C; none (0 0 auto)&#x3002;<br>&#x5EFA;&#x8BAE;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5355;&#x72EC;&#x5199;&#x4E09;&#x4E2A;&#x5206;&#x79BB;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x56E0;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x63A8;&#x7B97;&#x76F8;&#x5173;&#x503C;</p>
+<p><strong>1.6    align-self&#x5C5E;&#x6027;</strong><br>&#x5B9A;&#x4E49;&#x5143;&#x7D20;&#x81EA;&#x8EAB;&#x7684;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;</p>
 <pre><code>.item {
   align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
-</code></pre><p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。<br>来源：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+</code></pre><p>&#x8BE5;&#x5C5E;&#x6027;&#x53EF;&#x80FD;&#x53D6;6&#x4E2A;&#x503C;&#xFF0C;&#x9664;&#x4E86;auto&#xFF0C;&#x5176;&#x4ED6;&#x90FD;&#x4E0E;align-items&#x5C5E;&#x6027;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x3002;<br>&#x6765;&#x6E90;&#xFF1A;<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
 
                                             
-                                        </div>
-
+                                        </div>                 
                                         
             </div>
             
@@ -519,9 +520,9 @@ var _hmt = _hmt || [];
 -->
 
 
+
 </div>
-      <!--
-<footer id="footer">
+      <!--<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
@@ -540,6 +541,8 @@ var _hmt = _hmt || [];
   _st('install','m5RW4BUQrJ_r-CYKAksH','2.0.0');
 </script>
   </div>
+  <span id="busuanzi_container_site_pv">      Total visits: <span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv">    You are Visiter No.<span id="busuanzi_value_site_uv"></span></span>
+
 </footer>
 -->
     </div>

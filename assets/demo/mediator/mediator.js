@@ -13,26 +13,26 @@
   };
 
   scoreboard = {
-    element: document.getElementById("results"),
+    element: document.getElementById(&quot;results&quot;),
     update: function(score) {
       var diff, key, msg, value;
-      msg = '';
+      msg = &apos;&apos;;
       for (key in score) {
         value = score[key];
         if (score.hasOwnProperty(key)) {
-          msg = msg + ("<span><strong>" + key + "</strong>:" + value + "</span>");
+          msg = msg + (&quot;<span><strong>&quot; + key + &quot;</strong>:&quot; + value + &quot;</span>&quot;);
         }
       }
       this.element.innerHTML = msg;
       diff = score.Home - score.Guest;
-      if (diff > 15) {
-        alert("Home Win!");
+      if (diff &gt; 15) {
+        alert(&quot;Home Win!&quot;);
         return location.reload();
-      } else if (diff < -15) {
-        alert("Guest Win!");
+      } else if (diff &lt; -15) {
+        alert(&quot;Guest Win!&quot;);
         return location.reload();
       } else {
-        return document.getElementById('barGuest').style.width = 150 + (diff * 10) + 'px';
+        return document.getElementById(&apos;barGuest&apos;).style.width = 150 + (diff * 10) + &apos;px&apos;;
       }
     }
   };
@@ -42,8 +42,8 @@
     setup: function() {
       var players;
       players = this.players;
-      players.home = new Player('Home');
-      return players.guest = new Player('Guest');
+      players.home = new Player(&apos;Home&apos;);
+      return players.guest = new Player(&apos;Guest&apos;);
     },
     played: function() {
       var players, score;

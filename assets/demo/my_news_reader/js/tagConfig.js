@@ -224,22 +224,22 @@ window.tagConfig.pageLayout = {
 	}]
 },
 window.tagConfig.colorPatterns = [[{
-	backgrounds: ["#ce5f52", "#e37063"],
-	fontColor: "#FFF",
-	borderColor: "#5c666f"
+	backgrounds: [&quot;#ce5f52&quot;, &quot;#e37063&quot;],
+	fontColor: &quot;#FFF&quot;,
+	borderColor: &quot;#5c666f&quot;
 },
 {
-	backgrounds: ["#6c5d56", "#746760"],
-	fontColor: "#FFF",
-	borderColor: "#5c666f"
+	backgrounds: [&quot;#6c5d56&quot;, &quot;#746760&quot;],
+	fontColor: &quot;#FFF&quot;,
+	borderColor: &quot;#5c666f&quot;
 },
 {
-	backgrounds: ["#c8b66a", "#dbc877"],
-	fontColor: "#FFF",
-	borderColor: "#5c666f"
+	backgrounds: [&quot;#c8b66a&quot;, &quot;#dbc877&quot;],
+	fontColor: &quot;#FFF&quot;,
+	borderColor: &quot;#5c666f&quot;
 },
 {
-	backgrounds: ["#6e96b1", "#82a8bf"],
-	fontColor: "#FFF",
-	borderColor: "#5c666f"
+	backgrounds: [&quot;#6e96b1&quot;, &quot;#82a8bf&quot;],
+	fontColor: &quot;#FFF&quot;,
+	borderColor: &quot;#5c666f&quot;
 }]];

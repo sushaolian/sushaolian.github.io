@@ -247,13 +247,12 @@ var _hmt = _hmt || [];
             autohidemode: true
         });
     </script>
-	  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
     
         <div class="article-meta">
             <a href="/assets/demo/jiugongge_demo.html" class="article-date">
   	<time datetime="2016-11-24T14:43:32.660Z" itemprop="datePublished">2016-11-24</time>
 </a>
+
 
         </div>
         
@@ -268,7 +267,7 @@ var _hmt = _hmt || [];
 
                                                     <p class="toc-button">目录</p>
 <div id="toc" class="toc-article" style="display:none;">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">1) div+负margin实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">2.1) table border-collapse: collapse实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">2.2) table思路改进</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-div负margin实现"><span class="toc-number">1.</span> <span class="toc-text">1) div+负margin实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-table-border-collapse-collapse实现"><span class="toc-number">2.</span> <span class="toc-text">2.1) table border-collapse: collapse实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-table思路改进"><span class="toc-number">3.</span> <span class="toc-text">2.2) table思路改进</span></a></li></ol>
 </div>
 <script>
     $(function(){
@@ -299,8 +298,11 @@ var _hmt = _hmt || [];
                                             
                                             -->
                                             
-                                                     
-<!DOCTYPE HTML>
+                                                    <div id="toc" class="toc-article">
+                                                      <strong class="toc-title">文章目录</strong>
+                                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-div负margin实现"><span class="toc-number">1.</span> <span class="toc-text">1) div+负margin实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-table-border-collapse-collapse实现"><span class="toc-number">2.</span> <span class="toc-text">2.1) table border-collapse: collapse实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-table思路改进"><span class="toc-number">3.</span> <span class="toc-text">2.2) table思路改进</span></a></li></ol>
+                                                    </div>
+                                                     <!DOCTYPE HTML>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -398,7 +400,7 @@ var _hmt = _hmt || [];
 	</style>
 </head>
 <body>
-	<h2>1) div+负margin实现</h2>
+	<h2 id="1-div&#x8D1F;margin&#x5B9E;&#x73B0;">1) div+&#x8D1F;margin&#x5B9E;&#x73B0;</h2>
 	<div id="test0">
 		<div>1</div>
 		<div class="lr_indent">2</div>
@@ -410,7 +412,7 @@ var _hmt = _hmt || [];
 		<div class="lr_indent">8</div>
 		<div>9</div>
 	</div>
-	<h2>2.1) table border-collapse: collapse实现</h2>
+	<h2 id="21-table-border-collapse-collapse&#x5B9E;&#x73B0;">2.1) table border-collapse: collapse&#x5B9E;&#x73B0;</h2>
 	<div id="test1">
 		<table>
 			<tr>
@@ -430,7 +432,7 @@ var _hmt = _hmt || [];
 			</tr>
 		</table>
 	</div>
-	<h2>2.2) table思路改进</h2>
+	<h2 id="22-table&#x601D;&#x8DEF;&#x6539;&#x8FDB;">2.2) table&#x601D;&#x8DEF;&#x6539;&#x8FDB;</h2>
 	<div id="test2">
 		<table>
 			<tr>
@@ -453,8 +455,7 @@ var _hmt = _hmt || [];
 </body>
 </html>
                                             
-                                        </div>
-
+                                        </div>                 
                                         
             </div>
             
@@ -513,8 +514,7 @@ var _hmt = _hmt || [];
 -->
 
 </div>
-      <!--
-<footer id="footer">
+      <!--<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
@@ -533,6 +533,8 @@ var _hmt = _hmt || [];
   _st('install','m5RW4BUQrJ_r-CYKAksH','2.0.0');
 </script>
   </div>
+  <span id="busuanzi_container_site_pv">      Total visits: <span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv">    You are Visiter No.<span id="busuanzi_value_site_uv"></span></span>
+
 </footer>
 -->
     </div>

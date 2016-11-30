@@ -31,16 +31,16 @@
       var i, newDom,
         _this = this;
       i = 0;
-      while (i < N) {
-        newDom = $('<div class="bufBox"><div class="bufCover">' + i + '</div>' + i + '</div>');
-        $('#buf').append(newDom);
-        this.data.buf.push('e');
+      while (i &lt; N) {
+        newDom = $(&apos;<div class="bufBox"><div class="bufCover">&apos; + i + &apos;</div>&apos; + i + &apos;</div>&apos;);
+        $(&apos;#buf&apos;).append(newDom);
+        this.data.buf.push(&apos;e&apos;);
         i++;
       }
-      $('#produce').click(function() {
+      $(&apos;#produce&apos;).click(function() {
         return _this.producer();
       });
-      return $('#consume').click(function() {
+      return $(&apos;#consume&apos;).click(function() {
         return _this.consumer();
       });
     };
@@ -54,40 +54,40 @@
     };
 
     ProCon.prototype.produceItem = function() {
-      $('<p class="desPro">生产了产品</p>').insertBefore($("#des p:first"));
-      return 'm';
+      $(&apos;<p class="desPro">&#x751F;&#x4EA7;&#x4E86;&#x4EA7;&#x54C1;</p>&apos;).insertBefore($(&quot;#des p:first&quot;));
+      return &apos;m&apos;;
     };
 
     ProCon.prototype.consumeItem = function() {
-      return $('<p class="desCon">消费了产品</p>').insertBefore($("#des p:first"));
+      return $(&apos;<p class="desCon">&#x6D88;&#x8D39;&#x4E86;&#x4EA7;&#x54C1;</p>&apos;).insertBefore($(&quot;#des p:first&quot;));
     };
 
     ProCon.prototype.enterItem = function(item) {
       var str;
       this.data.front = (this.data.front + 1) % N;
       this.data.buf[this.data.front] = item;
-      str = "存入产品" + this.data.buf[this.data.front] + "到缓冲区" + this.data.front;
-      $("<p class="desPro">" + str + "</p>").insertBefore($("#des p:first"));
-      return $($('.bufCover')[this.data.front]).animate({
-        "height": "50px"
+      str = &quot;&#x5B58;&#x5165;&#x4EA7;&#x54C1;&quot; + this.data.buf[this.data.front] + &quot;&#x5230;&#x7F13;&#x51B2;&#x533A;&quot; + this.data.front;
+      $(&quot;<p class="desPro">&quot; + str + &quot;</p>&quot;).insertBefore($(&quot;#des p:first&quot;));
+      return $($(&apos;.bufCover&apos;)[this.data.front]).animate({
+        &quot;height&quot;: &quot;50px&quot;
       });
     };
 
     ProCon.prototype.removeItem = function() {
       var str;
       this.data.rear = (this.data.rear + 1) % N;
-      this.data.buf[this.data.rear] = 'e';
-      str = "取出产品" + this.data.buf[this.data.rear] + "从缓冲区" + this.data.rear;
-      $("<p class="desCon">" + str + "</p>").insertBefore($("#des p:first"));
-      return $($('.bufCover')[this.data.rear]).animate({
-        "height": "0px"
+      this.data.buf[this.data.rear] = &apos;e&apos;;
+      str = &quot;&#x53D6;&#x51FA;&#x4EA7;&#x54C1;&quot; + this.data.buf[this.data.rear] + &quot;&#x4ECE;&#x7F13;&#x51B2;&#x533A;&quot; + this.data.rear;
+      $(&quot;<p class="desCon">&quot; + str + &quot;</p>&quot;).insertBefore($(&quot;#des p:first&quot;));
+      return $($(&apos;.bufCover&apos;)[this.data.rear]).animate({
+        &quot;height&quot;: &quot;0px&quot;
       });
     };
 
     ProCon.prototype.producer = function() {
       var item;
       if (this.data.full === N) {
-        $("<p class="desSpe">缓冲区已全满</p>").insertBefore($("#des p:first"));
+        $(&quot;<p class="desSpe">&#x7F13;&#x51B2;&#x533A;&#x5DF2;&#x5168;&#x6EE1;</p>&quot;).insertBefore($(&quot;#des p:first&quot;));
         return;
       }
       item = this.produceItem();
@@ -100,7 +100,7 @@
 
     ProCon.prototype.consumer = function() {
       if (this.data.empty === N) {
-        $("<p class="desSpe">缓冲区已空</p>").insertBefore($("#des p:first"));
+        $(&quot;<p class="desSpe">&#x7F13;&#x51B2;&#x533A;&#x5DF2;&#x7A7A;</p>&quot;).insertBefore($(&quot;#des p:first&quot;));
         return;
       }
       this.data.full = this.p(this.data.full);

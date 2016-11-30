@@ -208,13 +208,12 @@ var _hmt = _hmt || [];
             autohidemode: true
         });
     </script>
-	  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-	</script>
     
         <div class="article-meta">
             <a href="/2016/07/25/css-wendang/" class="article-date">
   	<time datetime="2016-07-24T16:58:00.000Z" itemprop="datePublished">2016-07-25</time>
 </a>
+
 
         </div>
         
@@ -233,7 +232,6 @@ var _hmt = _hmt || [];
 
 
                             </header>
-							<div style="float:right;margin-right:25px;margin-bottom:15px;font-size:16px;color:orange;">阅读次数<span id="busuanzi_value_page_pv"></span>次</div>
                             
                                 <div class="article-info article-info-post">
                                     
@@ -254,7 +252,7 @@ var _hmt = _hmt || [];
 
                                                     <p class="toc-button">目录</p>
 <div id="toc" class="toc-article" style="display:none;">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#块元素（block-element）"><span class="toc-number">1.</span> <span class="toc-text">块元素（block element）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内联元素（inline-element）"><span class="toc-number">2.</span> <span class="toc-text">内联元素（inline element）</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#块元素block-element"><span class="toc-number">1.</span> <span class="toc-text">块元素（block element）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内联元素inline-element"><span class="toc-number">2.</span> <span class="toc-text">内联元素（inline element）</span></a></li></ol>
 </div>
 <script>
     $(function(){
@@ -285,112 +283,115 @@ var _hmt = _hmt || [];
                                             
                                             -->
                                             
-                                                     <p>将窗体自上而下分成一行行， 并在每行中按从左至右的顺序排放元素，即为文档流。<br>每个非浮动块级元素都独占一行， 浮动元素则按规定浮在行的一端。 若当前行容不下， 则另起新行再浮动。</p>
-<p>内联元素也不会独占一行。 几乎所有元素(包括块级，内联和列表元素）均可生成子行， 用于摆放子元素。</p>
-<p>有三种情况将使得元素脱离文档流而存在，分别是浮动，绝对定位， 固定定位。 但是在IE中浮动元素也存在于文档流中（还让我觉得这样很合理&gt;&lt;）。</p>
-<p>浮动元素不占任何正常文档流空间，而浮动元素的定位还是基于正常的文档流，然后从文档流中抽出并尽可能远的移动至左侧或者右侧。文字内容会围绕在浮动元素周围。当一个元素从正常文档流中抽出后，仍然在文档流中的其他元素将忽略该元素并填补他原先的空间。</p>
-<p>浮动概念让人迷惑根源在于浏览器对理论的解读造成的。只能说很多人以IE做标准，其实它不是。</p>
-<p>基于文档流， 我们可以很容易理解以下的定位模式：</p>
+                                                    <div id="toc" class="toc-article">
+                                                      <strong class="toc-title">文章目录</strong>
+                                                      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#块元素block-element"><span class="toc-number">1.</span> <span class="toc-text">块元素（block element）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内联元素inline-element"><span class="toc-number">2.</span> <span class="toc-text">内联元素（inline element）</span></a></li></ol>
+                                                    </div>
+                                                     <p>&#x5C06;&#x7A97;&#x4F53;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x5206;&#x6210;&#x4E00;&#x884C;&#x884C;&#xFF0C; &#x5E76;&#x5728;&#x6BCF;&#x884C;&#x4E2D;&#x6309;&#x4ECE;&#x5DE6;&#x81F3;&#x53F3;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x653E;&#x5143;&#x7D20;&#xFF0C;&#x5373;&#x4E3A;&#x6587;&#x6863;&#x6D41;&#x3002;<br>&#x6BCF;&#x4E2A;&#x975E;&#x6D6E;&#x52A8;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x90FD;&#x72EC;&#x5360;&#x4E00;&#x884C;&#xFF0C; &#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x5219;&#x6309;&#x89C4;&#x5B9A;&#x6D6E;&#x5728;&#x884C;&#x7684;&#x4E00;&#x7AEF;&#x3002; &#x82E5;&#x5F53;&#x524D;&#x884C;&#x5BB9;&#x4E0D;&#x4E0B;&#xFF0C; &#x5219;&#x53E6;&#x8D77;&#x65B0;&#x884C;&#x518D;&#x6D6E;&#x52A8;&#x3002;</p>
+<p>&#x5185;&#x8054;&#x5143;&#x7D20;&#x4E5F;&#x4E0D;&#x4F1A;&#x72EC;&#x5360;&#x4E00;&#x884C;&#x3002; &#x51E0;&#x4E4E;&#x6240;&#x6709;&#x5143;&#x7D20;(&#x5305;&#x62EC;&#x5757;&#x7EA7;&#xFF0C;&#x5185;&#x8054;&#x548C;&#x5217;&#x8868;&#x5143;&#x7D20;&#xFF09;&#x5747;&#x53EF;&#x751F;&#x6210;&#x5B50;&#x884C;&#xFF0C; &#x7528;&#x4E8E;&#x6446;&#x653E;&#x5B50;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x6709;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x5C06;&#x4F7F;&#x5F97;&#x5143;&#x7D20;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#x800C;&#x5B58;&#x5728;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x6D6E;&#x52A8;&#xFF0C;&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF0C; &#x56FA;&#x5B9A;&#x5B9A;&#x4F4D;&#x3002; &#x4F46;&#x662F;&#x5728;IE&#x4E2D;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x4E5F;&#x5B58;&#x5728;&#x4E8E;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#xFF08;&#x8FD8;&#x8BA9;&#x6211;&#x89C9;&#x5F97;&#x8FD9;&#x6837;&#x5F88;&#x5408;&#x7406;&gt;&lt;&#xFF09;&#x3002;</p>
+<p>&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x4E0D;&#x5360;&#x4EFB;&#x4F55;&#x6B63;&#x5E38;&#x6587;&#x6863;&#x6D41;&#x7A7A;&#x95F4;&#xFF0C;&#x800C;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x7684;&#x5B9A;&#x4F4D;&#x8FD8;&#x662F;&#x57FA;&#x4E8E;&#x6B63;&#x5E38;&#x7684;&#x6587;&#x6863;&#x6D41;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#x62BD;&#x51FA;&#x5E76;&#x5C3D;&#x53EF;&#x80FD;&#x8FDC;&#x7684;&#x79FB;&#x52A8;&#x81F3;&#x5DE6;&#x4FA7;&#x6216;&#x8005;&#x53F3;&#x4FA7;&#x3002;&#x6587;&#x5B57;&#x5185;&#x5BB9;&#x4F1A;&#x56F4;&#x7ED5;&#x5728;&#x6D6E;&#x52A8;&#x5143;&#x7D20;&#x5468;&#x56F4;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4ECE;&#x6B63;&#x5E38;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#x62BD;&#x51FA;&#x540E;&#xFF0C;&#x4ECD;&#x7136;&#x5728;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x5C06;&#x5FFD;&#x7565;&#x8BE5;&#x5143;&#x7D20;&#x5E76;&#x586B;&#x8865;&#x4ED6;&#x539F;&#x5148;&#x7684;&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x6D6E;&#x52A8;&#x6982;&#x5FF5;&#x8BA9;&#x4EBA;&#x8FF7;&#x60D1;&#x6839;&#x6E90;&#x5728;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x7406;&#x8BBA;&#x7684;&#x89E3;&#x8BFB;&#x9020;&#x6210;&#x7684;&#x3002;&#x53EA;&#x80FD;&#x8BF4;&#x5F88;&#x591A;&#x4EBA;&#x4EE5;IE&#x505A;&#x6807;&#x51C6;&#xFF0C;&#x5176;&#x5B9E;&#x5B83;&#x4E0D;&#x662F;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x6587;&#x6863;&#x6D41;&#xFF0C; &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x4EE5;&#x4E0B;&#x7684;&#x5B9A;&#x4F4D;&#x6A21;&#x5F0F;&#xFF1A;</p>
 <ol>
-<li>相对定位， 即相对于元素在文档流中位置进行偏移。 但保留原占位。</li>
-<li>绝对定位， 即完全脱离文档流， 相对于position属性非static值的最近父级元素进行偏移。</li>
-<li>固定定位， 即完全脱离文档流， 相对于视区进行偏移。</li>
+<li>&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF0C; &#x5373;&#x76F8;&#x5BF9;&#x4E8E;&#x5143;&#x7D20;&#x5728;&#x6587;&#x6863;&#x6D41;&#x4E2D;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x504F;&#x79FB;&#x3002; &#x4F46;&#x4FDD;&#x7559;&#x539F;&#x5360;&#x4F4D;&#x3002;</li>
+<li>&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#xFF0C; &#x5373;&#x5B8C;&#x5168;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#xFF0C; &#x76F8;&#x5BF9;&#x4E8E;position&#x5C5E;&#x6027;&#x975E;static&#x503C;&#x7684;&#x6700;&#x8FD1;&#x7236;&#x7EA7;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x504F;&#x79FB;&#x3002;</li>
+<li>&#x56FA;&#x5B9A;&#x5B9A;&#x4F4D;&#xFF0C; &#x5373;&#x5B8C;&#x5168;&#x8131;&#x79BB;&#x6587;&#x6863;&#x6D41;&#xFF0C; &#x76F8;&#x5BF9;&#x4E8E;&#x89C6;&#x533A;&#x8FDB;&#x884C;&#x504F;&#x79FB;&#x3002;</li>
 </ol>
-<p>几个问题</p>
+<p>&#x51E0;&#x4E2A;&#x95EE;&#x9898;</p>
 <ol>
-<li>作为三大基本元素之一的内联元素。 它跟块级元素的主要区别在哪？</li>
-<li>Clear属性取right值时怎么理解？ 貌似实验情况总跟理论不符.</li>
-<li>内联元素是什么意思呢？什么是块级别元素？<a id="more"></a>
-《CSS权威指南》中文字显示：任何不是块级元素的可见元素都是内联元素。其表现的特性是“行布局”形式，这里的“行布局”的意思就是说其表现形式始终以行进行显示。比如，我们设定一个内联元素border-bottom:1px solid #000;时其表现是以每行进行重复，每一行下方都会有一条黑色的细线。如果是块级元素那么所显示的的黑线只会在块的下方出现。</li>
+<li>&#x4F5C;&#x4E3A;&#x4E09;&#x5927;&#x57FA;&#x672C;&#x5143;&#x7D20;&#x4E4B;&#x4E00;&#x7684;&#x5185;&#x8054;&#x5143;&#x7D20;&#x3002; &#x5B83;&#x8DDF;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x7684;&#x4E3B;&#x8981;&#x533A;&#x522B;&#x5728;&#x54EA;&#xFF1F;</li>
+<li>Clear&#x5C5E;&#x6027;&#x53D6;right&#x503C;&#x65F6;&#x600E;&#x4E48;&#x7406;&#x89E3;&#xFF1F; &#x8C8C;&#x4F3C;&#x5B9E;&#x9A8C;&#x60C5;&#x51B5;&#x603B;&#x8DDF;&#x7406;&#x8BBA;&#x4E0D;&#x7B26;.</li>
+<li>&#x5185;&#x8054;&#x5143;&#x7D20;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5462;&#xFF1F;&#x4EC0;&#x4E48;&#x662F;&#x5757;&#x7EA7;&#x522B;&#x5143;&#x7D20;&#xFF1F;<a id="more"></a>
+&#x300A;CSS&#x6743;&#x5A01;&#x6307;&#x5357;&#x300B;&#x4E2D;&#x6587;&#x5B57;&#x663E;&#x793A;&#xFF1A;&#x4EFB;&#x4F55;&#x4E0D;&#x662F;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x7684;&#x53EF;&#x89C1;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x5185;&#x8054;&#x5143;&#x7D20;&#x3002;&#x5176;&#x8868;&#x73B0;&#x7684;&#x7279;&#x6027;&#x662F;&#x201C;&#x884C;&#x5E03;&#x5C40;&#x201D;&#x5F62;&#x5F0F;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x201C;&#x884C;&#x5E03;&#x5C40;&#x201D;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x8BF4;&#x5176;&#x8868;&#x73B0;&#x5F62;&#x5F0F;&#x59CB;&#x7EC8;&#x4EE5;&#x884C;&#x8FDB;&#x884C;&#x663E;&#x793A;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x5185;&#x8054;&#x5143;&#x7D20;border-bottom:1px solid #000;&#x65F6;&#x5176;&#x8868;&#x73B0;&#x662F;&#x4EE5;&#x6BCF;&#x884C;&#x8FDB;&#x884C;&#x91CD;&#x590D;&#xFF0C;&#x6BCF;&#x4E00;&#x884C;&#x4E0B;&#x65B9;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x6761;&#x9ED1;&#x8272;&#x7684;&#x7EC6;&#x7EBF;&#x3002;&#x5982;&#x679C;&#x662F;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x90A3;&#x4E48;&#x6240;&#x663E;&#x793A;&#x7684;&#x7684;&#x9ED1;&#x7EBF;&#x53EA;&#x4F1A;&#x5728;&#x5757;&#x7684;&#x4E0B;&#x65B9;&#x51FA;&#x73B0;&#x3002;</li>
 </ol>
-<p>p、h1、或div等元素常常称为块级元素，这些元素显示为一块内容；Strong。span等元素称为行内元素，它们的内容显示在行中，即“行内框”。（可以使用display=block将行内元素转换成块元素，display=none表示生成的元素根本没有框，也既不显示元素，不占用文档中的空间）</p>
-<pre><code>&gt; 行内就是在一行内的元素，只能放在行内；块级元素，就是一个四方块，可以放在页面上任何地方。
-&gt; 说白了，行内元素就好像一个单词；块级元素就好像一个段落，如果不另加定义的话，它将独立一行出现。
-&gt; 一般的 块级元素诸如段落&lt;p&gt;、标 题&lt;h1&gt;&lt;h2&gt;...、列表。&lt;ul&gt;&lt;ol&gt;&lt;li、表格&lt;table&gt;、表单&lt;form&gt;、DIV&lt;div&gt;和BODY&lt;body&gt;等元素。而内联元素则如: 表单元素&lt;input&gt;、超级链接&lt;a&gt;、图像&lt;img&gt;、&lt;span........
-&gt; 块级无素的显著特点是：每个块级元素都是从一个新行开始显示，而且其后的无素也需另起一行进行显示。
-&gt; &lt;span&gt;在CSS定义中属于一个行内元素，而&lt;div&gt;是块级元素。
-</code></pre><p>对于学过CSS的人来说一听就能明白。可对于新手来说不易理解，我主要对新手说通熟点吧!</p>
-<p>用容器这一词会更容易形象理解它们的存在与用途，行内元素相当一个小容器，而div相当于一个大容器，大容器当然可以放一个小容器了。<span>就是小容器，这样一说你也许会在脑海中有一个初步的印象了吧，如果我们想在大容器中装一些清水。但我也想在里装一些墨水怎么 办？很简单，我们把小容器拿出来装上墨水然后放入大容器里的清水中不就成了吗。</span></p>
-<p>块元素（block element）一般是其他元素的容器元素<br>块元素一般都从新行开始，它可以容纳内联元素和其他块元素。常见块元素是段落标签’P”。“form”这个块元素比较特殊，它只能用来容纳其他块元素。</p>
-<p>如果没有css的作用，块元素会顺序以每次另起一行的方式一直往下排。而有了css以后，我们可以改变这种html的默认布局模式，把块元素摆放到你想要 的位置上去。而不是每次都愚蠢的另起一行。需要指出的是，table标签也是块元素的一种，table based layout和css based layout从一般使用者（不包括视力障碍者、盲人等）的角度来看这两种布局，除了页面载入速度的差别外，没有其他的差别。但是如果普通使用者不经意点了 查看页面源代码按钮后，两者所表现出来的差异就非常大了。基于良好重构理念设计的css布局页面源码，至少也能让没有web开发经验的普通使用者把内容快速的读懂。从这个角度来说，css layout code应该有更好的美学体验吧。</p>
-<p>你能够把块容器元素div想象成一个个box，或者如果你玩过剪贴文载的话，那就更加容易理解了。我们先把需要的文章从各种报纸、杂志总剪 下来。每块剪下来的内容就是一个block。然后我们把这些纸块按照自己的排版意图，用胶水重新贴到一张空白的新纸上。这样就形成了你自己独特的文摘快报了。作为一种技术的延伸，网页布局设计也遵循了同样的模式。</p>
-<p>内联元素（inline element）一般都是基于语义级（semantic）的基本元素。内联元素只能容纳文本或者其他内联元素，常见内联元素 “a”。</p>
-<p>块元素（block element）和内联元素（inline element）都是html规范中的概念。块元素和内联元素的基本差异是块元素一般都从新行开始。而当加入了css控制以后，块元素和内联元素的这种属 性差异就不成为差异了。比如，我们完全可以把内联元素cite加上display:block这样的属性，让他也有每次都从新行开始的属性。</p>
-<p>可变元素的基本概念就是他需要根据上下文关系确定该元素是块元素或者内联元素。可变元素还是属于上述两种元素类别，一旦上下文关系确定了他的类别，他就要遵循块元素或者内联元素的规则限制。大致的元素分类见全文。</p>
-<p>关于inline element的中文叫法，有多种内联元素、内嵌元素、行内元素、直进式元素。基本上没有统一的翻译，爱怎么叫怎么叫吧。另外提到内联元素，我们会想到有个display的属性是display:inline;这个属性能够修复著名的IE双倍浮动边界问题。</p>
-<h2 id="块元素（block-element）"><a href="#块元素（block-element）" class="headerlink" title="块元素（block element）"></a>块元素（block element）</h2><ol>
-<li>address 地址</li>
-<li>blockquote 块引用</li>
-<li>center 举中对齐块</li>
-<li>dir 目录列表</li>
-<li>div 常用块级容易，也是css layout的主要标签</li>
-<li>dl 定义列表</li>
-<li>fieldset form控制组</li>
-<li>form 交互表单</li>
-<li>h1 大标题</li>
-<li>h2 副标题</li>
-<li>h3 3级标题</li>
-<li>h4 4级标题</li>
-<li>h5 5级标题</li>
-<li>h6 6级标题</li>
-<li>hr 水平分隔线</li>
+<p>p&#x3001;h1&#x3001;&#x6216;div&#x7B49;&#x5143;&#x7D20;&#x5E38;&#x5E38;&#x79F0;&#x4E3A;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#xFF0C;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x663E;&#x793A;&#x4E3A;&#x4E00;&#x5757;&#x5185;&#x5BB9;&#xFF1B;Strong&#x3002;span&#x7B49;&#x5143;&#x7D20;&#x79F0;&#x4E3A;&#x884C;&#x5185;&#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5185;&#x5BB9;&#x663E;&#x793A;&#x5728;&#x884C;&#x4E2D;&#xFF0C;&#x5373;&#x201C;&#x884C;&#x5185;&#x6846;&#x201D;&#x3002;&#xFF08;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;display=block&#x5C06;&#x884C;&#x5185;&#x5143;&#x7D20;&#x8F6C;&#x6362;&#x6210;&#x5757;&#x5143;&#x7D20;&#xFF0C;display=none&#x8868;&#x793A;&#x751F;&#x6210;&#x7684;&#x5143;&#x7D20;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x6846;&#xFF0C;&#x4E5F;&#x65E2;&#x4E0D;&#x663E;&#x793A;&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x5360;&#x7528;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x7A7A;&#x95F4;&#xFF09;</p>
+<pre><code>&gt; &#x884C;&#x5185;&#x5C31;&#x662F;&#x5728;&#x4E00;&#x884C;&#x5185;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x53EA;&#x80FD;&#x653E;&#x5728;&#x884C;&#x5185;&#xFF1B;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x56DB;&#x65B9;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x9875;&#x9762;&#x4E0A;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x3002;
+&gt; &#x8BF4;&#x767D;&#x4E86;&#xFF0C;&#x884C;&#x5185;&#x5143;&#x7D20;&#x5C31;&#x597D;&#x50CF;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#xFF1B;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x5C31;&#x597D;&#x50CF;&#x4E00;&#x4E2A;&#x6BB5;&#x843D;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x53E6;&#x52A0;&#x5B9A;&#x4E49;&#x7684;&#x8BDD;&#xFF0C;&#x5B83;&#x5C06;&#x72EC;&#x7ACB;&#x4E00;&#x884C;&#x51FA;&#x73B0;&#x3002;
+&gt; &#x4E00;&#x822C;&#x7684; &#x5757;&#x7EA7;&#x5143;&#x7D20;&#x8BF8;&#x5982;&#x6BB5;&#x843D;&lt;p&gt;&#x3001;&#x6807; &#x9898;&lt;h1&gt;&lt;h2&gt;...&#x3001;&#x5217;&#x8868;&#x3002;&lt;ul&gt;&lt;ol&gt;&lt;li&#x3001;&#x8868;&#x683C;&lt;table&gt;&#x3001;&#x8868;&#x5355;&lt;form&gt;&#x3001;DIV&lt;div&gt;&#x548C;BODY&lt;body&gt;&#x7B49;&#x5143;&#x7D20;&#x3002;&#x800C;&#x5185;&#x8054;&#x5143;&#x7D20;&#x5219;&#x5982;: &#x8868;&#x5355;&#x5143;&#x7D20;&lt;input&gt;&#x3001;&#x8D85;&#x7EA7;&#x94FE;&#x63A5;&lt;a&gt;&#x3001;&#x56FE;&#x50CF;&lt;img&gt;&#x3001;&lt;span........
+&gt; &#x5757;&#x7EA7;&#x65E0;&#x7D20;&#x7684;&#x663E;&#x8457;&#x7279;&#x70B9;&#x662F;&#xFF1A;&#x6BCF;&#x4E2A;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x4ECE;&#x4E00;&#x4E2A;&#x65B0;&#x884C;&#x5F00;&#x59CB;&#x663E;&#x793A;&#xFF0C;&#x800C;&#x4E14;&#x5176;&#x540E;&#x7684;&#x65E0;&#x7D20;&#x4E5F;&#x9700;&#x53E6;&#x8D77;&#x4E00;&#x884C;&#x8FDB;&#x884C;&#x663E;&#x793A;&#x3002;
+&gt; &lt;span&gt;&#x5728;CSS&#x5B9A;&#x4E49;&#x4E2D;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x884C;&#x5185;&#x5143;&#x7D20;&#xFF0C;&#x800C;&lt;div&gt;&#x662F;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x3002;
+</code></pre><p>&#x5BF9;&#x4E8E;&#x5B66;&#x8FC7;CSS&#x7684;&#x4EBA;&#x6765;&#x8BF4;&#x4E00;&#x542C;&#x5C31;&#x80FD;&#x660E;&#x767D;&#x3002;&#x53EF;&#x5BF9;&#x4E8E;&#x65B0;&#x624B;&#x6765;&#x8BF4;&#x4E0D;&#x6613;&#x7406;&#x89E3;&#xFF0C;&#x6211;&#x4E3B;&#x8981;&#x5BF9;&#x65B0;&#x624B;&#x8BF4;&#x901A;&#x719F;&#x70B9;&#x5427;!</p>
+<p>&#x7528;&#x5BB9;&#x5668;&#x8FD9;&#x4E00;&#x8BCD;&#x4F1A;&#x66F4;&#x5BB9;&#x6613;&#x5F62;&#x8C61;&#x7406;&#x89E3;&#x5B83;&#x4EEC;&#x7684;&#x5B58;&#x5728;&#x4E0E;&#x7528;&#x9014;&#xFF0C;&#x884C;&#x5185;&#x5143;&#x7D20;&#x76F8;&#x5F53;&#x4E00;&#x4E2A;&#x5C0F;&#x5BB9;&#x5668;&#xFF0C;&#x800C;div&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x5927;&#x5BB9;&#x5668;&#xFF0C;&#x5927;&#x5BB9;&#x5668;&#x5F53;&#x7136;&#x53EF;&#x4EE5;&#x653E;&#x4E00;&#x4E2A;&#x5C0F;&#x5BB9;&#x5668;&#x4E86;&#x3002;<span>&#x5C31;&#x662F;&#x5C0F;&#x5BB9;&#x5668;&#xFF0C;&#x8FD9;&#x6837;&#x4E00;&#x8BF4;&#x4F60;&#x4E5F;&#x8BB8;&#x4F1A;&#x5728;&#x8111;&#x6D77;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x521D;&#x6B65;&#x7684;&#x5370;&#x8C61;&#x4E86;&#x5427;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x5728;&#x5927;&#x5BB9;&#x5668;&#x4E2D;&#x88C5;&#x4E00;&#x4E9B;&#x6E05;&#x6C34;&#x3002;&#x4F46;&#x6211;&#x4E5F;&#x60F3;&#x5728;&#x91CC;&#x88C5;&#x4E00;&#x4E9B;&#x58A8;&#x6C34;&#x600E;&#x4E48; &#x529E;&#xFF1F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x5C0F;&#x5BB9;&#x5668;&#x62FF;&#x51FA;&#x6765;&#x88C5;&#x4E0A;&#x58A8;&#x6C34;&#x7136;&#x540E;&#x653E;&#x5165;&#x5927;&#x5BB9;&#x5668;&#x91CC;&#x7684;&#x6E05;&#x6C34;&#x4E2D;&#x4E0D;&#x5C31;&#x6210;&#x4E86;&#x5417;&#x3002;</span></p>
+<p>&#x5757;&#x5143;&#x7D20;&#xFF08;block element&#xFF09;&#x4E00;&#x822C;&#x662F;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x7684;&#x5BB9;&#x5668;&#x5143;&#x7D20;<br>&#x5757;&#x5143;&#x7D20;&#x4E00;&#x822C;&#x90FD;&#x4ECE;&#x65B0;&#x884C;&#x5F00;&#x59CB;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x5185;&#x8054;&#x5143;&#x7D20;&#x548C;&#x5176;&#x4ED6;&#x5757;&#x5143;&#x7D20;&#x3002;&#x5E38;&#x89C1;&#x5757;&#x5143;&#x7D20;&#x662F;&#x6BB5;&#x843D;&#x6807;&#x7B7E;&#x2019;P&#x201D;&#x3002;&#x201C;form&#x201D;&#x8FD9;&#x4E2A;&#x5757;&#x5143;&#x7D20;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;&#xFF0C;&#x5B83;&#x53EA;&#x80FD;&#x7528;&#x6765;&#x5BB9;&#x7EB3;&#x5176;&#x4ED6;&#x5757;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;css&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5757;&#x5143;&#x7D20;&#x4F1A;&#x987A;&#x5E8F;&#x4EE5;&#x6BCF;&#x6B21;&#x53E6;&#x8D77;&#x4E00;&#x884C;&#x7684;&#x65B9;&#x5F0F;&#x4E00;&#x76F4;&#x5F80;&#x4E0B;&#x6392;&#x3002;&#x800C;&#x6709;&#x4E86;css&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x8FD9;&#x79CD;html&#x7684;&#x9ED8;&#x8BA4;&#x5E03;&#x5C40;&#x6A21;&#x5F0F;&#xFF0C;&#x628A;&#x5757;&#x5143;&#x7D20;&#x6446;&#x653E;&#x5230;&#x4F60;&#x60F3;&#x8981; &#x7684;&#x4F4D;&#x7F6E;&#x4E0A;&#x53BB;&#x3002;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x611A;&#x8822;&#x7684;&#x53E6;&#x8D77;&#x4E00;&#x884C;&#x3002;&#x9700;&#x8981;&#x6307;&#x51FA;&#x7684;&#x662F;&#xFF0C;table&#x6807;&#x7B7E;&#x4E5F;&#x662F;&#x5757;&#x5143;&#x7D20;&#x7684;&#x4E00;&#x79CD;&#xFF0C;table based layout&#x548C;css based layout&#x4ECE;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x8005;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x89C6;&#x529B;&#x969C;&#x788D;&#x8005;&#x3001;&#x76F2;&#x4EBA;&#x7B49;&#xFF09;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#x8FD9;&#x4E24;&#x79CD;&#x5E03;&#x5C40;&#xFF0C;&#x9664;&#x4E86;&#x9875;&#x9762;&#x8F7D;&#x5165;&#x901F;&#x5EA6;&#x7684;&#x5DEE;&#x522B;&#x5916;&#xFF0C;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x5DEE;&#x522B;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x666E;&#x901A;&#x4F7F;&#x7528;&#x8005;&#x4E0D;&#x7ECF;&#x610F;&#x70B9;&#x4E86; &#x67E5;&#x770B;&#x9875;&#x9762;&#x6E90;&#x4EE3;&#x7801;&#x6309;&#x94AE;&#x540E;&#xFF0C;&#x4E24;&#x8005;&#x6240;&#x8868;&#x73B0;&#x51FA;&#x6765;&#x7684;&#x5DEE;&#x5F02;&#x5C31;&#x975E;&#x5E38;&#x5927;&#x4E86;&#x3002;&#x57FA;&#x4E8E;&#x826F;&#x597D;&#x91CD;&#x6784;&#x7406;&#x5FF5;&#x8BBE;&#x8BA1;&#x7684;css&#x5E03;&#x5C40;&#x9875;&#x9762;&#x6E90;&#x7801;&#xFF0C;&#x81F3;&#x5C11;&#x4E5F;&#x80FD;&#x8BA9;&#x6CA1;&#x6709;web&#x5F00;&#x53D1;&#x7ECF;&#x9A8C;&#x7684;&#x666E;&#x901A;&#x4F7F;&#x7528;&#x8005;&#x628A;&#x5185;&#x5BB9;&#x5FEB;&#x901F;&#x7684;&#x8BFB;&#x61C2;&#x3002;&#x4ECE;&#x8FD9;&#x4E2A;&#x89D2;&#x5EA6;&#x6765;&#x8BF4;&#xFF0C;css layout code&#x5E94;&#x8BE5;&#x6709;&#x66F4;&#x597D;&#x7684;&#x7F8E;&#x5B66;&#x4F53;&#x9A8C;&#x5427;&#x3002;</p>
+<p>&#x4F60;&#x80FD;&#x591F;&#x628A;&#x5757;&#x5BB9;&#x5668;&#x5143;&#x7D20;div&#x60F3;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x4E2A;box&#xFF0C;&#x6216;&#x8005;&#x5982;&#x679C;&#x4F60;&#x73A9;&#x8FC7;&#x526A;&#x8D34;&#x6587;&#x8F7D;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x5C31;&#x66F4;&#x52A0;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x5148;&#x628A;&#x9700;&#x8981;&#x7684;&#x6587;&#x7AE0;&#x4ECE;&#x5404;&#x79CD;&#x62A5;&#x7EB8;&#x3001;&#x6742;&#x5FD7;&#x603B;&#x526A; &#x4E0B;&#x6765;&#x3002;&#x6BCF;&#x5757;&#x526A;&#x4E0B;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x4E00;&#x4E2A;block&#x3002;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x628A;&#x8FD9;&#x4E9B;&#x7EB8;&#x5757;&#x6309;&#x7167;&#x81EA;&#x5DF1;&#x7684;&#x6392;&#x7248;&#x610F;&#x56FE;&#xFF0C;&#x7528;&#x80F6;&#x6C34;&#x91CD;&#x65B0;&#x8D34;&#x5230;&#x4E00;&#x5F20;&#x7A7A;&#x767D;&#x7684;&#x65B0;&#x7EB8;&#x4E0A;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x5F62;&#x6210;&#x4E86;&#x4F60;&#x81EA;&#x5DF1;&#x72EC;&#x7279;&#x7684;&#x6587;&#x6458;&#x5FEB;&#x62A5;&#x4E86;&#x3002;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x6280;&#x672F;&#x7684;&#x5EF6;&#x4F38;&#xFF0C;&#x7F51;&#x9875;&#x5E03;&#x5C40;&#x8BBE;&#x8BA1;&#x4E5F;&#x9075;&#x5FAA;&#x4E86;&#x540C;&#x6837;&#x7684;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF08;inline element&#xFF09;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x8BED;&#x4E49;&#x7EA7;&#xFF08;semantic&#xFF09;&#x7684;&#x57FA;&#x672C;&#x5143;&#x7D20;&#x3002;&#x5185;&#x8054;&#x5143;&#x7D20;&#x53EA;&#x80FD;&#x5BB9;&#x7EB3;&#x6587;&#x672C;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF0C;&#x5E38;&#x89C1;&#x5185;&#x8054;&#x5143;&#x7D20; &#x201C;a&#x201D;&#x3002;</p>
+<p>&#x5757;&#x5143;&#x7D20;&#xFF08;block element&#xFF09;&#x548C;&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF08;inline element&#xFF09;&#x90FD;&#x662F;html&#x89C4;&#x8303;&#x4E2D;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x5757;&#x5143;&#x7D20;&#x548C;&#x5185;&#x8054;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x672C;&#x5DEE;&#x5F02;&#x662F;&#x5757;&#x5143;&#x7D20;&#x4E00;&#x822C;&#x90FD;&#x4ECE;&#x65B0;&#x884C;&#x5F00;&#x59CB;&#x3002;&#x800C;&#x5F53;&#x52A0;&#x5165;&#x4E86;css&#x63A7;&#x5236;&#x4EE5;&#x540E;&#xFF0C;&#x5757;&#x5143;&#x7D20;&#x548C;&#x5185;&#x8054;&#x5143;&#x7D20;&#x7684;&#x8FD9;&#x79CD;&#x5C5E; &#x6027;&#x5DEE;&#x5F02;&#x5C31;&#x4E0D;&#x6210;&#x4E3A;&#x5DEE;&#x5F02;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x628A;&#x5185;&#x8054;&#x5143;&#x7D20;cite&#x52A0;&#x4E0A;display:block&#x8FD9;&#x6837;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8BA9;&#x4ED6;&#x4E5F;&#x6709;&#x6BCF;&#x6B21;&#x90FD;&#x4ECE;&#x65B0;&#x884C;&#x5F00;&#x59CB;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x53EF;&#x53D8;&#x5143;&#x7D20;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#x5C31;&#x662F;&#x4ED6;&#x9700;&#x8981;&#x6839;&#x636E;&#x4E0A;&#x4E0B;&#x6587;&#x5173;&#x7CFB;&#x786E;&#x5B9A;&#x8BE5;&#x5143;&#x7D20;&#x662F;&#x5757;&#x5143;&#x7D20;&#x6216;&#x8005;&#x5185;&#x8054;&#x5143;&#x7D20;&#x3002;&#x53EF;&#x53D8;&#x5143;&#x7D20;&#x8FD8;&#x662F;&#x5C5E;&#x4E8E;&#x4E0A;&#x8FF0;&#x4E24;&#x79CD;&#x5143;&#x7D20;&#x7C7B;&#x522B;&#xFF0C;&#x4E00;&#x65E6;&#x4E0A;&#x4E0B;&#x6587;&#x5173;&#x7CFB;&#x786E;&#x5B9A;&#x4E86;&#x4ED6;&#x7684;&#x7C7B;&#x522B;&#xFF0C;&#x4ED6;&#x5C31;&#x8981;&#x9075;&#x5FAA;&#x5757;&#x5143;&#x7D20;&#x6216;&#x8005;&#x5185;&#x8054;&#x5143;&#x7D20;&#x7684;&#x89C4;&#x5219;&#x9650;&#x5236;&#x3002;&#x5927;&#x81F4;&#x7684;&#x5143;&#x7D20;&#x5206;&#x7C7B;&#x89C1;&#x5168;&#x6587;&#x3002;</p>
+<p>&#x5173;&#x4E8E;inline element&#x7684;&#x4E2D;&#x6587;&#x53EB;&#x6CD5;&#xFF0C;&#x6709;&#x591A;&#x79CD;&#x5185;&#x8054;&#x5143;&#x7D20;&#x3001;&#x5185;&#x5D4C;&#x5143;&#x7D20;&#x3001;&#x884C;&#x5185;&#x5143;&#x7D20;&#x3001;&#x76F4;&#x8FDB;&#x5F0F;&#x5143;&#x7D20;&#x3002;&#x57FA;&#x672C;&#x4E0A;&#x6CA1;&#x6709;&#x7EDF;&#x4E00;&#x7684;&#x7FFB;&#x8BD1;&#xFF0C;&#x7231;&#x600E;&#x4E48;&#x53EB;&#x600E;&#x4E48;&#x53EB;&#x5427;&#x3002;&#x53E6;&#x5916;&#x63D0;&#x5230;&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x60F3;&#x5230;&#x6709;&#x4E2A;display&#x7684;&#x5C5E;&#x6027;&#x662F;display:inline;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x80FD;&#x591F;&#x4FEE;&#x590D;&#x8457;&#x540D;&#x7684;IE&#x53CC;&#x500D;&#x6D6E;&#x52A8;&#x8FB9;&#x754C;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x5757;&#x5143;&#x7D20;block-element"><a href="#&#x5757;&#x5143;&#x7D20;&#xFF08;block-element&#xFF09;" class="headerlink" title="&#x5757;&#x5143;&#x7D20;&#xFF08;block element&#xFF09;"></a>&#x5757;&#x5143;&#x7D20;&#xFF08;block element&#xFF09;</h2><ol>
+<li>address &#x5730;&#x5740;</li>
+<li>blockquote &#x5757;&#x5F15;&#x7528;</li>
+<li>center &#x4E3E;&#x4E2D;&#x5BF9;&#x9F50;&#x5757;</li>
+<li>dir &#x76EE;&#x5F55;&#x5217;&#x8868;</li>
+<li>div &#x5E38;&#x7528;&#x5757;&#x7EA7;&#x5BB9;&#x6613;&#xFF0C;&#x4E5F;&#x662F;css layout&#x7684;&#x4E3B;&#x8981;&#x6807;&#x7B7E;</li>
+<li>dl &#x5B9A;&#x4E49;&#x5217;&#x8868;</li>
+<li>fieldset form&#x63A7;&#x5236;&#x7EC4;</li>
+<li>form &#x4EA4;&#x4E92;&#x8868;&#x5355;</li>
+<li>h1 &#x5927;&#x6807;&#x9898;</li>
+<li>h2 &#x526F;&#x6807;&#x9898;</li>
+<li>h3 3&#x7EA7;&#x6807;&#x9898;</li>
+<li>h4 4&#x7EA7;&#x6807;&#x9898;</li>
+<li>h5 5&#x7EA7;&#x6807;&#x9898;</li>
+<li>h6 6&#x7EA7;&#x6807;&#x9898;</li>
+<li>hr &#x6C34;&#x5E73;&#x5206;&#x9694;&#x7EBF;</li>
 <li>isindex input prompt</li>
-<li>menu 菜单列表</li>
-<li>noframes frames可选内容（对于不支持frame的浏览器显示此区块内容）</li>
-<li>noscript 可选脚本内容（对于不支持script的浏览器显示此内容）</li>
-<li>ol 排序列表</li>
-<li>p 段落</li>
-<li>pre 格式化文本</li>
-<li>table 表格</li>
-<li>ul 非排序列表</li>
+<li>menu &#x83DC;&#x5355;&#x5217;&#x8868;</li>
+<li>noframes frames&#x53EF;&#x9009;&#x5185;&#x5BB9;&#xFF08;&#x5BF9;&#x4E8E;&#x4E0D;&#x652F;&#x6301;frame&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x663E;&#x793A;&#x6B64;&#x533A;&#x5757;&#x5185;&#x5BB9;&#xFF09;</li>
+<li>noscript &#x53EF;&#x9009;&#x811A;&#x672C;&#x5185;&#x5BB9;&#xFF08;&#x5BF9;&#x4E8E;&#x4E0D;&#x652F;&#x6301;script&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x663E;&#x793A;&#x6B64;&#x5185;&#x5BB9;&#xFF09;</li>
+<li>ol &#x6392;&#x5E8F;&#x5217;&#x8868;</li>
+<li>p &#x6BB5;&#x843D;</li>
+<li>pre &#x683C;&#x5F0F;&#x5316;&#x6587;&#x672C;</li>
+<li>table &#x8868;&#x683C;</li>
+<li>ul &#x975E;&#x6392;&#x5E8F;&#x5217;&#x8868;</li>
 </ol>
-<h2 id="内联元素（inline-element）"><a href="#内联元素（inline-element）" class="headerlink" title="内联元素（inline element）"></a>内联元素（inline element）</h2><ol>
-<li>a - 锚点</li>
-<li>abbr - 缩写</li>
-<li>acronym - 首字</li>
-<li>b - 粗体（不推荐）</li>
+<h2 id="&#x5185;&#x8054;&#x5143;&#x7D20;inline-element"><a href="#&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF08;inline-element&#xFF09;" class="headerlink" title="&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF08;inline element&#xFF09;"></a>&#x5185;&#x8054;&#x5143;&#x7D20;&#xFF08;inline element&#xFF09;</h2><ol>
+<li>a - &#x951A;&#x70B9;</li>
+<li>abbr - &#x7F29;&#x5199;</li>
+<li>acronym - &#x9996;&#x5B57;</li>
+<li>b - &#x7C97;&#x4F53;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;</li>
 <li>bdo - bidi override</li>
-<li>big - 大字体</li>
-<li>br - 换行</li>
-<li>cite - 引用</li>
-<li>code - 计算机代码（在引用源码的时候需要）</li>
-<li>dfn - 定义字段</li>
-<li>em - 强调</li>
-<li>font - 字体设定（不推荐）</li>
-<li>i - 斜体</li>
-<li>img - 图片</li>
-<li>input - 输入框</li>
-<li>kbd - 定义键盘文本</li>
-<li>label - 表格标签</li>
-<li>q - 短引用</li>
-<li>s - 中划线（不推荐）</li>
-<li>samp - 定义范例计算机代码</li>
-<li>select - 项目选择</li>
-<li>small - 小字体文本</li>
-<li>span - 常用内联容器，定义文本内区块</li>
-<li>strike - 中划线</li>
-<li>strong - 粗体强调</li>
-<li>sub - 下标</li>
-<li>sup - 上标</li>
-<li>textarea - 多行文本输入框</li>
-<li>tt - 电传文本</li>
-<li>u - 下划线</li>
-<li>var - 定义变量</li>
-<li>可变元素</li>
-<li>可变元素为根据上下文语境决定该元素为块元素或者内联元素。</li>
+<li>big - &#x5927;&#x5B57;&#x4F53;</li>
+<li>br - &#x6362;&#x884C;</li>
+<li>cite - &#x5F15;&#x7528;</li>
+<li>code - &#x8BA1;&#x7B97;&#x673A;&#x4EE3;&#x7801;&#xFF08;&#x5728;&#x5F15;&#x7528;&#x6E90;&#x7801;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#xFF09;</li>
+<li>dfn - &#x5B9A;&#x4E49;&#x5B57;&#x6BB5;</li>
+<li>em - &#x5F3A;&#x8C03;</li>
+<li>font - &#x5B57;&#x4F53;&#x8BBE;&#x5B9A;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;</li>
+<li>i - &#x659C;&#x4F53;</li>
+<li>img - &#x56FE;&#x7247;</li>
+<li>input - &#x8F93;&#x5165;&#x6846;</li>
+<li>kbd - &#x5B9A;&#x4E49;&#x952E;&#x76D8;&#x6587;&#x672C;</li>
+<li>label - &#x8868;&#x683C;&#x6807;&#x7B7E;</li>
+<li>q - &#x77ED;&#x5F15;&#x7528;</li>
+<li>s - &#x4E2D;&#x5212;&#x7EBF;&#xFF08;&#x4E0D;&#x63A8;&#x8350;&#xFF09;</li>
+<li>samp - &#x5B9A;&#x4E49;&#x8303;&#x4F8B;&#x8BA1;&#x7B97;&#x673A;&#x4EE3;&#x7801;</li>
+<li>select - &#x9879;&#x76EE;&#x9009;&#x62E9;</li>
+<li>small - &#x5C0F;&#x5B57;&#x4F53;&#x6587;&#x672C;</li>
+<li>span - &#x5E38;&#x7528;&#x5185;&#x8054;&#x5BB9;&#x5668;&#xFF0C;&#x5B9A;&#x4E49;&#x6587;&#x672C;&#x5185;&#x533A;&#x5757;</li>
+<li>strike - &#x4E2D;&#x5212;&#x7EBF;</li>
+<li>strong - &#x7C97;&#x4F53;&#x5F3A;&#x8C03;</li>
+<li>sub - &#x4E0B;&#x6807;</li>
+<li>sup - &#x4E0A;&#x6807;</li>
+<li>textarea - &#x591A;&#x884C;&#x6587;&#x672C;&#x8F93;&#x5165;&#x6846;</li>
+<li>tt - &#x7535;&#x4F20;&#x6587;&#x672C;</li>
+<li>u - &#x4E0B;&#x5212;&#x7EBF;</li>
+<li>var - &#x5B9A;&#x4E49;&#x53D8;&#x91CF;</li>
+<li>&#x53EF;&#x53D8;&#x5143;&#x7D20;</li>
+<li>&#x53EF;&#x53D8;&#x5143;&#x7D20;&#x4E3A;&#x6839;&#x636E;&#x4E0A;&#x4E0B;&#x6587;&#x8BED;&#x5883;&#x51B3;&#x5B9A;&#x8BE5;&#x5143;&#x7D20;&#x4E3A;&#x5757;&#x5143;&#x7D20;&#x6216;&#x8005;&#x5185;&#x8054;&#x5143;&#x7D20;&#x3002;</li>
 <li>applet - java applet</li>
-<li>button - 按钮</li>
-<li>del - 删除文本</li>
+<li>button - &#x6309;&#x94AE;</li>
+<li>del - &#x5220;&#x9664;&#x6587;&#x672C;</li>
 <li>iframe - inline frame</li>
-<li>ins - 插入的文本</li>
-<li>map - 图片区块（map）</li>
-<li>object - object对象</li>
-<li>script - 客户端脚本</li>
+<li>ins - &#x63D2;&#x5165;&#x7684;&#x6587;&#x672C;</li>
+<li>map - &#x56FE;&#x7247;&#x533A;&#x5757;&#xFF08;map&#xFF09;</li>
+<li>object - object&#x5BF9;&#x8C61;</li>
+<li>script - &#x5BA2;&#x6237;&#x7AEF;&#x811A;&#x672C;</li>
 </ol>
 
                                             
-                                        </div>
-
+                                        </div>                 
                                         
             </div>
             
@@ -468,9 +469,9 @@ var _hmt = _hmt || [];
 -->
 
 
+
 </div>
-      <!--
-<footer id="footer">
+      <!--<footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
@@ -489,6 +490,8 @@ var _hmt = _hmt || [];
   _st('install','m5RW4BUQrJ_r-CYKAksH','2.0.0');
 </script>
   </div>
+  <span id="busuanzi_container_site_pv">      Total visits: <span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv">    You are Visiter No.<span id="busuanzi_value_site_uv"></span></span>
+
 </footer>
 -->
     </div>

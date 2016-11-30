@@ -13,7 +13,7 @@
     function Shake() {
 
         //feature detect
-        this.hasDeviceMotion = 'ondevicemotion' in window;
+        this.hasDeviceMotion = &apos;ondevicemotion&apos; in window;
 
         //default velocity threshold for shake to register
         this.threshold = 15;
@@ -27,14 +27,14 @@
         this.lastZ = null;
 
         //create custom event
-        if (typeof document.CustomEvent === "function") {
-            this.event = new document.CustomEvent('shake', {
+        if (typeof document.CustomEvent === &quot;function&quot;) {
+            this.event = new document.CustomEvent(&apos;shake&apos;, {
                 bubbles: true,
                 cancelable: true
             });
-        } else if (typeof document.createEvent === "function") {
-            this.event = document.createEvent('Event');
-            this.event.initEvent('shake', true, true);
+        } else if (typeof document.createEvent === &quot;function&quot;) {
+            this.event = document.createEvent(&apos;Event&apos;);
+            this.event.initEvent(&apos;shake&apos;, true, true);
         } else { 
           return false;
         }
@@ -51,13 +51,13 @@
     //start listening for devicemotion
     Shake.prototype.start = function () {
         this.reset();
-        if (this.hasDeviceMotion) { window.addEventListener('devicemotion', this, false); }
+        if (this.hasDeviceMotion) { window.addEventListener(&apos;devicemotion&apos;, this, false); }
     };
 
     //stop listening for devicemotion
     Shake.prototype.stop = function () {
 
-        if (this.hasDeviceMotion) { window.removeEventListener('devicemotion', this, false); }
+        if (this.hasDeviceMotion) { window.removeEventListener(&apos;devicemotion&apos;, this, false); }
         this.reset();
     };
 
@@ -71,7 +71,7 @@
             deltaY = 0,
             deltaZ = 0;
 
-        if ((this.lastX === null) && (this.lastY === null) && (this.lastZ === null)) {
+        if ((this.lastX === null) &amp;&amp; (this.lastY === null) &amp;&amp; (this.lastZ === null)) {
             this.lastX = current.x;
             this.lastY = current.y;
             this.lastZ = current.z;
@@ -82,12 +82,12 @@
         deltaY = Math.abs(this.lastY - current.y);
         deltaZ = Math.abs(this.lastZ - current.z);
 
-        if (((deltaX > this.threshold) && (deltaY > this.threshold)) || ((deltaX > this.threshold) && (deltaZ > this.threshold)) || ((deltaY > this.threshold) && (deltaZ > this.threshold))) {
+        if (((deltaX &gt; this.threshold) &amp;&amp; (deltaY &gt; this.threshold)) || ((deltaX &gt; this.threshold) &amp;&amp; (deltaZ &gt; this.threshold)) || ((deltaY &gt; this.threshold) &amp;&amp; (deltaZ &gt; this.threshold))) {
             //calculate time in milliseconds since last shake registered
             currentTime = new Date();
             timeDifference = currentTime.getTime() - this.lastTime.getTime();
 
-            if (timeDifference > 1000) {
+            if (timeDifference &gt; 1000) {
                 window.dispatchEvent(this.event);
                 this.lastTime = new Date();
             }
@@ -102,13 +102,13 @@
     //event handler
     Shake.prototype.handleEvent = function (e) {
 
-        if (typeof (this[e.type]) === 'function') {
+        if (typeof (this[e.type]) === &apos;function&apos;) {
             return this[e.type](e);
         }
     };
 
     //create a new instance of shake.js.
     var myShakeEvent = new Shake();
-    myShakeEvent && myShakeEvent.start();
+    myShakeEvent &amp;&amp; myShakeEvent.start();
 
 }(window, document));
