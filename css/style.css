@@ -1271,6 +1271,24 @@ a {
 #article-nav #article-nav-older {
   float: right;
 }
+.article-view {
+  width: auto;
+  font-size: 14;
+  text-align: right;
+  margin-right: 150px;
+  position: absolute;
+  right: 0;
+  top: 23px;
+  text-align: center;
+  z-index: 1;
+  color: #aaa;
+}
+.article-view:before {
+  color: #999;
+  content: "\f06e";
+  font: 17px FontAwesome;
+  margin-right: 5px;
+}
 @-moz-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
